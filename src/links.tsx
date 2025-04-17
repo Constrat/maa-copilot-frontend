@@ -10,7 +10,7 @@ export const NAV_LINKS: {
 }[] = [
   {
     to: '/',
-    label: '首页',
+    label: 'links.首页',
     icon: 'home',
   },
   {

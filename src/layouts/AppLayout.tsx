@@ -7,6 +7,7 @@ import { AccountManager } from 'components/AccountManager'
 import { BackToTop } from 'components/BackToTop'
 import { NavExpandButton } from 'components/NavExpandButton'
 import { ThemeSwitchButton } from 'components/ThemeSwitchButton'
+import { LanguageSwitcher } from 'components/LanguageSwitcher'
 import { NavAside } from 'components/drawer/NavAside'
 
 import { NAV_LINKS } from '../links'
@@ -48,6 +49,7 @@ export const AppLayout: FCC = ({ children }) => (
 
       <div className="flex md:gap-4 gap-3">
         <NavExpandButton />
+        <LanguageSwitcher />
         <ThemeSwitchButton />
         <AccountManager />
       </div>

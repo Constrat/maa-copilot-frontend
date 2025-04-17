@@ -21,6 +21,8 @@ import { NotFoundPage } from './pages/404'
 import { IndexPage } from './pages/index'
 import './styles/blueprint.less'
 
+import './i18n'
+
 import './styles/index.css'
 
 Sentry.init({
