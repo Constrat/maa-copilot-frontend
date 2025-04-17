@@ -25,7 +25,7 @@ export const useLinks = () => {
     return {
       icon,
       href: link.href,
-      label: t(link.labelKey),
+      label: t(link.labelKey, link.labelParams),
     };
   });
 

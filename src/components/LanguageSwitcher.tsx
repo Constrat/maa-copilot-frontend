@@ -17,7 +17,12 @@ export const LanguageSwitcher: ComponentType = withGlobalErrorBoundary(() => {
   return (
     <Popover2
       content={
-        <Menu>
+        <Menu
+          style={{
+            width: "103.5px",      // 103.5px to get same width as the button
+            padding: "4px 0",
+            minWidth: "unset"
+          }}>
           <MenuItem
             text="English"
             icon={i18n.language === 'en' ? "tick" : undefined}
@@ -36,6 +41,11 @@ export const LanguageSwitcher: ComponentType = withGlobalErrorBoundary(() => {
         icon="translate"
         text={!isSM && (i18n.language === 'cn' ? '中文' : 'English')}
         rightIcon="caret-down"
+        style={
+          {
+            width: "120px"
+          }
+        }
       />
     </Popover2>
   )
