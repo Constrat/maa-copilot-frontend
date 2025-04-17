@@ -1,5 +1,31 @@
 {
   "components": {
+    "announcement": {
+      "AnnDialog": {
+        "title": {
+          "cn": "公告",
+          "en": "Announcement"
+        },
+        "no_announcements": {
+          "cn": "暂无公告",
+          "en": "No announcements"
+        },
+        "ok": {
+          "cn": "确定",
+          "en": "OK"
+        }
+      },
+      "AnnPanel": {
+        "title": {
+          "cn": "公告",
+          "en": "Announcement"
+        },
+        "load_failed": {
+          "cn": "公告加载失败：{{error}}",
+          "en": "Failed to load announcement: {{error}}"
+        }
+      }
+    },
     "editor": {
       "source": {
         "FileImporter": {
@@ -1206,7 +1232,7 @@
     }
   },
   "models": {
-    "announcement": {
+    "Announcement": {
       "default_title": {
         "cn": "公告",
         "en": "Announcement"
