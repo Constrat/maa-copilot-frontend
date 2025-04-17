@@ -37,7 +37,7 @@ export const SOCIAL_CONFIG = [
     iconType: 'iconify',
     iconSource: simpleIconsGitHub,
     href: 'https://github.com/MaaAssistantArknights/MaaAssistantArknights',
-    labelKey: 'maa_github_repo', // English text can have a key too
+    labelKey: 'links.MAA_Repo',
   },
   {
     iconType: 'iconify',

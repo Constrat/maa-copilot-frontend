@@ -1,4 +1,5 @@
 import { chunk, compact } from 'lodash-es'
+import i18n from 'i18n'
 
 export interface Announcement {
   sections: AnnouncementSection[]
@@ -48,7 +49,7 @@ export function parseAnnouncement(raw: string): Announcement {
         const slices = rawSection.split(emptyLinesMatcher)
         const segments = compact(slices.map((s) => s.trim())) // filter out the matched empty lines
 
-        const title = segments[0]?.replace(/^#+/, '').trim() || '公告'
+        const title = segments[0]?.replace(/^#+/, '').trim() || i18n.t('models/announcement.公告')
 
         let meta: AnnouncementSectionMeta | undefined
         const jsonBlockStart = '```json'

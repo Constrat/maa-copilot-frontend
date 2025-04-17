@@ -1,7 +1,4 @@
 {
-  "vite-env.d": {},
-  "types.d": {},
-  "main": {},
   "links": {
     "首页": {
       "cn": "首页",
@@ -13,70 +10,63 @@
     },
     "关于": {
       "cn": "关于",
-      "en": "TODO: translate"
+      "en": "About"
     },
     "官网": {
-      "cn": "官网",
-      "en": "TODO: translate"
+      "cn": "MAA 官网",
+      "en": "MAA Official Site"
     },
     "意见与反馈": {
       "cn": "意见与反馈",
-      "en": "TODO: translate"
+      "en": "Feedback"
+    },
+    "MAA_Repo": {
+      "cn": "MAA GitHub Repo",
+      "en": "MAA GitHub Repo"
     },
     "前端": {
-      "cn": "前端",
-      "en": "TODO: translate"
+      "cn": "前端 GitHub Repo",
+      "en": "Frontend GitHub Repo"
     },
     "后端": {
-      "cn": "后端",
-      "en": "TODO: translate"
+      "cn": "后端 GitHub Repo",
+      "en": "Backend GitHub Repo"
     },
     "作业制作者交流群": {
-      "cn": "作业制作者交流群",
-      "en": "TODO: translate"
+      "cn": "作业制作者交流群：",
+      "en": "Creator Community Group: "
     },
     "作业分享群": {
       "cn": "作业分享群",
-      "en": "TODO: translate"
+      "en": "Operation Sharing Group"
     }
+
   },
-  "App": {
-    "在没有": {
-      "cn": "在没有",
-      "en": "TODO: translate"
+  "utils/maa-copilot-client": {
+    "返回值无效": {
+      "cn": "返回值无效",
+      "en": "Invalid Return Value"
     },
-    "时会使用默认的": {
-      "cn": "时会使用默认的",
-      "en": "TODO: translate"
+    "服务器错误": {
+      "cn": "服务器错误",
+      "en": "Server Error"
     }
   },
   "utils/error": {
     "未知错误": {
       "cn": "未知错误",
+      "en": "Unknown Error"
+    },
+    "未登录请先登录": {
+      "cn": "未登录，请先登录",
       "en": "TODO: translate"
     },
-    "未登录": {
-      "cn": "未登录",
+    "登录已过期请重新登": {
+      "cn": "登录已过期，请重新登录",
       "en": "TODO: translate"
     },
-    "请先登录": {
-      "cn": "请先登录",
-      "en": "TODO: translate"
-    },
-    "登录已过期": {
-      "cn": "登录已过期",
-      "en": "TODO: translate"
-    },
-    "请重新登录": {
-      "cn": "请重新登录",
-      "en": "TODO: translate"
-    },
-    "登录失效": {
-      "cn": "登录失效",
-      "en": "TODO: translate"
-    },
-    "请重新登录_1": {
-      "cn": "请重新登录",
+    "登录失效请重新登录": {
+      "cn": "登录失效，请重新登录",
       "en": "TODO: translate"
     },
     "资源不存在": {
@@ -92,27 +82,20 @@
       "en": "TODO: translate"
     }
   },
-  "store/selectedOperators": {
-    "删除旧版数据": {
-      "cn": "删除旧版数据",
-      "en": "TODO: translate"
-    }
-  },
+  "utils/device": {},
+  "store/useFavOperators": {},
+  "store/useFavGroups": {},
+  "store/selectedOperators": {},
+  "store/pref": {},
+  "store/nav": {},
+  "store/auth": {},
   "services/operation": {
-    "类型对不上": {
-      "cn": "类型对不上",
-      "en": "TODO: translate"
-    },
     "已下载作业": {
       "cn": "已下载作业",
       "en": "TODO: translate"
     },
-    "文件": {
-      "cn": "文件",
-      "en": "TODO: translate"
-    },
-    "前往": {
-      "cn": "前往",
+    "文件前往": {
+      "cn": "文件，前往",
       "en": "TODO: translate"
     },
     "选择即可使用": {
@@ -120,39 +103,15 @@
       "en": "TODO: translate"
     },
     "下载失败": {
-      "cn": "下载失败",
+      "cn": "下载失败：",
       "en": "TODO: translate"
     },
-    "已下载作业_1": {
-      "cn": "已下载作业",
+    "数据错误请联系开发": {
+      "cn": "数据错误，请联系开发者",
       "en": "TODO: translate"
     },
-    "文件_1": {
-      "cn": "文件",
-      "en": "TODO: translate"
-    },
-    "前往_1": {
-      "cn": "前往",
-      "en": "TODO: translate"
-    },
-    "选择即可使用_1": {
-      "cn": "选择即可使用",
-      "en": "TODO: translate"
-    },
-    "数据错误": {
-      "cn": "数据错误",
-      "en": "TODO: translate"
-    },
-    "请联系开发者": {
-      "cn": "请联系开发者",
-      "en": "TODO: translate"
-    },
-    "已复制神秘代码": {
-      "cn": "已复制神秘代码",
-      "en": "TODO: translate"
-    },
-    "前往_2": {
-      "cn": "前往",
+    "已复制神秘代码前往": {
+      "cn": "已复制神秘代码，前往",
       "en": "TODO: translate"
     },
     "粘贴即可使用": {
@@ -160,7 +119,7 @@
       "en": "TODO: translate"
     },
     "复制神秘代码失败": {
-      "cn": "复制神秘代码失败",
+      "cn": "复制神秘代码失败：",
       "en": "TODO: translate"
     }
   },
@@ -177,12 +136,20 @@
     "作业集": {
       "cn": "作业集",
       "en": "TODO: translate"
+    },
+    "_userinfo_user": {
+      "cn": "{userInfo?.userName}",
+      "en": "{userInfo?.userName}"
     }
   },
   "pages/index": {
     "创建新作业": {
       "cn": "创建新作业",
       "en": "TODO: translate"
+    },
+    "_link_label_": {
+      "cn": "{link.label}",
+      "en": "{link.label}"
     },
     "雷电模拟器": {
       "cn": "雷电模拟器",
@@ -202,12 +169,12 @@
       "cn": "更新",
       "en": "TODO: translate"
     },
+    "_action_cost_c": {
+      "cn": "(action?.cost_changes as number)",
+      "en": "(action?.cost_changes as number)"
+    },
     "目前暂不支持上传费用": {
       "cn": "目前暂不支持上传费用变化量为负数的动作",
-      "en": "TODO: translate"
-    },
-    "第": {
-      "cn": "第",
       "en": "TODO: translate"
     },
     "个动作": {
@@ -222,36 +189,20 @@
       "cn": "成功",
       "en": "TODO: translate"
     },
-    "作业_1": {
-      "cn": "作业",
-      "en": "TODO: translate"
-    },
     "失败": {
-      "cn": "失败",
+      "cn": "失败：",
       "en": "TODO: translate"
     },
     "无标题": {
       "cn": "无标题",
       "en": "TODO: translate"
     },
-    "公开作业": {
-      "cn": "公开作业",
+    "公开作业会在所有列": {
+      "cn": "公开作业：会在所有列表中显示",
       "en": "TODO: translate"
     },
-    "会在所有列表中显示": {
-      "cn": "会在所有列表中显示",
-      "en": "TODO: translate"
-    },
-    "私有作业": {
-      "cn": "私有作业",
-      "en": "TODO: translate"
-    },
-    "其他人无法在列表中看": {
-      "cn": "其他人无法在列表中看见",
-      "en": "TODO: translate"
-    },
-    "但可以通过神秘代码访": {
-      "cn": "但可以通过神秘代码访问",
+    "私有作业其他人无法": {
+      "cn": "私有作业：其他人无法在列表中看见，但可以通过神秘代码访问",
       "en": "TODO: translate"
     },
     "公开": {
@@ -271,6 +222,10 @@
     "更新日志": {
       "cn": "更新日志",
       "en": "TODO: translate"
+    },
+    "_changelog_": {
+      "cn": "{changelog}",
+      "en": "{changelog}"
     }
   },
   "pages/404": {
@@ -296,20 +251,8 @@
       "cn": "部署",
       "en": "TODO: translate"
     },
-    "部署_1": {
-      "cn": "部署",
-      "en": "TODO: translate"
-    },
     "部署干员至指定位置": {
-      "cn": "部署干员至指定位置",
-      "en": "TODO: translate"
-    },
-    "当费用不够时": {
-      "cn": "当费用不够时",
-      "en": "TODO: translate"
-    },
-    "会一直等待到费用够": {
-      "cn": "会一直等待到费用够",
+      "cn": "部署干员至指定位置。当费用不够时，会一直等待到费用够",
       "en": "TODO: translate"
     },
     "除非": {
@@ -328,20 +271,8 @@
       "cn": "撤退",
       "en": "TODO: translate"
     },
-    "撤退_1": {
-      "cn": "撤退",
-      "en": "TODO: translate"
-    },
     "将干员从作战中撤出": {
       "cn": "将干员从作战中撤出",
-      "en": "TODO: translate"
-    },
-    "干员上_1": {
-      "cn": "干员上",
-      "en": "TODO: translate"
-    },
-    "退场_1": {
-      "cn": "退场",
       "en": "TODO: translate"
     },
     "使用技能": {
@@ -356,20 +287,8 @@
       "cn": "当技能",
       "en": "TODO: translate"
     },
-    "没转好时": {
-      "cn": "没转好时",
-      "en": "TODO: translate"
-    },
-    "一直等待到技能": {
-      "cn": "一直等待到技能",
-      "en": "TODO: translate"
-    },
-    "好": {
-      "cn": "好",
-      "en": "TODO: translate"
-    },
-    "除非_1": {
-      "cn": "除非",
+    "没转好时一直等待到": {
+      "cn": "没转好时，一直等待到技能",
       "en": "TODO: translate"
     },
     "干员技能": {
@@ -384,36 +303,8 @@
       "cn": "技能用法",
       "en": "TODO: translate"
     },
-    "切换干员技能用法": {
-      "cn": "切换干员技能用法",
-      "en": "TODO: translate"
-    },
-    "例如": {
-      "cn": "例如",
-      "en": "TODO: translate"
-    },
-    "刚下桃金娘": {
-      "cn": "刚下桃金娘",
-      "en": "TODO: translate"
-    },
-    "需要她帮忙打几个怪": {
-      "cn": "需要她帮忙打几个怪",
-      "en": "TODO: translate"
-    },
-    "但此时不能自动开技能": {
-      "cn": "但此时不能自动开技能否则会漏怪",
-      "en": "TODO: translate"
-    },
-    "等中后期平稳了才需要": {
-      "cn": "等中后期平稳了才需要她自动开技能",
-      "en": "TODO: translate"
-    },
-    "则可以在对应时刻后": {
-      "cn": "则可以在对应时刻后",
-      "en": "TODO: translate"
-    },
-    "将桃金娘的技能用法从": {
-      "cn": "将桃金娘的技能用法从",
+    "切换干员技能用法例": {
+      "cn": "切换干员技能用法。例如，刚下桃金娘、需要她帮忙打几个怪，但此时不能自动开技能否则会漏怪，等中后期平稳了才需要她自动开技能，则可以在对应时刻后，将桃金娘的技能用法从",
       "en": "TODO: translate"
     },
     "不自动使用": {
@@ -428,10 +319,6 @@
       "cn": "好了就用",
       "en": "TODO: translate"
     },
-    "干员技能_1": {
-      "cn": "干员技能",
-      "en": "TODO: translate"
-    },
     "切换二倍速": {
       "cn": "切换二倍速",
       "en": "TODO: translate"
@@ -441,11 +328,7 @@
       "en": "TODO: translate"
     },
     "执行后切换至二倍速": {
-      "cn": "执行后切换至二倍速",
-      "en": "TODO: translate"
-    },
-    "再次执行切换至一倍速": {
-      "cn": "再次执行切换至一倍速",
+      "cn": "执行后切换至二倍速，再次执行切换至一倍速",
       "en": "TODO: translate"
     },
     "作战控制": {
@@ -461,11 +344,7 @@
       "en": "TODO: translate"
     },
     "执行后将点击任意干员": {
-      "cn": "执行后将点击任意干员",
-      "en": "TODO: translate"
-    },
-    "进入": {
-      "cn": "进入",
+      "cn": "执行后将点击任意干员，进入",
       "en": "TODO: translate"
     },
     "速度状态": {
@@ -473,55 +352,19 @@
       "en": "TODO: translate"
     },
     "再进行任意动作会恢复": {
-      "cn": "再进行任意动作会恢复正常速度",
+      "cn": "再进行任意动作会恢复正常速度。下一个任务必须是",
       "en": "TODO: translate"
     },
-    "下一个任务必须是": {
-      "cn": "下一个任务必须是",
-      "en": "TODO: translate"
-    },
-    "部署_2": {
-      "cn": "部署",
-      "en": "TODO: translate"
-    },
-    "技能_1": {
-      "cn": "技能",
-      "en": "TODO: translate"
-    },
-    "撤退_2": {
-      "cn": "撤退",
-      "en": "TODO: translate"
-    },
-    "其中之一": {
-      "cn": "其中之一",
-      "en": "TODO: translate"
-    },
-    "此时会提前点开该干员": {
-      "cn": "此时会提前点开该干员",
-      "en": "TODO: translate"
-    },
-    "等待满足条件后再执行": {
-      "cn": "等待满足条件后再执行",
-      "en": "TODO: translate"
-    },
-    "作战控制_1": {
-      "cn": "作战控制",
+    "其中之一此时会提前": {
+      "cn": "其中之一，此时会提前点开该干员，等待满足条件后再执行。",
       "en": "TODO: translate"
     },
     "移动相机": {
       "cn": "移动相机",
       "en": "TODO: translate"
     },
-    "移动相机_1": {
-      "cn": "移动相机",
-      "en": "TODO: translate"
-    },
     "仅用于引航者试炼模式": {
       "cn": "仅用于引航者试炼模式中切换区域",
-      "en": "TODO: translate"
-    },
-    "作战控制_2": {
-      "cn": "作战控制",
       "en": "TODO: translate"
     },
     "开始挂机": {
@@ -532,32 +375,12 @@
       "cn": "摆完挂机",
       "en": "TODO: translate"
     },
-    "进入挂机模式": {
-      "cn": "进入挂机模式",
+    "进入挂机模式仅使用": {
+      "cn": "进入挂机模式。仅使用",
       "en": "TODO: translate"
     },
-    "仅使用": {
-      "cn": "仅使用",
-      "en": "TODO: translate"
-    },
-    "好了就用_1": {
-      "cn": "好了就用",
-      "en": "TODO: translate"
-    },
-    "的技能": {
-      "cn": "的技能",
-      "en": "TODO: translate"
-    },
-    "其他什么都不做": {
-      "cn": "其他什么都不做",
-      "en": "TODO: translate"
-    },
-    "直到战斗结束": {
-      "cn": "直到战斗结束",
-      "en": "TODO: translate"
-    },
-    "作战控制_3": {
-      "cn": "作战控制",
+    "的技能其他什么都不": {
+      "cn": "的技能，其他什么都不做，直到战斗结束",
       "en": "TODO: translate"
     },
     "打印描述内容": {
@@ -569,11 +392,7 @@
       "en": "TODO: translate"
     },
     "对作战没有实际作用": {
-      "cn": "对作战没有实际作用",
-      "en": "TODO: translate"
-    },
-    "仅用于输出描述内容": {
-      "cn": "仅用于输出描述内容",
+      "cn": "对作战没有实际作用，仅用于输出描述内容",
       "en": "TODO: translate"
     },
     "用来做字幕之类的": {
@@ -594,10 +413,6 @@
     },
     "未知动作类型": {
       "cn": "未知动作类型",
-      "en": "TODO: translate"
-    },
-    "未知_1": {
-      "cn": "未知",
       "en": "TODO: translate"
     }
   },
@@ -649,12 +464,8 @@
       "cn": "不由",
       "en": "TODO: translate"
     },
-    "自动开启技能": {
-      "cn": "自动开启技能",
-      "en": "TODO: translate"
-    },
-    "或干员技能并不需要操": {
-      "cn": "或干员技能并不需要操作开启",
+    "自动开启技能或干员": {
+      "cn": "自动开启技能、或干员技能并不需要操作开启",
       "en": "TODO: translate"
     },
     "自动触发": {
@@ -662,11 +473,7 @@
       "en": "TODO: translate"
     },
     "若需要手动开启技能": {
-      "cn": "若需要手动开启技能",
-      "en": "TODO: translate"
-    },
-    "请添加": {
-      "cn": "请添加",
+      "cn": "若需要手动开启技能，请添加",
       "en": "TODO: translate"
     },
     "使用技能": {
@@ -681,51 +488,27 @@
       "cn": "好了就用",
       "en": "TODO: translate"
     },
-    "有多少次用多少次": {
-      "cn": "有多少次用多少次",
+    "有多少次用多少次例": {
+      "cn": "有多少次用多少次，例如：棘刺",
       "en": "TODO: translate"
     },
-    "例如": {
-      "cn": "例如",
-      "en": "TODO: translate"
-    },
-    "棘刺": {
-      "cn": "棘刺",
-      "en": "TODO: translate"
-    },
-    "技能": {
-      "cn": "技能",
-      "en": "TODO: translate"
-    },
-    "桃金娘": {
-      "cn": "桃金娘",
+    "技能桃金娘": {
+      "cn": "技能、桃金娘",
       "en": "TODO: translate"
     },
     "技能等": {
       "cn": "技能等",
       "en": "TODO: translate"
     },
-    "好了就用_1": {
-      "cn": "好了就用",
-      "en": "TODO: translate"
-    },
     "指定次数": {
       "cn": "指定次数",
       "en": "TODO: translate"
     },
-    "默认仅使用一次": {
-      "cn": "默认仅使用一次",
+    "默认仅使用一次例如": {
+      "cn": "默认仅使用一次，例如：山",
       "en": "TODO: translate"
     },
-    "例如_1": {
-      "cn": "例如",
-      "en": "TODO: translate"
-    },
-    "山": {
-      "cn": "山",
-      "en": "TODO: translate"
-    },
-    "技能_1": {
+    "技能": {
       "cn": "技能",
       "en": "TODO: translate"
     },
@@ -738,43 +521,11 @@
       "en": "TODO: translate"
     },
     "画饼": {
-      "cn": "画饼",
+      "cn": "画饼.",
       "en": "TODO: translate"
     },
     "未知用法": {
       "cn": "未知用法",
-      "en": "TODO: translate"
-    },
-    "好了就用_2": {
-      "cn": "好了就用",
-      "en": "TODO: translate"
-    },
-    "次": {
-      "cn": "次",
-      "en": "TODO: translate"
-    },
-    "指定次数_1": {
-      "cn": "指定次数",
-      "en": "TODO: translate"
-    },
-    "无": {
-      "cn": "无",
-      "en": "TODO: translate"
-    },
-    "上": {
-      "cn": "上",
-      "en": "TODO: translate"
-    },
-    "下": {
-      "cn": "下",
-      "en": "TODO: translate"
-    },
-    "左": {
-      "cn": "左",
-      "en": "TODO: translate"
-    },
-    "右": {
-      "cn": "右",
       "en": "TODO: translate"
     },
     "未知方向": {
@@ -832,72 +583,7 @@
     }
   },
   "models/copilot.schema.validator": {},
-  "models/copilot.schema": {
-    "战斗协议": {
-      "cn": "战斗协议",
-      "en": "TODO: translate"
-    },
-    "必填": {
-      "cn": "必填",
-      "en": "TODO: translate"
-    },
-    "除危机合约外": {
-      "cn": "除危机合约外",
-      "en": "TODO: translate"
-    },
-    "均为关卡中文名": {
-      "cn": "均为关卡中文名",
-      "en": "TODO: translate"
-    },
-    "必填_1": {
-      "cn": "必填",
-      "en": "TODO: translate"
-    },
-    "可选": {
-      "cn": "可选",
-      "en": "TODO: translate"
-    },
-    "默认": {
-      "cn": "默认",
-      "en": "TODO: translate"
-    },
-    "取值范围": {
-      "cn": "取值范围",
-      "en": "TODO: translate"
-    },
-    "技能使用次数": {
-      "cn": "技能使用次数",
-      "en": "TODO: translate"
-    },
-    "可选_1": {
-      "cn": "可选",
-      "en": "TODO: translate"
-    },
-    "默认为": {
-      "cn": "默认为",
-      "en": "TODO: translate"
-    },
-    "不自动使用": {
-      "cn": "不自动使用",
-      "en": "TODO: translate"
-    },
-    "好了就用": {
-      "cn": "好了就用",
-      "en": "TODO: translate"
-    },
-    "好了就用_1": {
-      "cn": "好了就用",
-      "en": "TODO: translate"
-    },
-    "指定次数": {
-      "cn": "指定次数",
-      "en": "TODO: translate"
-    },
-    "自动使用": {
-      "cn": "自动使用",
-      "en": "TODO: translate"
-    }
-  },
+  "models/copilot.schema": {},
   "models/converter": {
     "无法解析作业内容": {
       "cn": "无法解析作业内容",
@@ -909,19 +595,21 @@
   "models/announcement": {
     "公告": {
       "cn": "公告",
-      "en": "TODO: translate"
+      "en": "Announcement"
     }
   },
-  "layouts/AppLayout": {},
+  "layouts/AppLayout": {
+    "_children_": {
+      "cn": "{children}",
+      "en": "{children}"
+    }
+  },
   "i18n/index": {},
+  "hooks/useLinks": {},
   "components/UserName": {},
   "components/UserFilter": {
     "我自己": {
       "cn": "我自己",
-      "en": "TODO: translate"
-    },
-    "退出登录时清空": {
-      "cn": "退出登录时清空",
       "en": "TODO: translate"
     },
     "有": {
@@ -937,11 +625,11 @@
       "en": "TODO: translate"
     },
     "正在搜索": {
-      "cn": "正在搜索",
+      "cn": "正在搜索...",
       "en": "TODO: translate"
     },
     "搜索失败": {
-      "cn": "搜索失败",
+      "cn": "搜索失败：",
       "en": "TODO: translate"
     },
     "查无此人": {
@@ -980,12 +668,8 @@
       "cn": "加载失败",
       "en": "TODO: translate"
     },
-    "数据加载失败": {
-      "cn": "数据加载失败",
-      "en": "TODO: translate"
-    },
-    "请重试": {
-      "cn": "请重试",
+    "数据加载失败请重试": {
+      "cn": "数据加载失败，请重试",
       "en": "TODO: translate"
     },
     "重试": {
@@ -993,17 +677,12 @@
       "en": "TODO: translate"
     }
   },
-  "components/Suggest": {
-    "禁用掉": {
-      "cn": "禁用掉",
-      "en": "TODO: translate"
-    },
-    "自动选中输入框文字的": {
-      "cn": "自动选中输入框文字的功能",
-      "en": "TODO: translate"
-    }
-  },
+  "components/Suggest": {},
   "components/Select": {
+    "extends_select2": {
+      "cn": "extends Select2Props",
+      "en": "extends Select2Props"
+    },
     "这个功能有无限": {
       "cn": "这个功能有无限",
       "en": "TODO: translate"
@@ -1015,181 +694,30 @@
     "不要用": {
       "cn": "不要用",
       "en": "TODO: translate"
-    },
-    "传给": {
-      "cn": "传给",
-      "en": "TODO: translate"
-    },
-    "给下面的补丁用": {
-      "cn": "给下面的补丁用",
-      "en": "TODO: translate"
-    },
-    "因为在": {
-      "cn": "因为在",
-      "en": "TODO: translate"
-    },
-    "内": {
-      "cn": "内",
-      "en": "TODO: translate"
-    },
-    "不阻止的话会再次展开": {
-      "cn": "不阻止的话会再次展开",
-      "en": "TODO: translate"
-    },
-    "修复": {
-      "cn": "修复",
-      "en": "TODO: translate"
-    },
-    "的远古": {
-      "cn": "的远古",
-      "en": "TODO: translate"
-    },
-    "补丁只对": {
-      "cn": "补丁只对",
-      "en": "TODO: translate"
-    },
-    "组件启用": {
-      "cn": "组件启用",
-      "en": "TODO: translate"
-    },
-    "因为不知道对": {
-      "cn": "因为不知道对",
-      "en": "TODO: translate"
-    },
-    "和": {
-      "cn": "和",
-      "en": "TODO: translate"
-    },
-    "是否有效": {
-      "cn": "是否有效",
-      "en": "TODO: translate"
-    },
-    "先不管了": {
-      "cn": "先不管了",
-      "en": "TODO: translate"
-    },
-    "如果": {
-      "cn": "如果",
-      "en": "TODO: translate"
-    },
-    "是": {
-      "cn": "是",
-      "en": "TODO: translate"
-    },
-    "会直接将": {
-      "cn": "会直接将",
-      "en": "TODO: translate"
-    },
-    "刷新为第一个": {
-      "cn": "刷新为第一个",
-      "en": "TODO: translate"
-    },
-    "为了阻止这种行为": {
-      "cn": "为了阻止这种行为",
-      "en": "TODO: translate"
-    },
-    "这里返回": {
-      "cn": "这里返回",
-      "en": "TODO: translate"
-    },
-    "以绕过": {
-      "cn": "以绕过",
-      "en": "TODO: translate"
-    },
-    "的判断": {
-      "cn": "的判断",
-      "en": "TODO: translate"
-    },
-    "在": {
-      "cn": "在",
-      "en": "TODO: translate"
-    },
-    "之后并未等待": {
-      "cn": "之后并未等待",
-      "en": "TODO: translate"
-    },
-    "更新就直接读取": {
-      "cn": "更新就直接读取",
-      "en": "TODO: translate"
-    },
-    "导致": {
-      "cn": "导致",
-      "en": "TODO: translate"
-    },
-    "仍然是旧值": {
-      "cn": "仍然是旧值",
-      "en": "TODO: translate"
-    },
-    "所以这里直接使用": {
-      "cn": "所以这里直接使用",
-      "en": "TODO: translate"
-    },
-    "来覆盖": {
-      "cn": "来覆盖",
-      "en": "TODO: translate"
     }
   },
-  "components/ReLinkDiv": {
-    "版的": {
-      "cn": "版的",
-      "en": "TODO: translate"
-    }
-  },
+  "components/ReLinkDiv": {},
   "components/ReLink": {},
-  "components/RelativeTime": {},
-  "components/Paragraphs": {},
+  "components/RelativeTime": {
+    "_formatted_": {
+      "cn": "{formatted}",
+      "en": "{formatted}"
+    }
+  },
+  "components/Paragraphs": {
+    "_paragraph_": {
+      "cn": "{paragraph}",
+      "en": "{paragraph}"
+    }
+  },
   "components/OutlinedIcon": {},
   "components/OperatorSelect": {
-    "如果没有输入则不显示": {
-      "cn": "如果没有输入则不显示下拉框",
-      "en": "TODO: translate"
-    },
-    "配合空的": {
-      "cn": "配合空的",
-      "en": "TODO: translate"
-    },
-    "来实现": {
-      "cn": "来实现",
-      "en": "TODO: translate"
-    },
-    "不能使用": {
-      "cn": "不能使用",
-      "en": "TODO: translate"
-    },
-    "因为它检查的是": {
-      "cn": "因为它检查的是",
-      "en": "TODO: translate"
-    },
-    "而不是": {
-      "cn": "而不是",
-      "en": "TODO: translate"
-    },
     "没有匹配的干员": {
       "cn": "没有匹配的干员",
       "en": "TODO: translate"
     }
   },
   "components/OperatorFilter": {
-    "用本地保存的干员过滤": {
-      "cn": "用本地保存的干员过滤器来初始化",
-      "en": "TODO: translate"
-    },
-    "对话框关闭时还原": {
-      "cn": "对话框关闭时还原",
-      "en": "TODO: translate"
-    },
-    "当两个数组中的干员冲": {
-      "cn": "当两个数组中的干员冲突时",
-      "en": "TODO: translate"
-    },
-    "保留最新的": {
-      "cn": "保留最新的",
-      "en": "TODO: translate"
-    },
-    "两边加空格让删除线更": {
-      "cn": "两边加空格让删除线更显眼一些",
-      "en": "TODO: translate"
-    },
     "禁用干员选择": {
       "cn": "禁用干员选择",
       "en": "TODO: translate"
@@ -1210,12 +738,8 @@
       "cn": "排除的干员",
       "en": "TODO: translate"
     },
-    "输入干员名": {
-      "cn": "输入干员名",
-      "en": "TODO: translate"
-    },
-    "拼音或拼音首字母以搜": {
-      "cn": "拼音或拼音首字母以搜索",
+    "输入干员名拼音或拼": {
+      "cn": "输入干员名、拼音或拼音首字母以搜索",
       "en": "TODO: translate"
     },
     "取消": {
@@ -1254,8 +778,8 @@
       "cn": "份作业",
       "en": "TODO: translate"
     },
-    "份作业_1": {
-      "cn": "份作业",
+    "{operation": {
+      "cn": "{operationSet.copilotIds.length}份作业",
       "en": "TODO: translate"
     },
     "复制神秘代码": {
@@ -1276,20 +800,12 @@
       "cn": "启动多选",
       "en": "TODO: translate"
     },
-    "标题": {
-      "cn": "标题",
-      "en": "TODO: translate"
-    },
-    "描述": {
-      "cn": "描述",
-      "en": "TODO: translate"
-    },
-    "神秘代码": {
-      "cn": "神秘代码",
+    "标题描述神秘代码": {
+      "cn": "标题、描述、神秘代码",
       "en": "TODO: translate"
     },
     "排序": {
-      "cn": "排序",
+      "cn": "排序:",
       "en": "TODO: translate"
     },
     "热度": {
@@ -1302,30 +818,6 @@
     },
     "访问量": {
       "cn": "访问量",
-      "en": "TODO: translate"
-    },
-    "标题_1": {
-      "cn": "标题",
-      "en": "TODO: translate"
-    },
-    "描述_1": {
-      "cn": "描述",
-      "en": "TODO: translate"
-    },
-    "神秘代码_1": {
-      "cn": "神秘代码",
-      "en": "TODO: translate"
-    },
-    "按热度排序时列表前几": {
-      "cn": "按热度排序时列表前几页的变化不会太频繁",
-      "en": "TODO: translate"
-    },
-    "可以不刷新第一页": {
-      "cn": "可以不刷新第一页",
-      "en": "TODO: translate"
-    },
-    "节省点流量": {
-      "cn": "节省点流量",
       "en": "TODO: translate"
     }
   },
@@ -1381,28 +873,20 @@
       "en": "TODO: translate"
     },
     "访问量": {
-      "cn": "访问量",
+      "cn": "访问量：",
       "en": "TODO: translate"
     },
-    "私有_1": {
-      "cn": "私有",
-      "en": "TODO: translate"
-    },
-    "访问量_1": {
-      "cn": "访问量",
-      "en": "TODO: translate"
-    },
-    "干员_1": {
-      "cn": "干员",
-      "en": "TODO: translate"
-    },
-    "干员组_1": {
-      "cn": "干员组",
-      "en": "TODO: translate"
+    "_operation_view": {
+      "cn": "{operation.views}",
+      "en": "{operation.views}"
     },
     "无干员": {
       "cn": "无干员",
       "en": "TODO: translate"
+    },
+    "_name_": {
+      "cn": "[{name}]",
+      "en": "[{name}]"
     },
     "无记录": {
       "cn": "无记录",
@@ -1410,6 +894,10 @@
     },
     "下载原": {
       "cn": "下载原",
+      "en": "TODO: translate"
+    },
+    "下载原_1": {
+      "cn": "下载原 JSON",
       "en": "TODO: translate"
     },
     "复制神秘代码": {
@@ -1422,58 +910,19 @@
     }
   },
   "components/NavExpandButton": {},
-  "components/Markdown": {},
+  "components/Markdown": {
+    "_children_": {
+      "cn": "{children}",
+      "en": "{children}"
+    }
+  },
   "components/LevelSelect": {
-    "清空": {
-      "cn": "清空",
-      "en": "TODO: translate"
-    },
-    "之后会自动设置为第一": {
-      "cn": "之后会自动设置为第一项",
-      "en": "TODO: translate"
-    },
-    "如果有": {
-      "cn": "如果有",
-      "en": "TODO: translate"
-    },
-    "但匹配不到": {
-      "cn": "但匹配不到",
-      "en": "TODO: translate"
-    },
-    "就创建一个自定义关卡": {
-      "cn": "就创建一个自定义关卡来显示",
-      "en": "TODO: translate"
-    },
-    "未输入": {
-      "cn": "未输入",
-      "en": "TODO: translate"
-    },
-    "时显示同类关卡": {
-      "cn": "时显示同类关卡",
-      "en": "TODO: translate"
-    },
     "剿灭作战": {
       "cn": "剿灭作战",
       "en": "TODO: translate"
     },
-    "危机合约分类非常混乱": {
-      "cn": "危机合约分类非常混乱",
-      "en": "TODO: translate"
-    },
-    "直接全塞到一起": {
-      "cn": "直接全塞到一起",
-      "en": "TODO: translate"
-    },
     "危机合约": {
       "cn": "危机合约",
-      "en": "TODO: translate"
-    },
-    "为空的时候用": {
-      "cn": "为空的时候用",
-      "en": "TODO: translate"
-    },
-    "来分类": {
-      "cn": "来分类",
       "en": "TODO: translate"
     },
     "相关关卡": {
@@ -1488,28 +937,12 @@
       "cn": "被选中为",
       "en": "TODO: translate"
     },
-    "重置": {
-      "cn": "重置",
-      "en": "TODO: translate"
-    },
-    "以显示同类关卡": {
-      "cn": "以显示同类关卡",
-      "en": "TODO: translate"
-    },
     "直接搜索关卡": {
       "cn": "直接搜索关卡",
       "en": "TODO: translate"
     },
-    "关卡名": {
-      "cn": "关卡名",
-      "en": "TODO: translate"
-    },
-    "类型": {
-      "cn": "类型",
-      "en": "TODO: translate"
-    },
-    "编号": {
-      "cn": "编号",
+    "关卡名类型编号": {
+      "cn": "关卡名、类型、编号",
       "en": "TODO: translate"
     },
     "关卡": {
@@ -1521,16 +954,21 @@
     "中文": {
       "cn": "中文",
       "en": "TODO: translate"
-    },
-    "中文_1": {
-      "cn": "中文",
-      "en": "TODO: translate"
     }
   },
-  "components/HelperText": {},
+  "components/HelperText": {
+    "_child_": {
+      "cn": "{child()}",
+      "en": "{child()}"
+    }
+  },
   "components/GlobalErrorBoundary": {
     "発生": {
       "cn": "発生",
+      "en": "TODO: translate"
+    },
+    "発生_1": {
+      "cn": "エラー発生",
       "en": "TODO: translate"
     },
     "页面渲染出现错误": {
@@ -1546,11 +984,33 @@
       "en": "TODO: translate"
     }
   },
-  "components/FormField": {},
+  "components/FormField": {
+    "_description_": {
+      "cn": "{description}",
+      "en": "{description}"
+    },
+    "_label_": {
+      "cn": "{label}",
+      "en": "{label}"
+    }
+  },
   "components/FieldResetButton": {},
   "components/FactItem": {},
-  "components/dnd": {},
+  "components/dnd": {
+    "_children_dropp": {
+      "cn": "{children(droppable)}",
+      "en": "{children(droppable)}"
+    },
+    "_children_": {
+      "cn": "{children}",
+      "en": "{children}"
+    }
+  },
   "components/Confirm": {
+    "void_promise": {
+      "cn": "void | Promise",
+      "en": "void | Promise"
+    },
     "确定": {
       "cn": "确定",
       "en": "TODO: translate"
@@ -1563,9 +1023,17 @@
   "components/CardTitle": {},
   "components/BackToTop": {},
   "components/ActionCard": {
+    "_type_title_": {
+      "cn": "{type.title}",
+      "en": "{type.title}"
+    },
     "坐标": {
       "cn": "坐标",
       "en": "TODO: translate"
+    },
+    "_action_locatio": {
+      "cn": "{action.location.join(', ')}",
+      "en": "{action.location.join(', ')}"
     },
     "朝向": {
       "cn": "朝向",
@@ -1575,9 +1043,17 @@
       "cn": "距离",
       "en": "TODO: translate"
     },
+    "_action_distanc": {
+      "cn": "{action.distance.join(', ')}",
+      "en": "{action.distance.join(', ')}"
+    },
     "击杀": {
       "cn": "击杀",
       "en": "TODO: translate"
+    },
+    "_action_kills_": {
+      "cn": "{action.kills || '-'}",
+      "en": "{action.kills || '-'}"
     },
     "冷却中": {
       "cn": "冷却中",
@@ -1586,6 +1062,10 @@
     "费用": {
       "cn": "费用",
       "en": "TODO: translate"
+    },
+    "_action_costs_": {
+      "cn": "{action.costs || '-'}",
+      "en": "{action.costs || '-'}"
     },
     "费用变化": {
       "cn": "费用变化",
@@ -1598,6 +1078,10 @@
     "后置": {
       "cn": "后置",
       "en": "TODO: translate"
+    },
+    "_title_": {
+      "cn": "{title}",
+      "en": "{title}"
     }
   },
   "components/AccountManager": {
@@ -1613,24 +1097,12 @@
       "cn": "退出登录",
       "en": "TODO: translate"
     },
-    "退出登录_1": {
-      "cn": "退出登录",
-      "en": "TODO: translate"
-    },
     "确定要退出登录吗": {
-      "cn": "确定要退出登录吗",
+      "cn": "确定要退出登录吗？",
       "en": "TODO: translate"
     },
-    "账号未激活": {
-      "cn": "账号未激活",
-      "en": "TODO: translate"
-    },
-    "请在退出登录后": {
-      "cn": "请在退出登录后",
-      "en": "TODO: translate"
-    },
-    "以重置密码的方式激活": {
-      "cn": "以重置密码的方式激活",
+    "账号未激活请在退出": {
+      "cn": "账号未激活，请在退出登录后，以重置密码的方式激活",
       "en": "TODO: translate"
     },
     "个人主页": {
@@ -1638,15 +1110,15 @@
       "en": "TODO: translate"
     },
     "修改信息": {
-      "cn": "修改信息",
-      "en": "TODO: translate"
-    },
-    "退出登录_2": {
-      "cn": "退出登录",
+      "cn": "修改信息...",
       "en": "TODO: translate"
     },
     "账户": {
       "cn": "账户",
+      "en": "TODO: translate"
+    },
+    "MAA_Copilo": {
+      "cn": "MAA Copilot 账户",
       "en": "TODO: translate"
     },
     "登录": {
@@ -1656,31 +1128,15 @@
     "注册": {
       "cn": "注册",
       "en": "TODO: translate"
-    },
-    "设置防止弹出框撑大": {
-      "cn": "设置防止弹出框撑大",
-      "en": "TODO: translate"
-    },
-    "超过": {
-      "cn": "超过",
-      "en": "TODO: translate"
-    },
-    "登录_1": {
-      "cn": "登录",
-      "en": "TODO: translate"
-    },
-    "注册_1": {
-      "cn": "注册",
-      "en": "TODO: translate"
     }
   },
   "components/viewer/OperationViewer": {
     "操作失败": {
-      "cn": "操作失败",
+      "cn": "操作失败：",
       "en": "TODO: translate"
     },
     "删除失败": {
-      "cn": "删除失败",
+      "cn": "删除失败：",
       "en": "TODO: translate"
     },
     "删除成功": {
@@ -1695,32 +1151,20 @@
       "cn": "关闭评论区",
       "en": "TODO: translate"
     },
-    "关闭评论区_1": {
-      "cn": "关闭评论区",
-      "en": "TODO: translate"
-    },
     "确定要关闭评论区吗": {
-      "cn": "确定要关闭评论区吗",
+      "cn": "确定要关闭评论区吗？",
       "en": "TODO: translate"
     },
     "已有的评论不会被删除": {
-      "cn": "已有的评论不会被删除",
-      "en": "TODO: translate"
-    },
-    "重新开启后会恢复显示": {
-      "cn": "重新开启后会恢复显示",
+      "cn": "已有的评论不会被删除，重新开启后会恢复显示",
       "en": "TODO: translate"
     },
     "开启评论区": {
       "cn": "开启评论区",
       "en": "TODO: translate"
     },
-    "开启评论区_1": {
-      "cn": "开启评论区",
-      "en": "TODO: translate"
-    },
     "确定要开启评论区吗": {
-      "cn": "确定要开启评论区吗",
+      "cn": "确定要开启评论区吗？",
       "en": "TODO: translate"
     },
     "删除": {
@@ -1731,12 +1175,8 @@
       "cn": "删除作业",
       "en": "TODO: translate"
     },
-    "删除作业_1": {
-      "cn": "删除作业",
-      "en": "TODO: translate"
-    },
     "确定要删除作业吗": {
-      "cn": "确定要删除作业吗",
+      "cn": "确定要删除作业吗？",
       "en": "TODO: translate"
     },
     "需要三次确认以删除": {
@@ -1744,15 +1184,19 @@
       "en": "TODO: translate"
     },
     "刷新作业失败": {
-      "cn": "刷新作业失败",
+      "cn": "刷新作业失败：",
       "en": "TODO: translate"
     },
     "提交评分失败": {
-      "cn": "提交评分失败",
+      "cn": "提交评分失败：",
       "en": "TODO: translate"
     },
     "作业": {
       "cn": "作业",
+      "en": "TODO: translate"
+    },
+    "MAA_Copilo": {
+      "cn": "MAA Copilot 作业",
       "en": "TODO: translate"
     },
     "管理": {
@@ -1761,6 +1205,10 @@
     },
     "下载原": {
       "cn": "下载原",
+      "en": "TODO: translate"
+    },
+    "下载原_1": {
+      "cn": "下载原 JSON",
       "en": "TODO: translate"
     },
     "复制神秘代码": {
@@ -1772,35 +1220,27 @@
       "en": "TODO: translate"
     },
     "渲染此作业时出现了问": {
-      "cn": "渲染此作业时出现了问题",
-      "en": "TODO: translate"
-    },
-    "是否是还未支持的作业": {
-      "cn": "是否是还未支持的作业类型",
+      "cn": "渲染此作业时出现了问题。是否是还未支持的作业类型？",
       "en": "TODO: translate"
     },
     "作业加载中": {
       "cn": "作业加载中",
       "en": "TODO: translate"
     },
-    "一": {
-      "cn": "一",
-      "en": "TODO: translate"
-    },
-    "二": {
-      "cn": "二",
-      "en": "TODO: translate"
-    },
-    "三": {
-      "cn": "三",
-      "en": "TODO: translate"
-    },
     "未知": {
       "cn": "未知",
       "en": "TODO: translate"
     },
+    "_name_": {
+      "cn": "{name}",
+      "en": "{name}"
+    },
     "技能": {
       "cn": "技能",
+      "en": "TODO: translate"
+    },
+    "{skillStr}": {
+      "cn": "{skillStr}技能",
       "en": "TODO: translate"
     },
     "私有": {
@@ -1827,23 +1267,11 @@
       "cn": "作者",
       "en": "TODO: translate"
     },
-    "渲染错误_1": {
-      "cn": "渲染错误",
-      "en": "TODO: translate"
-    },
     "渲染此作业的预览时出": {
-      "cn": "渲染此作业的预览时出现了问题",
-      "en": "TODO: translate"
-    },
-    "是否是还未支持的作业_1": {
-      "cn": "是否是还未支持的作业类型",
+      "cn": "渲染此作业的预览时出现了问题。是否是还未支持的作业类型？",
       "en": "TODO: translate"
     },
     "评论": {
-      "cn": "评论",
-      "en": "TODO: translate"
-    },
-    "评论_1": {
       "cn": "评论",
       "en": "TODO: translate"
     },
@@ -1863,16 +1291,8 @@
       "cn": "干员与干员组",
       "en": "TODO: translate"
     },
-    "干员组": {
-      "cn": "干员组",
-      "en": "TODO: translate"
-    },
-    "组内干员可以任选其一": {
-      "cn": "组内干员可以任选其一",
-      "en": "TODO: translate"
-    },
-    "自动编队时按最高练度": {
-      "cn": "自动编队时按最高练度来选择",
+    "干员组组内干员可以": {
+      "cn": "干员组：组内干员可以任选其一，自动编队时按最高练度来选择",
       "en": "TODO: translate"
     },
     "暂无干员": {
@@ -1882,6 +1302,10 @@
     "作业并未添加干员": {
       "cn": "作业并未添加干员",
       "en": "TODO: translate"
+    },
+    "_group_name_": {
+      "cn": "{group.name}",
+      "en": "{group.name}"
     },
     "无干员": {
       "cn": "无干员",
@@ -1902,7 +1326,7 @@
   },
   "components/viewer/OperationSetViewer": {
     "删除失败": {
-      "cn": "删除失败",
+      "cn": "删除失败：",
       "en": "TODO: translate"
     },
     "删除成功": {
@@ -1922,23 +1346,27 @@
       "en": "TODO: translate"
     },
     "确定要删除作业集吗": {
-      "cn": "确定要删除作业集吗",
+      "cn": "确定要删除作业集吗？",
       "en": "TODO: translate"
     },
     "编辑作业集": {
-      "cn": "编辑作业集",
+      "cn": "编辑作业集...",
       "en": "TODO: translate"
     },
     "删除作业集_1": {
-      "cn": "删除作业集",
+      "cn": "删除作业集...",
       "en": "TODO: translate"
     },
     "刷新作业集失败": {
-      "cn": "刷新作业集失败",
+      "cn": "刷新作业集失败：",
       "en": "TODO: translate"
     },
     "作业集": {
       "cn": "作业集",
+      "en": "TODO: translate"
+    },
+    "MAA_Copilo": {
+      "cn": "MAA Copilot 作业集",
       "en": "TODO: translate"
     },
     "管理": {
@@ -1954,16 +1382,16 @@
       "en": "TODO: translate"
     },
     "渲染此作业集时出现了": {
-      "cn": "渲染此作业集时出现了问题",
-      "en": "TODO: translate"
-    },
-    "是否是还未支持的作业": {
-      "cn": "是否是还未支持的作业集类型",
+      "cn": "渲染此作业集时出现了问题。是否是还未支持的作业集类型？",
       "en": "TODO: translate"
     },
     "作业集加载中": {
       "cn": "作业集加载中",
       "en": "TODO: translate"
+    },
+    "_operationset_n": {
+      "cn": "{operationSet.name}",
+      "en": "{operationSet.name}"
     },
     "发布于": {
       "cn": "发布于",
@@ -1971,10 +1399,6 @@
     },
     "作者": {
       "cn": "作者",
-      "en": "TODO: translate"
-    },
-    "渲染错误_1": {
-      "cn": "渲染错误",
       "en": "TODO: translate"
     },
     "渲染此作业集的预览时": {
@@ -1995,10 +1419,6 @@
       "cn": "评分不足",
       "en": "TODO: translate"
     },
-    "有": {
-      "cn": "有",
-      "en": "TODO: translate"
-    },
     "的人为本作业点了个赞": {
       "cn": "的人为本作业点了个赞",
       "en": "TODO: translate"
@@ -2014,7 +1434,7 @@
       "en": "TODO: translate"
     },
     "发表评论失败": {
-      "cn": "发表评论失败",
+      "cn": "发表评论失败：",
       "en": "TODO: translate"
     },
     "要回复的评论不存在": {
@@ -2040,15 +1460,15 @@
     "没有内容": {
       "cn": "没有内容",
       "en": "TODO: translate"
+    },
+    "{message_|": {
+      "cn": "{message || '*没有内容*'}",
+      "en": "TODO: translate"
     }
   },
   "components/viewer/comment/CommentArea": {
-    "还没有评论": {
-      "cn": "还没有评论",
-      "en": "TODO: translate"
-    },
-    "发一条评论鼓励作者吧": {
-      "cn": "发一条评论鼓励作者吧",
+    "还没有评论发一条评": {
+      "cn": "还没有评论，发一条评论鼓励作者吧！",
       "en": "TODO: translate"
     },
     "已经到底了哦": {
@@ -2063,6 +1483,10 @@
       "cn": "已删除",
       "en": "TODO: translate"
     },
+    "已删除_1": {
+      "cn": "（已删除）",
+      "en": "TODO: translate"
+    },
     "回复": {
       "cn": "回复",
       "en": "TODO: translate"
@@ -2075,16 +1499,20 @@
       "cn": "时保持高度一致",
       "en": "TODO: translate"
     },
+    "_uploader_": {
+      "cn": "{uploader}",
+      "en": "{uploader}"
+    },
     "置顶": {
       "cn": "置顶",
       "en": "TODO: translate"
     },
-    "评分失败": {
-      "cn": "评分失败",
-      "en": "TODO: translate"
+    "_message_": {
+      "cn": "{message}",
+      "en": "{message}"
     },
-    "回复_1": {
-      "cn": "回复",
+    "评分失败": {
+      "cn": "评分失败：",
       "en": "TODO: translate"
     },
     "删除": {
@@ -2095,36 +1523,24 @@
       "cn": "取消",
       "en": "TODO: translate"
     },
-    "删除_1": {
-      "cn": "删除",
-      "en": "TODO: translate"
-    },
     "删除评论": {
       "cn": "删除评论",
       "en": "TODO: translate"
     },
     "确定要删除评论吗": {
-      "cn": "确定要删除评论吗",
+      "cn": "确定要删除评论吗？",
       "en": "TODO: translate"
     },
     "所有子评论都会被删除": {
-      "cn": "所有子评论都会被删除",
-      "en": "TODO: translate"
-    },
-    "评分失败_1": {
-      "cn": "评分失败",
+      "cn": "所有子评论都会被删除。",
       "en": "TODO: translate"
     },
     "置顶失败": {
-      "cn": "置顶失败",
+      "cn": "置顶失败：",
       "en": "TODO: translate"
     },
     "取消置顶": {
       "cn": "取消置顶",
-      "en": "TODO: translate"
-    },
-    "置顶_1": {
-      "cn": "置顶",
       "en": "TODO: translate"
     }
   },
@@ -2146,11 +1562,11 @@
       "en": "TODO: translate"
     },
     "文件_1": {
-      "cn": "文件",
+      "cn": "文件：",
       "en": "TODO: translate"
     },
     "解析失败": {
-      "cn": "解析失败",
+      "cn": "解析失败：",
       "en": "TODO: translate"
     },
     "作业": {
@@ -2166,11 +1582,11 @@
       "en": "TODO: translate"
     },
     "自动修正失败": {
-      "cn": "自动修正失败",
+      "cn": "自动修正失败：",
       "en": "TODO: translate"
     },
     "验证失败": {
-      "cn": "验证失败",
+      "cn": "验证失败：",
       "en": "TODO: translate"
     }
   },
@@ -2181,20 +1597,12 @@
     }
   },
   "components/uploader/OperationUploader": {
-    "正在上传": {
-      "cn": "正在上传",
+    "正在上传请等待": {
+      "cn": "正在上传，请等待",
       "en": "TODO: translate"
     },
-    "请等待": {
-      "cn": "请等待",
-      "en": "TODO: translate"
-    },
-    "正在解析文件": {
-      "cn": "正在解析文件",
-      "en": "TODO: translate"
-    },
-    "请等待_1": {
-      "cn": "请等待",
+    "正在解析文件请等待": {
+      "cn": "正在解析文件，请等待",
       "en": "TODO: translate"
     },
     "请选择文件": {
@@ -2202,67 +1610,35 @@
       "en": "TODO: translate"
     },
     "文件列表中包含已上传": {
-      "cn": "文件列表中包含已上传的文件",
+      "cn": "文件列表中包含已上传的文件，请重新选择",
       "en": "TODO: translate"
     },
-    "请重新选择": {
-      "cn": "请重新选择",
+    "文件存在错误请修改": {
+      "cn": "文件存在错误，请修改内容",
       "en": "TODO: translate"
     },
-    "文件存在错误": {
-      "cn": "文件存在错误",
-      "en": "TODO: translate"
-    },
-    "请修改内容": {
-      "cn": "请修改内容",
-      "en": "TODO: translate"
-    },
-    "存在错误": {
-      "cn": "存在错误",
-      "en": "TODO: translate"
-    },
-    "请排查问题": {
-      "cn": "请排查问题",
+    "存在错误请排查问题": {
+      "cn": "存在错误，请排查问题",
       "en": "TODO: translate"
     },
     "上传失败": {
-      "cn": "上传失败",
+      "cn": "上传失败：",
       "en": "TODO: translate"
     },
-    "作业上传完成": {
-      "cn": "作业上传完成",
+    "作业上传完成成功": {
+      "cn": "作业上传完成：成功",
       "en": "TODO: translate"
     },
-    "成功": {
-      "cn": "成功",
-      "en": "TODO: translate"
-    },
-    "个": {
-      "cn": "个",
-      "en": "TODO: translate"
-    },
-    "失败": {
-      "cn": "失败",
-      "en": "TODO: translate"
-    },
-    "个_1": {
-      "cn": "个",
+    "个失败": {
+      "cn": "个，失败",
       "en": "TODO: translate"
     },
     "上传本地作业": {
       "cn": "上传本地作业",
       "en": "TODO: translate"
     },
-    "上传本地作业_1": {
-      "cn": "上传本地作业",
-      "en": "TODO: translate"
-    },
     "若需要在上传前进行编": {
-      "cn": "若需要在上传前进行编辑",
-      "en": "TODO: translate"
-    },
-    "请在作业编辑器的": {
-      "cn": "请在作业编辑器的",
+      "cn": "若需要在上传前进行编辑，请在作业编辑器的",
       "en": "TODO: translate"
     },
     "编辑": {
@@ -2278,15 +1654,11 @@
       "en": "TODO: translate"
     },
     "仅支持": {
-      "cn": "仅支持",
+      "cn": "仅支持 .",
       "en": "TODO: translate"
     },
-    "文件": {
-      "cn": "文件",
-      "en": "TODO: translate"
-    },
-    "可多选": {
-      "cn": "可多选",
+    "文件可多选": {
+      "cn": "文件，可多选",
       "en": "TODO: translate"
     },
     "浏览": {
@@ -2298,7 +1670,7 @@
       "en": "TODO: translate"
     },
     "选择文件": {
-      "cn": "选择文件",
+      "cn": "选择文件...",
       "en": "TODO: translate"
     },
     "上传": {
@@ -2308,6 +1680,10 @@
     "错误": {
       "cn": "错误",
       "en": "TODO: translate"
+    },
+    "_error_": {
+      "cn": "{error}",
+      "en": "{error}"
     },
     "文件详情": {
       "cn": "文件详情",
@@ -2335,9 +1711,9 @@
       "cn": "编辑作业集",
       "en": "TODO: translate"
     },
-    "创建作业集_1": {
-      "cn": "创建作业集",
-      "en": "TODO: translate"
+    "void_promise": {
+      "cn": "void | Promise",
+      "en": "void | Promise"
     },
     "还没有添加作业哦": {
       "cn": "还没有添加作业哦",
@@ -2379,64 +1755,16 @@
       "cn": "错误",
       "en": "TODO: translate"
     },
-    "这个组件做成受控组件": {
-      "cn": "这个组件做成受控组件的话",
-      "en": "TODO: translate"
-    },
-    "输入输出比较难处理": {
-      "cn": "输入输出比较难处理",
-      "en": "TODO: translate"
-    },
-    "所以做成非受控组件": {
-      "cn": "所以做成非受控组件",
-      "en": "TODO: translate"
-    },
-    "用": {
-      "cn": "用",
-      "en": "TODO: translate"
-    },
-    "获取值": {
-      "cn": "获取值",
-      "en": "TODO: translate"
-    },
-    "如果两个都是未知关卡": {
-      "cn": "如果两个都是未知关卡",
-      "en": "TODO: translate"
-    },
-    "可能是自定义关卡": {
-      "cn": "可能是自定义关卡",
-      "en": "TODO: translate"
-    },
-    "或者关卡列表加载失败": {
-      "cn": "或者关卡列表加载失败",
-      "en": "TODO: translate"
-    },
-    "直接按": {
-      "cn": "直接按",
-      "en": "TODO: translate"
-    },
-    "排序": {
-      "cn": "排序",
-      "en": "TODO: translate"
-    },
-    "未知关卡排最后面": {
-      "cn": "未知关卡排最后面",
-      "en": "TODO: translate"
-    },
     "按关卡": {
       "cn": "按关卡",
       "en": "TODO: translate"
     },
     "加载中": {
-      "cn": "加载中",
+      "cn": "加载中...",
       "en": "TODO: translate"
     },
-    "关卡加载失败": {
-      "cn": "关卡加载失败",
-      "en": "TODO: translate"
-    },
-    "使用备用排序": {
-      "cn": "使用备用排序",
+    "关卡加载失败使用备": {
+      "cn": "关卡加载失败，使用备用排序",
       "en": "TODO: translate"
     },
     "按标题": {
@@ -2447,16 +1775,16 @@
       "cn": "按",
       "en": "TODO: translate"
     },
+    "按_1": {
+      "cn": "按 ID",
+      "en": "TODO: translate"
+    },
     "一键排序": {
-      "cn": "一键排序",
+      "cn": "一键排序...",
       "en": "TODO: translate"
     },
     "反转列表": {
       "cn": "反转列表",
-      "en": "TODO: translate"
-    },
-    "错误_1": {
-      "cn": "错误",
       "en": "TODO: translate"
     }
   },
@@ -2497,6 +1825,10 @@
       "cn": "私有",
       "en": "TODO: translate"
     },
+    "_copilotids_len": {
+      "cn": "{copilotIds.length}",
+      "en": "{copilotIds.length}"
+    },
     "加载更多": {
       "cn": "加载更多",
       "en": "TODO: translate"
@@ -2506,7 +1838,7 @@
       "en": "TODO: translate"
     },
     "创建作业集": {
-      "cn": "创建作业集",
+      "cn": "创建作业集...",
       "en": "TODO: translate"
     },
     "确定": {
@@ -2519,9 +1851,17 @@
       "cn": "自定义关卡",
       "en": "TODO: translate"
     },
-    "自定义关卡_1": {
-      "cn": "自定义关卡",
-      "en": "TODO: translate"
+    "_catthree_": {
+      "cn": "{catThree}",
+      "en": "{catThree}"
+    },
+    "_cattwo_": {
+      "cn": "{catTwo}",
+      "en": "{catTwo}"
+    },
+    "_catone_": {
+      "cn": "{catOne}",
+      "en": "{catOne}"
     }
   },
   "components/entity/EDifficulty": {
@@ -2541,37 +1881,13 @@
       "cn": "本作业支持突袭难度作战",
       "en": "TODO: translate"
     },
-    "本作业并未支持难度支": {
-      "cn": "本作业并未支持难度支持标识",
-      "en": "TODO: translate"
+    "_tooltip_": {
+      "cn": "{tooltip}",
+      "en": "{tooltip}"
     },
-    "请自行根据作业的文字": {
-      "cn": "请自行根据作业的文字描述判断其所支持的作业难度等级",
-      "en": "TODO: translate"
-    },
-    "通常来说": {
-      "cn": "通常来说",
-      "en": "TODO: translate"
-    },
-    "未写明支持难度的作业": {
-      "cn": "未写明支持难度的作业均兼容突袭和普通难度作战",
-      "en": "TODO: translate"
-    },
-    "作业作者": {
-      "cn": "作业作者",
-      "en": "TODO: translate"
-    },
-    "若您为作业作者": {
-      "cn": "若您为作业作者",
-      "en": "TODO: translate"
-    },
-    "您可使用作业编辑器将": {
-      "cn": "您可使用作业编辑器将此作业编辑为对应的难度支持标识",
-      "en": "TODO: translate"
-    },
-    "未知难度": {
-      "cn": "未知难度",
-      "en": "TODO: translate"
+    "_children_": {
+      "cn": "{children}",
+      "en": "{children}"
     }
   },
   "components/editor/validation": {
@@ -2581,10 +1897,6 @@
     },
     "不能为空": {
       "cn": "不能为空",
-      "en": "TODO: translate"
-    },
-    "第": {
-      "cn": "第",
       "en": "TODO: translate"
     },
     "个动作是": {
@@ -2601,16 +1913,16 @@
     }
   },
   "components/editor/useAutosave": {
+    "_record": {
+      "cn": "= Record",
+      "en": "= Record"
+    },
     "每隔": {
       "cn": "每隔",
       "en": "TODO: translate"
     },
     "分钟自动保存编辑过的": {
-      "cn": "分钟自动保存编辑过的内容",
-      "en": "TODO: translate"
-    },
-    "记录上限为": {
-      "cn": "记录上限为",
+      "cn": "分钟自动保存编辑过的内容，记录上限为",
       "en": "TODO: translate"
     },
     "条": {
@@ -2618,7 +1930,7 @@
       "en": "TODO: translate"
     },
     "已自动保存": {
-      "cn": "已自动保存",
+      "cn": "已自动保存：",
       "en": "TODO: translate"
     },
     "未保存": {
@@ -2638,11 +1950,7 @@
       "en": "TODO: translate"
     },
     "当前的编辑内容将会被": {
-      "cn": "当前的编辑内容将会被覆盖",
-      "en": "TODO: translate"
-    },
-    "确定要恢复内容吗": {
-      "cn": "确定要恢复内容吗",
+      "cn": "当前的编辑内容将会被覆盖，确定要恢复内容吗？",
       "en": "TODO: translate"
     }
   },
@@ -2665,28 +1973,12 @@
       "cn": "键入以搜索",
       "en": "TODO: translate"
     },
-    "对于主线": {
-      "cn": "对于主线",
+    "对于主线活动关卡": {
+      "cn": "对于主线、活动关卡：键入关卡代号、关卡中文名或活动名称",
       "en": "TODO: translate"
     },
-    "活动关卡": {
-      "cn": "活动关卡",
-      "en": "TODO: translate"
-    },
-    "键入关卡代号": {
-      "cn": "键入关卡代号",
-      "en": "TODO: translate"
-    },
-    "关卡中文名或活动名称": {
-      "cn": "关卡中文名或活动名称",
-      "en": "TODO: translate"
-    },
-    "对于悖论模拟关卡": {
-      "cn": "对于悖论模拟关卡",
-      "en": "TODO: translate"
-    },
-    "键入关卡名或干员名": {
-      "cn": "键入关卡名或干员名",
+    "对于悖论模拟关卡键": {
+      "cn": "对于悖论模拟关卡：键入关卡名或干员名",
       "en": "TODO: translate"
     },
     "自定义": {
@@ -2699,10 +1991,6 @@
     },
     "使用自定义关卡名": {
       "cn": "使用自定义关卡名",
-      "en": "TODO: translate"
-    },
-    "关卡_1": {
-      "cn": "关卡",
       "en": "TODO: translate"
     },
     "在": {
@@ -2718,19 +2006,11 @@
       "en": "TODO: translate"
     },
     "在作业上显示的难度标": {
-      "cn": "在作业上显示的难度标识",
-      "en": "TODO: translate"
-    },
-    "如果不选择则不显示": {
-      "cn": "如果不选择则不显示",
+      "cn": "在作业上显示的难度标识，如果不选择则不显示",
       "en": "TODO: translate"
     },
     "该关卡没有突袭难度": {
-      "cn": "该关卡没有突袭难度",
-      "en": "TODO: translate"
-    },
-    "无需选择": {
-      "cn": "无需选择",
+      "cn": "该关卡没有突袭难度，无需选择",
       "en": "TODO: translate"
     },
     "普通": {
@@ -2748,6 +2028,10 @@
     "错误": {
       "cn": "错误",
       "en": "TODO: translate"
+    },
+    "_line_": {
+      "cn": "{line}",
+      "en": "{line}"
     },
     "作业元信息": {
       "cn": "作业元信息",
@@ -2769,24 +2053,16 @@
       "cn": "作业描述",
       "en": "TODO: translate"
     },
-    "如": {
-      "cn": "如",
-      "en": "TODO: translate"
-    },
-    "作者名": {
-      "cn": "作者名",
-      "en": "TODO: translate"
-    },
-    "参考的视频攻略链接": {
-      "cn": "参考的视频攻略链接",
+    "如作者名参考的视": {
+      "cn": "如：作者名、参考的视频攻略链接",
       "en": "TODO: translate"
     },
     "如有": {
       "cn": "如有",
       "en": "TODO: translate"
     },
-    "等": {
-      "cn": "等",
+    "如作者名参考的视_1": {
+      "cn": "如：作者名、参考的视频攻略链接（如有）等",
       "en": "TODO: translate"
     },
     "动作序列": {
@@ -2806,11 +2082,7 @@
       "en": "TODO: translate"
     },
     "如果拖拽速度过快可能": {
-      "cn": "如果拖拽速度过快可能会使动画出现问题",
-      "en": "TODO: translate"
-    },
-    "此时请点击": {
-      "cn": "此时请点击",
+      "cn": "如果拖拽速度过快可能会使动画出现问题，此时请点击",
       "en": "TODO: translate"
     },
     "刷新界面": {
@@ -2833,8 +2105,16 @@
       "cn": "发生错误",
       "en": "TODO: translate"
     },
+    "发生错误_1": {
+      "cn": "发生错误…",
+      "en": "TODO: translate"
+    },
     "未知错误": {
       "cn": "未知错误",
+      "en": "TODO: translate"
+    },
+    "{error?.me": {
+      "cn": "{error?.message || '未知错误'}",
       "en": "TODO: translate"
     }
   },
@@ -2848,7 +2128,7 @@
       "en": "TODO: translate"
     },
     "重置_1": {
-      "cn": "重置",
+      "cn": "重置{entityName}",
       "en": "TODO: translate"
     },
     "确定要重置": {
@@ -2856,11 +2136,15 @@
       "en": "TODO: translate"
     },
     "吗": {
-      "cn": "吗",
+      "cn": "吗？",
+      "en": "TODO: translate"
+    },
+    "确定要重置_1": {
+      "cn": "确定要重置{entityName}吗？",
       "en": "TODO: translate"
     },
     "重置_2": {
-      "cn": "重置",
+      "cn": "重置...",
       "en": "TODO: translate"
     }
   },
@@ -2870,18 +2154,35 @@
       "en": "TODO: translate"
     }
   },
-  "components/editor/EditorFieldProps": {},
-  "components/editor/DetailedSelect": {},
-  "components/editor/converter": {
-    "部署": {
-      "cn": "部署",
-      "en": "TODO: translate"
+  "components/editor/EditorFieldProps": {
+    "_arraypath": {
+      "cn": "| ArrayPath",
+      "en": "| ArrayPath"
     },
-    "上": {
-      "cn": "上",
-      "en": "TODO: translate"
+    "_fieldpath": {
+      "cn": "= FieldPath",
+      "en": "= FieldPath"
+    },
+    "extends_usecont": {
+      "cn": "extends UseControllerProps",
+      "en": "extends UseControllerProps"
     }
   },
+  "components/editor/DetailedSelect": {
+    "_action_header_": {
+      "cn": "{action.header}",
+      "en": "{action.header}"
+    },
+    "_action_title_": {
+      "cn": "{action.title}",
+      "en": "{action.title}"
+    },
+    "_action_descrip": {
+      "cn": "{action.description}",
+      "en": "{action.description}"
+    }
+  },
+  "components/editor/converter": {},
   "components/editor/CardOptions": {
     "复制": {
       "cn": "复制",
@@ -2892,10 +2193,6 @@
       "en": "TODO: translate"
     },
     "删除": {
-      "cn": "删除",
-      "en": "TODO: translate"
-    },
-    "删除_1": {
       "cn": "删除",
       "en": "TODO: translate"
     }
@@ -2925,6 +2222,10 @@
       "cn": "编辑",
       "en": "TODO: translate"
     },
+    "编辑_1": {
+      "cn": "编辑 JSON",
+      "en": "TODO: translate"
+    },
     "导入": {
       "cn": "导入",
       "en": "TODO: translate"
@@ -2945,6 +2246,10 @@
   "components/editor/source/SourceEditorButton": {
     "编辑": {
       "cn": "编辑",
+      "en": "TODO: translate"
+    },
+    "编辑_1": {
+      "cn": "编辑 JSON",
       "en": "TODO: translate"
     }
   },
@@ -2969,8 +2274,12 @@
       "cn": "将会实时更新表单",
       "en": "TODO: translate"
     },
+    "在此处编辑_1": {
+      "cn": "在此处编辑 JSON 将会实时更新表单",
+      "en": "TODO: translate"
+    },
     "验证": {
-      "cn": "验证",
+      "cn": "验证：",
       "en": "TODO: translate"
     },
     "语法错误": {
@@ -2986,15 +2295,11 @@
       "en": "TODO: translate"
     },
     "表单验证": {
-      "cn": "表单验证",
+      "cn": "表单验证：",
       "en": "TODO: translate"
     },
     "未通过": {
       "cn": "未通过",
-      "en": "TODO: translate"
-    },
-    "通过_1": {
-      "cn": "通过",
       "en": "TODO: translate"
     }
   },
@@ -3012,11 +2317,11 @@
       "en": "TODO: translate"
     },
     "加载失败": {
-      "cn": "加载失败",
+      "cn": "加载失败：",
       "en": "TODO: translate"
     },
     "导入神秘代码": {
-      "cn": "导入神秘代码",
+      "cn": "导入神秘代码...",
       "en": "TODO: translate"
     },
     "导入神秘代码_1": {
@@ -3031,6 +2336,10 @@
       "cn": "神秘代码可在本站的作业详情中获取",
       "en": "TODO: translate"
     },
+    "maa_": {
+      "cn": "maa://...",
+      "en": "maa://..."
+    },
     "导入": {
       "cn": "导入",
       "en": "TODO: translate"
@@ -3042,7 +2351,7 @@
       "en": "TODO: translate"
     },
     "导入本地文件": {
-      "cn": "导入本地文件",
+      "cn": "导入本地文件...",
       "en": "TODO: translate"
     }
   },
@@ -3065,12 +2374,8 @@
       "cn": "选择干员或直接使用搜索内容创建干员",
       "en": "TODO: translate"
     },
-    "键入干员名": {
-      "cn": "键入干员名",
-      "en": "TODO: translate"
-    },
-    "拼音或拼音首字母以从": {
-      "cn": "拼音或拼音首字母以从干员列表中搜索",
+    "键入干员名拼音或拼": {
+      "cn": "键入干员名、拼音或拼音首字母以从干员列表中搜索",
       "en": "TODO: translate"
     },
     "所属干员组": {
@@ -3078,11 +2383,7 @@
       "en": "TODO: translate"
     },
     "该干员的所属干员组": {
-      "cn": "该干员的所属干员组",
-      "en": "TODO: translate"
-    },
-    "如果不存在则会自动创": {
-      "cn": "如果不存在则会自动创建",
+      "cn": "该干员的所属干员组，如果不存在则会自动创建",
       "en": "TODO: translate"
     },
     "技能": {
@@ -3116,7 +2417,7 @@
       "en": "TODO: translate"
     },
     "什么是干员组": {
-      "cn": "什么是干员组",
+      "cn": "什么是干员组？",
       "en": "TODO: translate"
     },
     "编队时将选择组内练度": {
@@ -3127,36 +2428,20 @@
       "cn": "组内前后顺序并不影响判断",
       "en": "TODO: translate"
     },
+    "编队时将选择组内练度_1": {
+      "cn": "编队时将选择组内练度最高的一位干员；组内前后顺序并不影响判断",
+      "en": "TODO: translate"
+    },
     "干员组名": {
       "cn": "干员组名",
       "en": "TODO: translate"
     },
-    "任意名称": {
-      "cn": "任意名称",
-      "en": "TODO: translate"
-    },
-    "用于在动作中引用": {
-      "cn": "用于在动作中引用",
-      "en": "TODO: translate"
-    },
-    "例如": {
-      "cn": "例如",
-      "en": "TODO: translate"
-    },
-    "速狙": {
-      "cn": "速狙",
-      "en": "TODO: translate"
-    },
-    "群奶": {
-      "cn": "群奶",
+    "任意名称用于在动作": {
+      "cn": "任意名称，用于在动作中引用。例如：速狙、群奶",
       "en": "TODO: translate"
     },
     "请输入干员组名": {
       "cn": "请输入干员组名",
-      "en": "TODO: translate"
-    },
-    "干员组名_1": {
-      "cn": "干员组名",
       "en": "TODO: translate"
     },
     "添加": {
@@ -3184,6 +2469,10 @@
     "添加": {
       "cn": "添加",
       "en": "TODO: translate"
+    },
+    "_child_": {
+      "cn": "{child}",
+      "en": "{child}"
     }
   },
   "components/editor/operator/EditorPerformer": {
@@ -3204,7 +2493,7 @@
       "en": "TODO: translate"
     },
     "未加入干员": {
-      "cn": "未加入干员",
+      "cn": "未加入干员：",
       "en": "TODO: translate"
     },
     "干员": {
@@ -3268,15 +2557,7 @@
       "en": "TODO: translate"
     },
     "部署干员至指定位置": {
-      "cn": "部署干员至指定位置",
-      "en": "TODO: translate"
-    },
-    "当费用不够时": {
-      "cn": "当费用不够时",
-      "en": "TODO: translate"
-    },
-    "会一直等待到费用够": {
-      "cn": "会一直等待到费用够",
+      "cn": "部署干员至指定位置。当费用不够时，会一直等待到费用够",
       "en": "TODO: translate"
     },
     "除非": {
@@ -3303,56 +2584,16 @@
       "cn": "当技能",
       "en": "TODO: translate"
     },
-    "没转好时": {
-      "cn": "没转好时",
-      "en": "TODO: translate"
-    },
-    "一直等待到技能": {
-      "cn": "一直等待到技能",
-      "en": "TODO: translate"
-    },
-    "好": {
-      "cn": "好",
-      "en": "TODO: translate"
-    },
-    "除非_1": {
-      "cn": "除非",
+    "没转好时一直等待到": {
+      "cn": "没转好时，一直等待到技能",
       "en": "TODO: translate"
     },
     "切换技能用法": {
       "cn": "切换技能用法",
       "en": "TODO: translate"
     },
-    "切换干员技能用法": {
-      "cn": "切换干员技能用法",
-      "en": "TODO: translate"
-    },
-    "例如": {
-      "cn": "例如",
-      "en": "TODO: translate"
-    },
-    "刚下桃金娘": {
-      "cn": "刚下桃金娘",
-      "en": "TODO: translate"
-    },
-    "需要她帮忙打几个怪": {
-      "cn": "需要她帮忙打几个怪",
-      "en": "TODO: translate"
-    },
-    "但此时不能自动开技能": {
-      "cn": "但此时不能自动开技能否则会漏怪",
-      "en": "TODO: translate"
-    },
-    "等中后期平稳了才需要": {
-      "cn": "等中后期平稳了才需要她自动开技能",
-      "en": "TODO: translate"
-    },
-    "则可以在对应时刻后": {
-      "cn": "则可以在对应时刻后",
-      "en": "TODO: translate"
-    },
-    "将桃金娘的技能用法从": {
-      "cn": "将桃金娘的技能用法从",
+    "切换干员技能用法例": {
+      "cn": "切换干员技能用法。例如，刚下桃金娘、需要她帮忙打几个怪，但此时不能自动开技能否则会漏怪，等中后期平稳了才需要她自动开技能，则可以在对应时刻后，将桃金娘的技能用法从",
       "en": "TODO: translate"
     },
     "不自动使用": {
@@ -3376,11 +2617,7 @@
       "en": "TODO: translate"
     },
     "执行后切换至二倍速": {
-      "cn": "执行后切换至二倍速",
-      "en": "TODO: translate"
-    },
-    "再次执行切换至一倍速": {
-      "cn": "再次执行切换至一倍速",
+      "cn": "执行后切换至二倍速，再次执行切换至一倍速",
       "en": "TODO: translate"
     },
     "进入子弹时间": {
@@ -3388,11 +2625,7 @@
       "en": "TODO: translate"
     },
     "执行后将点击任意干员": {
-      "cn": "执行后将点击任意干员",
-      "en": "TODO: translate"
-    },
-    "进入": {
-      "cn": "进入",
+      "cn": "执行后将点击任意干员，进入",
       "en": "TODO: translate"
     },
     "速度状态": {
@@ -3407,28 +2640,12 @@
       "cn": "开始挂机",
       "en": "TODO: translate"
     },
-    "进入挂机模式": {
-      "cn": "进入挂机模式",
+    "进入挂机模式仅使用": {
+      "cn": "进入挂机模式。仅使用",
       "en": "TODO: translate"
     },
-    "仅使用": {
-      "cn": "仅使用",
-      "en": "TODO: translate"
-    },
-    "好了就用_1": {
-      "cn": "好了就用",
-      "en": "TODO: translate"
-    },
-    "的技能": {
-      "cn": "的技能",
-      "en": "TODO: translate"
-    },
-    "其他什么都不做": {
-      "cn": "其他什么都不做",
-      "en": "TODO: translate"
-    },
-    "直到战斗结束": {
-      "cn": "直到战斗结束",
+    "的技能其他什么都不": {
+      "cn": "的技能，其他什么都不做，直到战斗结束",
       "en": "TODO: translate"
     },
     "杂项": {
@@ -3440,11 +2657,7 @@
       "en": "TODO: translate"
     },
     "对作战没有实际作用": {
-      "cn": "对作战没有实际作用",
-      "en": "TODO: translate"
-    },
-    "仅用于输出描述内容": {
-      "cn": "仅用于输出描述内容",
+      "cn": "对作战没有实际作用，仅用于输出描述内容",
       "en": "TODO: translate"
     },
     "用来做字幕之类的": {
@@ -3457,25 +2670,21 @@
     }
   },
   "components/editor/operator/EditorOperatorItem": {
-    "一": {
-      "cn": "一",
-      "en": "TODO: translate"
-    },
-    "二": {
-      "cn": "二",
-      "en": "TODO: translate"
-    },
-    "三": {
-      "cn": "三",
-      "en": "TODO: translate"
-    },
     "未知": {
       "cn": "未知",
       "en": "TODO: translate"
     },
     "技能": {
-      "cn": "技能",
+      "cn": "技能：",
       "en": "TODO: translate"
+    },
+    "_operator_name_": {
+      "cn": "{operator.name}",
+      "en": "{operator.name}"
+    },
+    "_skill_": {
+      "cn": "{skill}",
+      "en": "{skill}"
     }
   },
   "components/editor/operator/EditorOperatorGroupSelect": {
@@ -3505,48 +2714,24 @@
       "cn": "请输入",
       "en": "TODO: translate"
     },
-    "名": {
-      "cn": "名",
-      "en": "TODO: translate"
-    },
-    "已选择的名称做": {
-      "cn": "已选择的名称做",
-      "en": "TODO: translate"
-    },
-    "已选择的": {
-      "cn": "已选择的",
-      "en": "TODO: translate"
-    },
-    "过滤出未加入干员列表": {
-      "cn": "过滤出未加入干员列表的干员",
-      "en": "TODO: translate"
-    },
-    "顺便插入已选择的列表": {
-      "cn": "顺便插入已选择的列表",
-      "en": "TODO: translate"
-    },
-    "干员组和已选择的放前": {
-      "cn": "干员组和已选择的放前面",
-      "en": "TODO: translate"
-    },
     "使用自定义": {
       "cn": "使用自定义",
       "en": "TODO: translate"
     },
-    "名_1": {
+    "名": {
       "cn": "名",
       "en": "TODO: translate"
     },
     "没有匹配的": {
       "cn": "没有匹配的",
       "en": "TODO: translate"
-    },
-    "名_2": {
-      "cn": "名",
-      "en": "TODO: translate"
     }
   },
   "components/editor/operator/EditorGroupItem": {
+    "_group_name_": {
+      "cn": "{group.name}",
+      "en": "{group.name}"
+    },
     "将干员拖拽到此处": {
       "cn": "将干员拖拽到此处",
       "en": "TODO: translate"
@@ -3571,11 +2756,7 @@
       "en": "TODO: translate"
     },
     "若不进行任何设置": {
-      "cn": "若不进行任何设置",
-      "en": "TODO: translate"
-    },
-    "将使用默认值": {
-      "cn": "将使用默认值",
+      "cn": "若不进行任何设置, 将使用默认值",
       "en": "TODO: translate"
     },
     "一技能": {
@@ -3587,20 +2768,16 @@
       "en": "TODO: translate"
     },
     "技能使用次数_1": {
-      "cn": "技能使用次数",
-      "en": "TODO: translate"
-    },
-    "次": {
-      "cn": "次",
+      "cn": "技能使用次数:",
       "en": "TODO: translate"
     },
     "未设置": {
       "cn": "未设置",
       "en": "TODO: translate"
     },
-    "技能_1": {
-      "cn": "技能",
-      "en": "TODO: translate"
+    "x_operator_skil": {
+      "cn": "x{operator.skillTimes}",
+      "en": "x{operator.skillTimes}"
     }
   },
   "components/editor/operator/sheet/SheetOperator": {
@@ -3675,6 +2852,10 @@
       "cn": "已经展示全部干员了",
       "en": "TODO: translate"
     },
+    "已经展示全部干员了_1": {
+      "cn": "已经展示全部干员了({dataTotal})",
+      "en": "TODO: translate"
+    },
     "收起": {
       "cn": "收起",
       "en": "TODO: translate"
@@ -3704,13 +2885,14 @@
     "此操作会覆盖已有干员": {
       "cn": "此操作会覆盖已有干员",
       "en": "TODO: translate"
-    },
-    "已被编组_1": {
-      "cn": "已被编组",
-      "en": "TODO: translate"
     }
   },
-  "components/editor/operator/sheet/sheetOperator/SheetOperatorFilterProvider": {},
+  "components/editor/operator/sheet/sheetOperator/SheetOperatorFilterProvider": {
+    "_t_dispatch": {
+      "cn": "= [T, Dispatch",
+      "en": "= [T, Dispatch"
+    }
+  },
   "components/editor/operator/sheet/sheetOperator/ProfClassificationWithFilters": {
     "全部": {
       "cn": "全部",
@@ -3724,13 +2906,13 @@
       "cn": "其它",
       "en": "TODO: translate"
     },
-    "全部_1": {
-      "cn": "全部",
-      "en": "TODO: translate"
-    },
     "已选择": {
       "cn": "已选择",
       "en": "TODO: translate"
+    },
+    "_name_": {
+      "cn": "{name}",
+      "en": "{name}"
     }
   },
   "components/editor/operator/sheet/sheetOperator/toolBox/OperatorRaritySelect": {
@@ -3749,10 +2931,6 @@
     "按从下至上降序排列": {
       "cn": "按从下至上降序排列",
       "en": "TODO: translate"
-    },
-    "确认": {
-      "cn": "确认",
-      "en": "TODO: translate"
     }
   },
   "components/editor/operator/sheet/sheetOperator/toolBox/OperatorMutipleSelect": {
@@ -3766,10 +2944,6 @@
     },
     "全选": {
       "cn": "全选",
-      "en": "TODO: translate"
-    },
-    "位干员_1": {
-      "cn": "位干员",
       "en": "TODO: translate"
     }
   },
@@ -3800,6 +2974,10 @@
       "cn": "其他分组干员",
       "en": "TODO: translate"
     },
+    "_othergroupname": {
+      "cn": "{otherGroupName}",
+      "en": "{otherGroupName}"
+    },
     "全选": {
       "cn": "全选",
       "en": "TODO: translate"
@@ -3809,11 +2987,7 @@
       "en": "TODO: translate"
     },
     "所有未保存的数据均会": {
-      "cn": "所有未保存的数据均会丢失",
-      "en": "TODO: translate"
-    },
-    "确认继续": {
-      "cn": "确认继续",
+      "cn": "所有未保存的数据均会丢失，确认继续？",
       "en": "TODO: translate"
     },
     "继续": {
@@ -3839,11 +3013,7 @@
       "en": "TODO: translate"
     },
     "当前干员组名修改未保": {
-      "cn": "当前干员组名修改未保存",
-      "en": "TODO: translate"
-    },
-    "是否放弃修改": {
-      "cn": "是否放弃修改",
+      "cn": "当前干员组名修改未保存，是否放弃修改？",
       "en": "TODO: translate"
     },
     "修改干员组名称": {
@@ -3897,14 +3067,10 @@
   "components/editor/floatingMap/FloatingMapContext": {},
   "components/editor/floatingMap/FloatingMap": {
     "等待地图连接": {
-      "cn": "等待地图连接",
+      "cn": "等待地图连接...",
       "en": "TODO: translate"
     },
     "未选择关卡": {
-      "cn": "未选择关卡",
-      "en": "TODO: translate"
-    },
-    "未选择关卡_1": {
       "cn": "未选择关卡",
       "en": "TODO: translate"
     },
@@ -3927,16 +3093,8 @@
   },
   "components/editor/floatingMap/connection": {},
   "components/editor/action/validation": {
-    "类型为技能": {
-      "cn": "类型为技能",
-      "en": "TODO: translate"
-    },
-    "撤退或子弹时间时": {
-      "cn": "撤退或子弹时间时",
-      "en": "TODO: translate"
-    },
-    "必须填写名称或位置其": {
-      "cn": "必须填写名称或位置其中一个",
+    "类型为技能撤退或子": {
+      "cn": "类型为技能、撤退或子弹时间时，必须填写名称或位置其中一个",
       "en": "TODO: translate"
     }
   },
@@ -3973,20 +3131,12 @@
       "cn": "坐标超出地图范围",
       "en": "TODO: translate"
     },
-    "坐标超出地图范围_1": {
-      "cn": "坐标超出地图范围",
-      "en": "TODO: translate"
-    },
     "干员位置": {
       "cn": "干员位置",
       "en": "TODO: translate"
     },
     "填完关卡名后开一局": {
-      "cn": "填完关卡名后开一局",
-      "en": "TODO: translate"
-    },
-    "会在目录下": {
-      "cn": "会在目录下",
+      "cn": "填完关卡名后开一局，会在目录下",
       "en": "TODO: translate"
     },
     "文件夹中生成地图坐标": {
@@ -4002,7 +3152,11 @@
       "en": "TODO: translate"
     },
     "坐标_1": {
-      "cn": "坐标",
+      "cn": "X 坐标",
+      "en": "TODO: translate"
+    },
+    "坐标_2": {
+      "cn": "Y 坐标",
       "en": "TODO: translate"
     }
   },
@@ -4021,22 +3175,19 @@
     }
   },
   "components/editor/action/EditorActionModule": {},
-  "components/editor/action/EditorActionItem": {},
+  "components/editor/action/EditorActionItem": {
+    "_type_title_": {
+      "cn": "{type.title}",
+      "en": "{type.title}"
+    }
+  },
   "components/editor/action/EditorActionExecPredicate": {
     "击杀数条件": {
       "cn": "击杀数条件",
       "en": "TODO: translate"
     },
     "如果没达到就一直等待": {
-      "cn": "如果没达到就一直等待",
-      "en": "TODO: translate"
-    },
-    "可选": {
-      "cn": "可选",
-      "en": "TODO: translate"
-    },
-    "默认为": {
-      "cn": "默认为",
+      "cn": "如果没达到就一直等待。可选，默认为",
       "en": "TODO: translate"
     },
     "直接执行": {
@@ -4051,48 +3202,8 @@
       "cn": "费用条件",
       "en": "TODO: translate"
     },
-    "如果没达到就一直等待_1": {
-      "cn": "如果没达到就一直等待",
-      "en": "TODO: translate"
-    },
-    "可选_1": {
-      "cn": "可选",
-      "en": "TODO: translate"
-    },
-    "默认为_1": {
-      "cn": "默认为",
-      "en": "TODO: translate"
-    },
-    "直接执行_1": {
-      "cn": "直接执行",
-      "en": "TODO: translate"
-    },
-    "费用受潜能等影响": {
-      "cn": "费用受潜能等影响",
-      "en": "TODO: translate"
-    },
-    "可能并不完全正确": {
-      "cn": "可能并不完全正确",
-      "en": "TODO: translate"
-    },
-    "仅适合对时间轴要求不": {
-      "cn": "仅适合对时间轴要求不严格的战斗",
-      "en": "TODO: translate"
-    },
-    "否则请使用下面的费用": {
-      "cn": "否则请使用下面的费用变化量条件",
-      "en": "TODO: translate"
-    },
-    "另外仅在费用是两位数": {
-      "cn": "另外仅在费用是两位数的时候识别的比较准",
-      "en": "TODO: translate"
-    },
-    "三位数的费用可能会识": {
-      "cn": "三位数的费用可能会识别错",
-      "en": "TODO: translate"
-    },
-    "不推荐使用": {
-      "cn": "不推荐使用",
+    "直接执行费用受潜能": {
+      "cn": "直接执行。费用受潜能等影响，可能并不完全正确，仅适合对时间轴要求不严格的战斗，否则请使用下面的费用变化量条件。另外仅在费用是两位数的时候识别的比较准，三位数的费用可能会识别错，不推荐使用。",
       "en": "TODO: translate"
     },
     "费用": {
@@ -4103,68 +3214,28 @@
       "cn": "费用变化量条件",
       "en": "TODO: translate"
     },
-    "如果没达到就一直等待_2": {
-      "cn": "如果没达到就一直等待",
+    "直接执行注意费用": {
+      "cn": "直接执行。注意：费用变化量是从开始执行本动作时开始计算的",
       "en": "TODO: translate"
     },
-    "可选_2": {
-      "cn": "可选",
+    "即使用前一个动作结": {
+      "cn": "即：使用前一个动作结束时的费用作为基准",
       "en": "TODO: translate"
     },
-    "默认为_2": {
-      "cn": "默认为",
-      "en": "TODO: translate"
-    },
-    "直接执行_2": {
-      "cn": "直接执行",
-      "en": "TODO: translate"
-    },
-    "注意": {
-      "cn": "注意",
-      "en": "TODO: translate"
-    },
-    "费用变化量是从开始执": {
-      "cn": "费用变化量是从开始执行本动作时开始计算的",
-      "en": "TODO: translate"
-    },
-    "即": {
-      "cn": "即",
-      "en": "TODO: translate"
-    },
-    "使用前一个动作结束时": {
-      "cn": "使用前一个动作结束时的费用作为基准",
-      "en": "TODO: translate"
-    },
-    "支持负数": {
-      "cn": "支持负数",
-      "en": "TODO: translate"
-    },
-    "即费用变少了": {
-      "cn": "即费用变少了",
+    "支持负数即费用变少": {
+      "cn": "支持负数，即费用变少了",
       "en": "TODO: translate"
     },
     "例如": {
       "cn": "例如",
       "en": "TODO: translate"
     },
-    "孑": {
-      "cn": "孑",
-      "en": "TODO: translate"
-    },
     "等吸费干员使得费用变": {
       "cn": "等吸费干员使得费用变少了",
       "en": "TODO: translate"
     },
-    "另外仅在费用是两位数_1": {
-      "cn": "另外仅在费用是两位数的时候识别的比较准",
-      "en": "TODO: translate"
-    },
-    "三位数的费用可能会识_1": {
-      "cn": "三位数的费用可能会识别错",
-      "en": "TODO: translate"
-    },
-    "不推荐使用_1": {
-      "cn": "不推荐使用",
+    "另外仅在费用是两位数": {
+      "cn": "另外仅在费用是两位数的时候识别的比较准，三位数的费用可能会识别错，不推荐使用。",
       "en": "TODO: translate"
     },
     "费用变化量": {
@@ -4175,16 +3246,12 @@
       "cn": "中干员数量条件",
       "en": "TODO: translate"
     },
-    "如果没达到就一直等待_3": {
-      "cn": "如果没达到就一直等待",
+    "中干员数量条件_1": {
+      "cn": "CD 中干员数量条件",
       "en": "TODO: translate"
     },
-    "可选_3": {
-      "cn": "可选",
-      "en": "TODO: translate"
-    },
-    "默认": {
-      "cn": "默认",
+    "如果没达到就一直等待_1": {
+      "cn": "如果没达到就一直等待。可选，默认",
       "en": "TODO: translate"
     },
     "不识别": {
@@ -4208,6 +3275,14 @@
     "中打印描述时的颜色": {
       "cn": "中打印描述时的颜色",
       "en": "TODO: translate"
+    },
+    "_color_title_": {
+      "cn": "{color?.title}",
+      "en": "{color?.title}"
+    },
+    "_selected_titl": {
+      "cn": "{selected?.title}",
+      "en": "{selected?.title}"
     }
   },
   "components/editor/action/EditorActionDistance": {
@@ -4228,7 +3303,11 @@
       "en": "TODO: translate"
     },
     "距离_1": {
-      "cn": "距离",
+      "cn": "X 距离",
+      "en": "TODO: translate"
+    },
+    "距离_2": {
+      "cn": "Y 距离",
       "en": "TODO: translate"
     }
   },
@@ -4237,196 +3316,20 @@
       "cn": "前置延时",
       "en": "TODO: translate"
     },
-    "可选": {
-      "cn": "可选",
-      "en": "TODO: translate"
-    },
-    "默认为": {
-      "cn": "默认为",
+    "可选默认为": {
+      "cn": "可选，默认为",
       "en": "TODO: translate"
     },
     "单位毫秒": {
       "cn": "单位毫秒",
       "en": "TODO: translate"
     },
-    "前置延时_1": {
-      "cn": "前置延时",
-      "en": "TODO: translate"
-    },
     "后置延时": {
-      "cn": "后置延时",
-      "en": "TODO: translate"
-    },
-    "可选_1": {
-      "cn": "可选",
-      "en": "TODO: translate"
-    },
-    "默认为_1": {
-      "cn": "默认为",
-      "en": "TODO: translate"
-    },
-    "单位毫秒_1": {
-      "cn": "单位毫秒",
-      "en": "TODO: translate"
-    },
-    "后置延时_1": {
       "cn": "后置延时",
       "en": "TODO: translate"
     }
   },
   "components/editor/action/EditorActionAdd": {
-    "修复切换": {
-      "cn": "修复切换",
-      "en": "TODO: translate"
-    },
-    "的时候": {
-      "cn": "的时候",
-      "en": "TODO: translate"
-    },
-    "数据丢失的问题": {
-      "cn": "数据丢失的问题",
-      "en": "TODO: translate"
-    },
-    "原因": {
-      "cn": "原因",
-      "en": "TODO: translate"
-    },
-    "因为切换": {
-      "cn": "因为切换",
-      "en": "TODO: translate"
-    },
-    "的时候会触发页面绘制": {
-      "cn": "的时候会触发页面绘制",
-      "en": "TODO: translate"
-    },
-    "导致": {
-      "cn": "导致",
-      "en": "TODO: translate"
-    },
-    "和对应的": {
-      "cn": "和对应的",
-      "en": "TODO: translate"
-    },
-    "组件丢失绑定": {
-      "cn": "组件丢失绑定",
-      "en": "TODO: translate"
-    },
-    "当重置时没办法正常清": {
-      "cn": "当重置时没办法正常清空",
-      "en": "TODO: translate"
-    },
-    "组件内部的值": {
-      "cn": "组件内部的值",
-      "en": "TODO: translate"
-    },
-    "放入": {
-      "cn": "放入",
-      "en": "TODO: translate"
-    },
-    "中": {
-      "cn": "中",
-      "en": "TODO: translate"
-    },
-    "延迟赋值": {
-      "cn": "延迟赋值",
-      "en": "TODO: translate"
-    },
-    "就可以避免丢失绑定的": {
-      "cn": "就可以避免丢失绑定的问题",
-      "en": "TODO: translate"
-    },
-    "修复先点击": {
-      "cn": "修复先点击",
-      "en": "TODO: translate"
-    },
-    "部署": {
-      "cn": "部署",
-      "en": "TODO: translate"
-    },
-    "动作的编辑按钮": {
-      "cn": "动作的编辑按钮",
-      "en": "TODO: translate"
-    },
-    "再连续点击": {
-      "cn": "再连续点击",
-      "en": "TODO: translate"
-    },
-    "二倍速": {
-      "cn": "二倍速",
-      "en": "TODO: translate"
-    },
-    "动作的编辑按钮_1": {
-      "cn": "动作的编辑按钮",
-      "en": "TODO: translate"
-    },
-    "部署_1": {
-      "cn": "部署",
-      "en": "TODO: translate"
-    },
-    "的数据丢失": {
-      "cn": "的数据丢失",
-      "en": "TODO: translate"
-    },
-    "原因_1": {
-      "cn": "原因",
-      "en": "TODO: translate"
-    },
-    "通过": {
-      "cn": "通过",
-      "en": "TODO: translate"
-    },
-    "方式赋值给": {
-      "cn": "方式赋值给",
-      "en": "TODO: translate"
-    },
-    "相当于将": {
-      "cn": "相当于将",
-      "en": "TODO: translate"
-    },
-    "变量跟": {
-      "cn": "变量跟",
-      "en": "TODO: translate"
-    },
-    "绑定": {
-      "cn": "绑定",
-      "en": "TODO: translate"
-    },
-    "当再通过": {
-      "cn": "当再通过",
-      "en": "TODO: translate"
-    },
-    "后": {
-      "cn": "后",
-      "en": "TODO: translate"
-    },
-    "会将": {
-      "cn": "会将",
-      "en": "TODO: translate"
-    },
-    "的值置为": {
-      "cn": "的值置为",
-      "en": "TODO: translate"
-    },
-    "通过_1": {
-      "cn": "通过",
-      "en": "TODO: translate"
-    },
-    "的方式": {
-      "cn": "的方式",
-      "en": "TODO: translate"
-    },
-    "不会将": {
-      "cn": "不会将",
-      "en": "TODO: translate"
-    },
-    "和": {
-      "cn": "和",
-      "en": "TODO: translate"
-    },
-    "绑定_1": {
-      "cn": "绑定",
-      "en": "TODO: translate"
-    },
     "添加": {
       "cn": "添加",
       "en": "TODO: translate"
@@ -4439,8 +3342,8 @@
       "cn": "动作",
       "en": "TODO: translate"
     },
-    "添加_1": {
-      "cn": "添加",
+    "{isNew_?_'": {
+      "cn": "{isNew ? '添加' : '编辑'}动作",
       "en": "TODO: translate"
     },
     "保存": {
@@ -4459,24 +3362,12 @@
       "cn": "干员或干员组名",
       "en": "TODO: translate"
     },
-    "选择干员": {
-      "cn": "选择干员",
+    "选择干员使用干员名": {
+      "cn": "选择干员、使用干员名、或使用干员组名引用",
       "en": "TODO: translate"
     },
-    "使用干员名": {
-      "cn": "使用干员名",
-      "en": "TODO: translate"
-    },
-    "或使用干员组名引用": {
-      "cn": "或使用干员组名引用",
-      "en": "TODO: translate"
-    },
-    "键入干员名": {
-      "cn": "键入干员名",
-      "en": "TODO: translate"
-    },
-    "拼音或拼音首字母以搜": {
-      "cn": "拼音或拼音首字母以搜索干员列表",
+    "键入干员名拼音或拼": {
+      "cn": "键入干员名、拼音或拼音首字母以搜索干员列表",
       "en": "TODO: translate"
     },
     "键入干员组名以引用干": {
@@ -4496,11 +3387,7 @@
       "en": "TODO: translate"
     },
     "移动距离一般不需要修": {
-      "cn": "移动距离一般不需要修改",
-      "en": "TODO: translate"
-    },
-    "只填写前置延迟": {
-      "cn": "只填写前置延迟",
+      "cn": "移动距离一般不需要修改，只填写前置延迟",
       "en": "TODO: translate"
     },
     "和击杀数条件即可": {
@@ -4519,28 +3406,8 @@
       "cn": "描述",
       "en": "TODO: translate"
     },
-    "描述_1": {
-      "cn": "描述",
-      "en": "TODO: translate"
-    },
-    "可选": {
-      "cn": "可选",
-      "en": "TODO: translate"
-    },
-    "会显示在界面上": {
-      "cn": "会显示在界面上",
-      "en": "TODO: translate"
-    },
-    "没有实际作用": {
-      "cn": "没有实际作用",
-      "en": "TODO: translate"
-    },
-    "添加_2": {
-      "cn": "添加",
-      "en": "TODO: translate"
-    },
-    "保存_1": {
-      "cn": "保存",
+    "描述可选会显示在": {
+      "cn": "描述，可选。会显示在界面上，没有实际作用",
       "en": "TODO: translate"
     },
     "取消编辑": {
@@ -4549,34 +3416,6 @@
     }
   },
   "components/drawer/OperationDrawer": {
-    "如果是通过鼠标点击外": {
-      "cn": "如果是通过鼠标点击外面来触发的关闭",
-      "en": "TODO: translate"
-    },
-    "那么只在左键点击时关": {
-      "cn": "那么只在左键点击时关闭",
-      "en": "TODO: translate"
-    },
-    "避免用后退键点击时关": {
-      "cn": "避免用后退键点击时关闭后又立即打开的问题",
-      "en": "TODO: translate"
-    },
-    "原因是后退键会先触发": {
-      "cn": "原因是后退键会先触发关闭",
-      "en": "TODO: translate"
-    },
-    "然后触发浏览器的后退": {
-      "cn": "然后触发浏览器的后退操作",
-      "en": "TODO: translate"
-    },
-    "使页面回到上一个": {
-      "cn": "使页面回到上一个",
-      "en": "TODO: translate"
-    },
-    "导致又触发打开": {
-      "cn": "导致又触发打开",
-      "en": "TODO: translate"
-    },
     "嵌套": {
       "cn": "嵌套",
       "en": "TODO: translate"
@@ -4588,12 +3427,16 @@
   },
   "components/drawer/NavAside": {
     "创建作业集": {
-      "cn": "创建作业集",
+      "cn": "创建作业集...",
       "en": "TODO: translate"
     },
     "公告": {
       "cn": "公告",
       "en": "TODO: translate"
+    },
+    "_link_label_": {
+      "cn": "{link.label}",
+      "en": "{link.label}"
     }
   },
   "components/drawer/DrawerLayout": {},
@@ -4602,8 +3445,12 @@
       "cn": "公告",
       "en": "TODO: translate"
     },
+    "_title_": {
+      "cn": "{title}",
+      "en": "{title}"
+    },
     "公告加载失败": {
-      "cn": "公告加载失败",
+      "cn": "公告加载失败：",
       "en": "TODO: translate"
     }
   },
@@ -4622,12 +3469,8 @@
     }
   },
   "components/account/ResetPasswordDialog": {
-    "重置成功": {
-      "cn": "重置成功",
-      "en": "TODO: translate"
-    },
-    "请重新登录": {
-      "cn": "请重新登录",
+    "重置成功请重新登录": {
+      "cn": "重置成功，请重新登录",
       "en": "TODO: translate"
     },
     "重置密码": {
@@ -4655,7 +3498,7 @@
       "en": "TODO: translate"
     },
     "获取验证码失败": {
-      "cn": "获取验证码失败",
+      "cn": "获取验证码失败：",
       "en": "TODO: translate"
     },
     "验证码已发送至您的邮": {
@@ -4673,7 +3516,7 @@
   },
   "components/account/RegisterPanel": {
     "注册失败": {
-      "cn": "注册失败",
+      "cn": "注册失败：",
       "en": "TODO: translate"
     },
     "注册成功": {
@@ -4681,15 +3524,11 @@
       "en": "TODO: translate"
     },
     "邮箱输入为空或格式错": {
-      "cn": "邮箱输入为空或格式错误",
-      "en": "TODO: translate"
-    },
-    "请重新输入": {
-      "cn": "请重新输入",
+      "cn": "邮箱输入为空或格式错误,请重新输入",
       "en": "TODO: translate"
     },
     "发送失败": {
-      "cn": "发送失败",
+      "cn": "发送失败：",
       "en": "TODO: translate"
     },
     "邮件发送成功": {
@@ -4711,23 +3550,19 @@
   },
   "components/account/LoginPanel": {
     "登录失败": {
-      "cn": "登录失败",
+      "cn": "登录失败：",
       "en": "TODO: translate"
     },
-    "登录成功": {
-      "cn": "登录成功",
-      "en": "TODO: translate"
-    },
-    "欢迎回来": {
-      "cn": "欢迎回来",
+    "登录成功欢迎回来": {
+      "cn": "登录成功。欢迎回来，",
       "en": "TODO: translate"
     },
     "忘记密码": {
-      "cn": "忘记密码",
+      "cn": "忘记密码...",
       "en": "TODO: translate"
     },
     "还没有账号": {
-      "cn": "还没有账号",
+      "cn": "还没有账号？",
       "en": "TODO: translate"
     },
     "前往注册": {
@@ -4768,14 +3603,6 @@
       "cn": "两次输入的密码不一致",
       "en": "TODO: translate"
     },
-    "更新成功_1": {
-      "cn": "更新成功",
-      "en": "TODO: translate"
-    },
-    "错误_1": {
-      "cn": "错误",
-      "en": "TODO: translate"
-    },
     "当前密码": {
       "cn": "当前密码",
       "en": "TODO: translate"
@@ -4789,15 +3616,15 @@
       "en": "TODO: translate"
     },
     "忘记密码": {
-      "cn": "忘记密码",
-      "en": "TODO: translate"
-    },
-    "保存_1": {
-      "cn": "保存",
+      "cn": "忘记密码...",
       "en": "TODO: translate"
     }
   },
   "components/account/AuthFormShared": {
+    "123456": {
+      "cn": "123456",
+      "en": "123456"
+    },
     "邮箱为必填项": {
       "cn": "邮箱为必填项",
       "en": "TODO: translate"
@@ -4814,16 +3641,8 @@
       "cn": "密码长度不能小于",
       "en": "TODO: translate"
     },
-    "位": {
-      "cn": "位",
-      "en": "TODO: translate"
-    },
     "密码长度不能大于": {
       "cn": "密码长度不能大于",
-      "en": "TODO: translate"
-    },
-    "位_1": {
-      "cn": "位",
       "en": "TODO: translate"
     },
     "用户名为必填项": {
@@ -4834,16 +3653,8 @@
       "cn": "用户名长度不能小于",
       "en": "TODO: translate"
     },
-    "位_2": {
-      "cn": "位",
-      "en": "TODO: translate"
-    },
     "用户名长度不能大于": {
       "cn": "用户名长度不能大于",
-      "en": "TODO: translate"
-    },
-    "位_3": {
-      "cn": "位",
       "en": "TODO: translate"
     },
     "邮箱验证码为必填项": {
@@ -4854,21 +3665,17 @@
       "cn": "邮箱验证码长度为",
       "en": "TODO: translate"
     },
-    "位_4": {
-      "cn": "位",
-      "en": "TODO: translate"
-    },
-    "邮箱验证码长度为_1": {
-      "cn": "邮箱验证码长度为",
-      "en": "TODO: translate"
-    },
-    "位_5": {
-      "cn": "位",
-      "en": "TODO: translate"
+    "_pick": {
+      "cn": "= Pick",
+      "en": "= Pick"
     },
     "邮箱": {
       "cn": "邮箱",
       "en": "TODO: translate"
+    },
+    "user_example_co": {
+      "cn": "user@example.com",
+      "en": "user@example.com"
     },
     "将通过发送邮件输入验": {
       "cn": "将通过发送邮件输入验证码确认",
@@ -4886,73 +3693,21 @@
       "cn": "密码",
       "en": "TODO: translate"
     },
+    "_": {
+      "cn": "· · · · · · · ·",
+      "en": "· · · · · · · ·"
+    },
     "用户名": {
       "cn": "用户名",
       "en": "TODO: translate"
+    },
+    "pallas_bot": {
+      "cn": "Pallas-Bot",
+      "en": "Pallas-Bot"
     }
   },
   "apis/user": {},
   "apis/operation": {
-    "用户输入神秘代码时": {
-      "cn": "用户输入神秘代码时",
-      "en": "TODO: translate"
-    },
-    "只传这个": {
-      "cn": "只传这个",
-      "en": "TODO: translate"
-    },
-    "其他参数都不传": {
-      "cn": "其他参数都不传",
-      "en": "TODO: translate"
-    },
-    "如果指定了": {
-      "cn": "如果指定了",
-      "en": "TODO: translate"
-    },
-    "列表": {
-      "cn": "列表",
-      "en": "TODO: translate"
-    },
-    "但是列表为空": {
-      "cn": "但是列表为空",
-      "en": "TODO: translate"
-    },
-    "就直接返回空数据": {
-      "cn": "就直接返回空数据",
-      "en": "TODO: translate"
-    },
-    "不然要是直接传空列表": {
-      "cn": "不然要是直接传空列表",
-      "en": "TODO: translate"
-    },
-    "就相当于没有这个参数": {
-      "cn": "就相当于没有这个参数",
-      "en": "TODO: translate"
-    },
-    "会导致后端返回所有数": {
-      "cn": "会导致后端返回所有数据",
-      "en": "TODO: translate"
-    },
-    "如果": {
-      "cn": "如果",
-      "en": "TODO: translate"
-    },
-    "从第二页开始可能会有": {
-      "cn": "从第二页开始可能会有重复数据",
-      "en": "TODO: translate"
-    },
-    "需要去重": {
-      "cn": "需要去重",
-      "en": "TODO: translate"
-    },
-    "按": {
-      "cn": "按",
-      "en": "TODO: translate"
-    },
-    "的顺序排序": {
-      "cn": "的顺序排序",
-      "en": "TODO: translate"
-    },
     "如果有": {
       "cn": "如果有",
       "en": "TODO: translate"
@@ -4971,25 +3726,12 @@
       "cn": "即可获取到私有的作业集",
       "en": "TODO: translate"
     },
-    "如果有_1": {
-      "cn": "如果有",
-      "en": "TODO: translate"
-    },
     "会用来获取用户是否点": {
       "cn": "会用来获取用户是否点赞",
       "en": "TODO: translate"
     }
   },
-  "apis/level": {
-    "肉鸽": {
-      "cn": "肉鸽",
-      "en": "TODO: translate"
-    },
-    "保全派驻": {
-      "cn": "保全派驻",
-      "en": "TODO: translate"
-    }
-  },
+  "apis/level": {},
   "apis/comment": {},
   "apis/auth": {},
   "apis/announcement": {
