@@ -2,6 +2,7 @@ import { Card } from '@blueprintjs/core'
 
 import dayjs from 'dayjs'
 import { ComponentType } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { CardTitle } from 'components/CardTitle'
 import { withGlobalErrorBoundary } from 'components/GlobalErrorBoundary'
@@ -12,11 +13,13 @@ import { OperationSetEditorLauncher } from 'components/operation-set/OperationSe
 import { OperationUploaderLauncher } from 'components/uploader/OperationUploaderLauncher'
 
 import { AnnPanel } from '../components/announcement/AnnPanel'
-import { SOCIAL_LINKS } from '../links'
+import { useLinks } from 'hooks/useLinks'
 import { useCurrentSize } from '../utils/useCurrenSize'
 
 export const IndexPage: ComponentType = withGlobalErrorBoundary(() => {
   const { isMD } = useCurrentSize()
+  const { t } = useTranslation()
+  const { SOCIAL_LINKS } = useLinks()
   return (
     <div className="flex flex-col md:flex-row px-4 mt-4 md:px-8 md:mt-8 max-w-[96rem] mx-auto">
       {isMD && <Ad />}
@@ -41,6 +44,7 @@ export const IndexPage: ComponentType = withGlobalErrorBoundary(() => {
             <div className="flex flex-wrap leading-relaxed mb-4 section-social-links">
               {SOCIAL_LINKS.map((link) => (
                 <a
+                  key={link.href}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"

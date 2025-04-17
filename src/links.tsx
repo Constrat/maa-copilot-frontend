@@ -1,70 +1,66 @@
-import { Icon as BlueprintIcon, IconName } from '@blueprintjs/core'
 import simpleIconsGitHub from '@iconify/icons-simple-icons/github'
 import simpleIconsQQ from '@iconify/icons-simple-icons/tencentqq'
-import { Icon as IconifyIcon } from '@iconify/react'
 
-export const NAV_LINKS: {
-  to: string
-  label: string
-  icon: IconName
-}[] = [
+// Keep only the static configuration data
+export const NAV_CONFIG = [
   {
     to: '/',
-    label: 'links.首页',
+    labelKey: 'links.首页',
     icon: 'home',
   },
   {
     to: '/create',
-    label: '创建作业',
+    labelKey: 'links.创建作业',
     icon: 'add',
   },
   {
     to: '/about',
-    label: '关于',
+    labelKey: 'links.关于',
     icon: 'info-sign',
   },
 ]
 
-export const SOCIAL_LINKS = [
+export const SOCIAL_CONFIG = [
   {
-    icon: <BlueprintIcon icon="globe" className="mr-2" size={12} />,
+    iconType: 'blueprint',
+    iconName: 'globe',
     href: 'https://maa.plus',
-    label: 'MAA 官网',
+    labelKey: 'links.官网',
   },
   {
-    icon: <BlueprintIcon icon="edit" className="mr-2" size={12} />,
+    iconType: 'blueprint',
+    iconName: 'edit',
     href: 'https://github.com/MaaAssistantArknights/maa-copilot-frontend/issues/new/choose',
-    label: '意见与反馈',
+    labelKey: 'links.意见与反馈',
   },
   {
-    icon: (
-      <IconifyIcon icon={simpleIconsGitHub} className="mr-2" fontSize="12px" />
-    ),
+    iconType: 'iconify',
+    iconSource: simpleIconsGitHub,
     href: 'https://github.com/MaaAssistantArknights/MaaAssistantArknights',
-    label: 'MAA GitHub Repo',
+    labelKey: 'maa_github_repo', // English text can have a key too
   },
   {
-    icon: (
-      <IconifyIcon icon={simpleIconsGitHub} className="mr-2" fontSize="12px" />
-    ),
+    iconType: 'iconify',
+    iconSource: simpleIconsGitHub,
     href: 'https://github.com/MaaAssistantArknights/maa-copilot-frontend',
-    label: '前端 GitHub Repo',
+    labelKey: 'links.前端',
   },
   {
-    icon: (
-      <IconifyIcon icon={simpleIconsGitHub} className="mr-2" fontSize="12px" />
-    ),
+    iconType: 'iconify',
+    iconSource: simpleIconsGitHub,
     href: 'https://github.com/MaaAssistantArknights/MaaBackendCenter',
-    label: '后端 GitHub Repo',
+    labelKey: 'links.后端',
   },
   {
-    icon: <IconifyIcon icon={simpleIconsQQ} className="mr-2" fontSize="12px" />,
+    iconType: 'iconify',
+    iconSource: simpleIconsQQ,
     href: 'https://jq.qq.com/?_wv=1027&k=ElimpMzQ',
-    label: '作业制作者交流群：1169188429',
+    labelKey: 'links.作业制作者交流群',
   },
   {
-    icon: <IconifyIcon icon={simpleIconsQQ} className="mr-2" fontSize="12px" />,
+    iconType: 'iconify',
+    iconSource: simpleIconsQQ,
     href: 'https://ota.maa.plus/MaaAssistantArknights/api/qqgroup/index.html',
-    label: '作业分享群',
+    labelKey: 'links.作业分享群',
   },
 ]

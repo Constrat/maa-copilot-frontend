@@ -1,46 +1,48 @@
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
-import LanguageDetector from 'i18next-browser-languagedetector'
-import translations from './translations.json'
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import translations from './translations.json';
 
-const transformToI18Next = (data: any, language: string) => {
-  const result: any = {}
+// Flatten the nested translation structure to work with keys like "links.首页"
+const flattenTranslations = (obj, lang) => {
+  const result = {};
 
-  Object.entries(data).forEach(([category, items]: [string, any]) => {
-    if (!result[category]) {
-      result[category] = {}
-    }
+  const flatten = (current, prefix = '') => {
+    Object.entries(current).forEach(([key, value]) => {
+      const newKey = prefix ? `${prefix}.${key}` : key;
 
-    Object.entries(items).forEach(([key, values]: [string, any]) => {
-      if (values[language]) {
-        result[category][key] = values[language]
+      if (value && typeof value === 'object' && 'cn' in value && 'en' in value) {
+        // This is a translation entry, use it directly
+        result[newKey] = value[lang];
+      } else if (value && typeof value === 'object') {
+        // Continue flattening
+        flatten(value, newKey);
       }
-    })
-  })
+    });
+  };
 
-  return result
-}
-
-const resources = {
-  en: {
-    translation: transformToI18Next(translations, 'en')
-  },
-  cn: {
-    translation: transformToI18Next(translations, 'cn')
-  }
-}
+  flatten(obj);
+  return result;
+};
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources,
-    fallbackLng: 'en',
+    resources: {
+      cn: {
+        translation: flattenTranslations(translations, 'cn')
+      },
+      en: {
+        translation: flattenTranslations(translations, 'en')
+      }
+    },
+    fallbackLng: 'cn',
     lng: localStorage.getItem('language') || 'cn',
     debug: process.env.NODE_ENV === 'development',
     interpolation: {
       escapeValue: false,
     }
-  })
+  });
 
-export default i18n
+export default i18n;

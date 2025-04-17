@@ -7,10 +7,10 @@ import { NavLink } from 'react-router-dom'
 
 import { navAtom, toggleExpandNavAtom } from 'store/nav'
 
-import { NAV_LINKS, SOCIAL_LINKS } from '../../links'
 import { useCurrentSize } from '../../utils/useCurrenSize'
 import { AnnPanel } from '../announcement/AnnPanel'
 import { OperationSetEditorDialog } from '../operation-set/OperationSetEditor'
+import { useLinks } from 'hooks/useLinks'
 
 export const NavAside = () => {
   const { isMD } = useCurrentSize()
@@ -18,6 +18,8 @@ export const NavAside = () => {
   const toggleNav = useSetAtom(toggleExpandNavAtom)
 
   const [showOperationSetDialog, setShowOperationSetDialog] = useState(false)
+
+  const { NAV_LINKS, SOCIAL_LINKS } = useLinks();
 
   if (!isMD) return null
 
@@ -38,7 +40,7 @@ export const NavAside = () => {
               {({ isActive }) => (
                 <MenuItem2
                   key={link.to}
-                  icon={link.icon}
+                  icon={link.icon as any}
                   active={isActive}
                   text={link.label}
                   className="p-2 rounded-md"
