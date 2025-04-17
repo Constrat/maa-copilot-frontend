@@ -40,5 +40,287 @@
       "cn": "作业分享群",
       "en": "Operation Sharing Group"
     }
+  },
+  "components": {
+    "viewer": {
+      "OperationSetViewer": {
+        "delete_failed": {
+          "cn": "删除失败：{{error}}",
+          "en": "Delete failed: {{error}}"
+        },
+        "delete_success": {
+          "cn": "删除成功",
+          "en": "Delete successful"
+        },
+        "cancel": {
+          "cn": "取消",
+          "en": "Cancel"
+        },
+        "delete": {
+          "cn": "删除",
+          "en": "Delete"
+        },
+        "delete_task_set": {
+          "cn": "删除作业集",
+          "en": "Delete Job Set"
+        },
+        "confirm_delete_task_set": {
+          "cn": "确定要删除作业集吗？",
+          "en": "Are you sure you want to delete this Job set?"
+        },
+        "edit_task_set": {
+          "cn": "编辑作业集...",
+          "en": "Edit Job Set..."
+        },
+        "refresh_failed": {
+          "cn": "刷新作业集失败：{{error}}",
+          "en": "Failed to refresh Job set: {{error}}"
+        },
+        "maa_copilot_task_set": {
+          "cn": "MAA Copilot 作业集",
+          "en": "MAA Copilot Job Set"
+        },
+        "manage": {
+          "cn": "管理",
+          "en": "Manage"
+        },
+        "copy_secret_code": {
+          "cn": "复制神秘代码",
+          "en": "Copy Secret Code"
+        },
+        "render_error": {
+          "cn": "渲染错误",
+          "en": "Render Error"
+        },
+        "render_problem": {
+          "cn": "渲染此作业集时出现了问题。是否是还未支持的作业集类型？",
+          "en": "There was a problem rendering this Job set. Is it an unsupported Job set type?"
+        },
+        "published_at": {
+          "cn": "发布于",
+          "en": "Published at"
+        },
+        "author": {
+          "cn": "作者",
+          "en": "Author"
+        },
+        "render_preview_problem": {
+          "cn": "渲染此作业集的预览时出现了问题 Σ(っ °Д °;)っ",
+          "en": "There was a problem rendering the preview of this Job set Σ(っ °Д °;)っ"
+        },
+        "task_list": {
+          "cn": "作业列表",
+          "en": "Job List"
+        },
+        "loading_task_set": {
+          "cn": "作业集加载中",
+          "en": "Loading Job Set"
+        }
+      },
+      "OperationViewer": {
+        "operation_failed": {
+          "cn": "操作失败：{{error}}",
+          "en": "Operation failed: {{error}}"
+        },
+        "delete_failed": {
+          "cn": "删除失败：{{error}}",
+          "en": "Delete failed: {{error}}"
+        },
+        "delete_success": {
+          "cn": "删除成功",
+          "en": "Delete successful"
+        },
+        "modify_task": {
+          "cn": "修改作业",
+          "en": "Modify Job"
+        },
+        "close_comments": {
+          "cn": "关闭评论区",
+          "en": "Close Comments"
+        },
+        "confirm_close_comments": {
+          "cn": "确定要关闭评论区吗？",
+          "en": "Are you sure you want to close the comments section?"
+        },
+        "existing_comments_preserved": {
+          "cn": "已有的评论不会被删除，重新开启后会恢复显示",
+          "en": "Existing comments won't be deleted and will be visible again when reopened"
+        },
+        "open_comments": {
+          "cn": "开启评论区",
+          "en": "Open Comments"
+        },
+        "confirm_open_comments": {
+          "cn": "确定要开启评论区吗？",
+          "en": "Are you sure you want to open the comments section?"
+        },
+        "delete": {
+          "cn": "删除",
+          "en": "Delete"
+        },
+        "delete_task": {
+          "cn": "删除作业",
+          "en": "Delete Job"
+        },
+        "confirm_delete_task": {
+          "cn": "确定要删除作业吗？",
+          "en": "Are you sure you want to delete this Job?"
+        },
+        "three_confirmations": {
+          "cn": "需要三次确认以删除",
+          "en": "Three confirmations required to delete"
+        },
+        "refresh_failed": {
+          "cn": "刷新作业失败：{{error}}",
+          "en": "Failed to refresh Job: {{error}}"
+        },
+        "submit_rating_failed": {
+          "cn": "提交评分失败：{{error}}",
+          "en": "Failed to submit rating: {{error}}"
+        },
+        "maa_copilot_task": {
+          "cn": "MAA Copilot 作业",
+          "en": "MAA Copilot Job"
+        },
+        "manage": {
+          "cn": "管理",
+          "en": "Manage"
+        },
+        "download_json": {
+          "cn": "下载原 JSON",
+          "en": "Download Original JSON"
+        },
+        "copy_secret_code": {
+          "cn": "复制神秘代码",
+          "en": "Copy Secret Code"
+        },
+        "render_error": {
+          "cn": "渲染错误",
+          "en": "Render Error"
+        },
+        "render_problem": {
+          "cn": "渲染此作业时出现了问题。是否是还未支持的作业类型？",
+          "en": "There was a problem rendering this Job. Is it an unsupported Job type?"
+        },
+        "loading_task": {
+          "cn": "作业加载中",
+          "en": "Loading Job"
+        },
+        "private": {
+          "cn": "私有",
+          "en": "Private"
+        },
+        "battle": {
+          "cn": "作战",
+          "en": "Battle"
+        },
+        "task_rating": {
+          "cn": "作业评分",
+          "en": "Job Rating"
+        },
+        "views": {
+          "cn": "浏览量",
+          "en": "Views"
+        },
+        "published_at": {
+          "cn": "发布于",
+          "en": "Published at"
+        },
+        "author": {
+          "cn": "作者",
+          "en": "Author"
+        },
+        "render_preview_problem": {
+          "cn": "渲染此作业的预览时出现了问题。是否是还未支持的作业类型？",
+          "en": "There was a problem rendering the preview of this Job. Is it an unsupported Job type?"
+        },
+        "comments": {
+          "cn": "评论",
+          "en": "Comments"
+        },
+        "comments_count": {
+          "cn": "评论 ({{count}})",
+          "en": "Comments ({{count}})"
+        },
+        "comments_closed": {
+          "cn": "评论区已关闭",
+          "en": "Comments section is closed"
+        },
+        "feel_the_silence": {
+          "cn": "感受…宁静……",
+          "en": "Feel... the silence..."
+        },
+        "operators_and_groups": {
+          "cn": "干员与干员组",
+          "en": "Operators and Operator Groups"
+        },
+        "operator_group_tooltip": {
+          "cn": "干员组：组内干员可以任选其一，自动编队时按最高练度来选择",
+          "en": "Operator Group: Choose any operator in the group; auto-formation selects the highest level"
+        },
+        "no_operators": {
+          "cn": "暂无干员",
+          "en": "No Operators"
+        },
+        "no_operators_added": {
+          "cn": "作业并未添加干员",
+          "en": "No operators have been added to this Job"
+        },
+        "unknown": {
+          "cn": "未知",
+          "en": "Unknown"
+        },
+        "no_operator": {
+          "cn": "无干员",
+          "en": "No Operator"
+        },
+        "action_sequence": {
+          "cn": "动作序列",
+          "en": "Action Sequence"
+        },
+        "no_actions": {
+          "cn": "暂无动作",
+          "en": "No Actions"
+        },
+        "no_actions_defined": {
+          "cn": "作业并未定义任何动作",
+          "en": "No actions have been defined for this Job"
+        }
+      }
+    },
+    "Operations": {
+      "operations": {
+        "cn": "作业",
+        "en": "Jobs"
+      },
+      "operation_sets": {
+        "cn": "作业集",
+        "en": "Job Sets"
+      },
+      "enable_multi_select": {
+        "cn": "启动多选",
+        "en": "Enable Multi-select"
+      },
+      "search_placeholder": {
+        "cn": "标题、描述、神秘代码",
+        "en": "Title, Description, Secret Code"
+      },
+      "sort_by": {
+        "cn": "排序:",
+        "en": "Sort by:"
+      },
+      "popularity": {
+        "cn": "热度",
+        "en": "Popularity"
+      },
+      "newest": {
+        "cn": "最新",
+        "en": "Newest"
+      },
+      "views": {
+        "cn": "访问量",
+        "en": "Views"
+      }
+    }
   }
 }
