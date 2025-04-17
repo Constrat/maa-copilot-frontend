@@ -5,17 +5,17 @@ import simpleIconsQQ from '@iconify/icons-simple-icons/tencentqq'
 export const NAV_CONFIG = [
   {
     to: '/',
-    labelKey: 'links.首页',
+    labelKey: 'links.home',
     icon: 'home',
   },
   {
     to: '/create',
-    labelKey: 'links.创建作业',
+    labelKey: 'links.create_job',
     icon: 'add',
   },
   {
     to: '/about',
-    labelKey: 'links.关于',
+    labelKey: 'links.about',
     icon: 'info-sign',
   },
 ]
@@ -25,43 +25,43 @@ export const SOCIAL_CONFIG = [
     iconType: 'blueprint',
     iconName: 'globe',
     href: 'https://maa.plus',
-    labelKey: 'links.官网',
+    labelKey: 'links.official_site',
   },
   {
     iconType: 'blueprint',
     iconName: 'edit',
     href: 'https://github.com/MaaAssistantArknights/maa-copilot-frontend/issues/new/choose',
-    labelKey: 'links.意见与反馈',
+    labelKey: 'links.feedback',
   },
   {
     iconType: 'iconify',
     iconSource: simpleIconsGitHub,
     href: 'https://github.com/MaaAssistantArknights/MaaAssistantArknights',
-    labelKey: 'links.MAA_Repo',
+    labelKey: 'links.maa_repo',
   },
   {
     iconType: 'iconify',
     iconSource: simpleIconsGitHub,
     href: 'https://github.com/MaaAssistantArknights/maa-copilot-frontend',
-    labelKey: 'links.前端',
+    labelKey: 'links.frontend_repo',
   },
   {
     iconType: 'iconify',
     iconSource: simpleIconsGitHub,
     href: 'https://github.com/MaaAssistantArknights/MaaBackendCenter',
-    labelKey: 'links.后端',
+    labelKey: 'links.backend_repo',
   },
   {
     iconType: 'iconify',
     iconSource: simpleIconsQQ,
     href: 'https://jq.qq.com/?_wv=1027&k=ElimpMzQ',
-    labelKey: 'links.作业制作者交流群',
+    labelKey: 'links.creator_group',
     labelParams: { groupNumber: '1169188429' }  // Modifiable group number
   },
   {
     iconType: 'iconify',
     iconSource: simpleIconsQQ,
     href: 'https://ota.maa.plus/MaaAssistantArknights/api/qqgroup/index.html',
-    labelKey: 'links.作业分享群',
+    labelKey: 'links.sharing_group',
   },
 ]

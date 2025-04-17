@@ -84,6 +84,7 @@ export const Suspensable: FCC<SuspensableProps> = ({
 interface SuspensableOptions {
   pendingTitle?: string | ((t: TFunction) => string)
   retryOnChange?: string[]
+  errorFallback?: (params: { error: Error; resetError: () => void }) => JSX.Element | undefined
 }
 
 export function withSuspensable<P extends object>(

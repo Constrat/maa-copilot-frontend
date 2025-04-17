@@ -1,4 +1,5 @@
 import { Button, Classes, IconSize, MenuItem, Spinner } from '@blueprintjs/core'
+import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import { useAtomValue } from 'jotai'
@@ -32,6 +33,7 @@ export const UserFilter: FC<UserFilterProps> = ({
   user,
   onChange,
 }) => {
+  const { t } = useTranslation();
   const auth = useAtomValue(authAtom)
   const { query, debouncedQuery, updateQuery, onOptionMouseDown } =
     useDebouncedQuery({ debounceTime: 500 })
@@ -78,17 +80,17 @@ export const UserFilter: FC<UserFilterProps> = ({
             disabled
             text={
               isLoading
-                ? '正在搜索...'
+                ? t('components.UserFilter.searching')
                 : error
-                  ? '搜索失败：' + formatError(error)
+                  ? t('components.UserFilter.search_failed') + formatError(error)
                   : query && debouncedQuery
-                    ? '查无此人 (ﾟДﾟ≡ﾟдﾟ)!?'
-                    : '输入用户名以搜索'
+                    ? t('components.UserFilter.no_user_found')
+                    : t('components.UserFilter.enter_username')
             }
           />
         }
         inputProps={{
-          placeholder: '用户名称',
+          placeholder: t('components.UserFilter.username_placeholder'),
           leftElement: isValidating ? (
             <Spinner className="m-[7px] mr-[9px]" size={IconSize.STANDARD} />
           ) : undefined,
@@ -103,7 +105,7 @@ export const UserFilter: FC<UserFilterProps> = ({
           icon="person"
           rightIcon="chevron-down"
         >
-          {user && !isMyself(user) ? user.userName : '作者'}
+          {user && !isMyself(user) ? user.userName : t('components.UserFilter.author')}
         </Button>
       </Select>
       {!!auth.token && (
@@ -111,7 +113,7 @@ export const UserFilter: FC<UserFilterProps> = ({
           minimal
           icon="user"
           className="!px-3"
-          title="查看我自己的作业"
+          title={t('components.UserFilter.view_my_jobs')}
           active={isMyself(user)}
           intent={isMyself(user) ? 'primary' : 'none'}
           onClick={() => {
@@ -122,7 +124,7 @@ export const UserFilter: FC<UserFilterProps> = ({
             }
           }}
         >
-          看看我的
+          {t('components.UserFilter.view_mine')}
         </Button>
       )}
     </>

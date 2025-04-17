@@ -1,48 +1,664 @@
 {
   "links": {
-    "首页": {
+    "home": {
       "cn": "首页",
       "en": "Home"
     },
-    "创建作业": {
+    "create_job": {
       "cn": "创建作业",
       "en": "Create Job"
     },
-    "关于": {
+    "about": {
       "cn": "关于",
       "en": "About"
     },
-    "官网": {
+    "official_site": {
       "cn": "MAA 官网",
       "en": "MAA Official Site"
     },
-    "意见与反馈": {
+    "feedback": {
       "cn": "意见与反馈",
       "en": "Feedback"
     },
-    "MAA_Repo": {
+    "maa_repo": {
       "cn": "MAA GitHub Repo",
       "en": "MAA GitHub Repo"
     },
-    "前端": {
+    "frontend_repo": {
       "cn": "前端 GitHub Repo",
       "en": "Frontend GitHub Repo"
     },
-    "后端": {
+    "backend_repo": {
       "cn": "后端 GitHub Repo",
       "en": "Backend GitHub Repo"
     },
-    "作业制作者交流群": {
+    "creator_group": {
       "cn": "作业制作者交流群：{{groupNumber}}",
       "en": "Creator Community Group: {{groupNumber}}"
     },
-    "作业分享群": {
+    "sharing_group": {
       "cn": "作业分享群",
-      "en": "Operation Sharing Group"
+      "en": "Job Sharing Group"
     }
   },
   "components": {
+    "editor": {
+      "source": {
+        "FileImporter": {
+          "cannot_read_file": {
+            "cn": "无法读取文件",
+            "en": "Cannot read file"
+          },
+          "import_local_file": {
+            "cn": "导入本地文件...",
+            "en": "Import local file..."
+          }
+        },
+        "ShortCodeImporter": {
+          "enter_shortcode": {
+            "cn": "请输入神秘代码",
+            "en": "Please enter a shortcode"
+          },
+          "invalid_shortcode": {
+            "cn": "无效的神秘代码",
+            "en": "Invalid shortcode"
+          },
+          "cannot_parse_content": {
+            "cn": "无法解析作业内容",
+            "en": "Cannot parse Job content"
+          },
+          "load_failed": {
+            "cn": "加载失败：",
+            "en": "Loading failed: "
+          },
+          "import_shortcode": {
+            "cn": "导入神秘代码...",
+            "en": "Import shortcode..."
+          },
+          "import_shortcode_title": {
+            "cn": "导入神秘代码",
+            "en": "Import Shortcode"
+          },
+          "shortcode_label": {
+            "cn": "神秘代码",
+            "en": "Shortcode"
+          },
+          "shortcode_description": {
+            "cn": "神秘代码可在本站的作业详情中获取",
+            "en": "Shortcodes can be found in Job details on this site"
+          },
+          "import_button": {
+            "cn": "导入",
+            "en": "Import"
+          }
+        },
+        "SourceEditorButton": {
+          "edit_json": {
+            "cn": "编辑 JSON",
+            "en": "Edit JSON"
+          }
+        },
+        "SourceEditor": {
+          "parsing_error": {
+            "cn": "(解析时出现错误)",
+            "en": "(Error occurred during parsing)"
+          },
+          "syntax_error": {
+            "cn": "存在语法错误",
+            "en": "Syntax error exists"
+          },
+          "structure_error": {
+            "cn": "存在结构错误",
+            "en": "Structure error exists"
+          },
+          "json_update_notice": {
+            "cn": "在此处编辑 JSON 将会实时更新表单",
+            "en": "Editing JSON here will update the form in real-time"
+          },
+          "json_validation": {
+            "cn": "JSON 验证：{{status}}",
+            "en": "JSON validation: {{status}}"
+          },
+          "syntax_error_short": {
+            "cn": "语法错误",
+            "en": "Syntax error"
+          },
+          "passed": {
+            "cn": "通过",
+            "en": "Passed"
+          },
+          "see_errors_in_form": {
+            "cn": "请在表单中查看错误信息",
+            "en": "Please check the error messages in the form"
+          },
+          "form_validation": {
+            "cn": "表单验证：{{status}}",
+            "en": "Form validation: {{status}}"
+          },
+          "not_passed": {
+            "cn": "未通过",
+            "en": "Not passed"
+          }
+        },
+        "SourceEditorHeader": {
+          "edit_json": {
+            "cn": "编辑 JSON",
+            "en": "Edit JSON"
+          },
+          "json_copied": {
+            "cn": "已复制 JSON 到剪贴板",
+            "en": "JSON copied to clipboard"
+          },
+          "untitled": {
+            "cn": "未命名",
+            "en": "Untitled"
+          },
+          "job_json_downloaded": {
+            "cn": "已下载作业 JSON 文件",
+            "en": "Job JSON file downloaded"
+          },
+          "import": {
+            "cn": "导入",
+            "en": "Import"
+          },
+          "copy": {
+            "cn": "复制",
+            "en": "Copy"
+          },
+          "download": {
+            "cn": "下载",
+            "en": "Download"
+          },
+          "export": {
+            "cn": "导出",
+            "en": "Export"
+          }
+        }
+      },
+      "OperationEditorLauncher": {
+        "launch_job_editor": {
+          "cn": "启动作业编辑器",
+          "en": "Launch Job editor"
+        }
+      },
+      "OperationEditor": {
+        "stage_required": {
+          "cn": "请输入关卡",
+          "en": "Please enter a stage"
+        },
+        "stage": {
+          "cn": "关卡",
+          "en": "Stage"
+        },
+        "type_to_search": {
+          "cn": "键入以搜索",
+          "en": "Type to search"
+        },
+        "for_main_event_stages": {
+          "cn": "对于主线、活动关卡：键入关卡代号、关卡中文名或活动名称",
+          "en": "For main story or event stages: Type stage code, stage name or event name"
+        },
+        "for_paradox_stages": {
+          "cn": "对于悖论模拟关卡：键入关卡名或干员名",
+          "en": "For paradox simulation stages: Type stage name or operator name"
+        },
+        "custom": {
+          "cn": "自定义",
+          "en": "Custom"
+        },
+        "no_matching_stages": {
+          "cn": "没有匹配的关卡",
+          "en": "No matching stages"
+        },
+        "use_custom_stage": {
+          "cn": "使用自定义关卡名 \"{{query}}\"",
+          "en": "Use custom stage name \"{{query}}\""
+        },
+        "view_in_prts_map": {
+          "cn": "在 PRTS.Map 中查看关卡",
+          "en": "View stage in PRTS.Map"
+        },
+        "stage_difficulty": {
+          "cn": "关卡难度",
+          "en": "Stage Difficulty"
+        },
+        "difficulty_description": {
+          "cn": "在作业上显示的难度标识，如果不选择则不显示",
+          "en": "Difficulty indicator shown on the Job, not displayed if not selected"
+        },
+        "no_challenge_mode": {
+          "cn": "该关卡没有突袭难度，无需选择",
+          "en": "This stage has no challenge mode, no need to select"
+        },
+        "normal": {
+          "cn": "普通",
+          "en": "Normal"
+        },
+        "challenge": {
+          "cn": "突袭",
+          "en": "Challenge"
+        },
+        "job_editor": {
+          "cn": "作业编辑器",
+          "en": "Job Editor"
+        },
+        "error": {
+          "cn": "错误",
+          "en": "Error"
+        },
+        "job_metadata": {
+          "cn": "作业元信息",
+          "en": "Job Metadata"
+        },
+        "job_title": {
+          "cn": "作业标题",
+          "en": "Job Title"
+        },
+        "title_required": {
+          "cn": "必须填写标题",
+          "en": "Title is required"
+        },
+        "title_placeholder": {
+          "cn": "起一个引人注目的标题吧",
+          "en": "Create an eye-catching title"
+        },
+        "job_description": {
+          "cn": "作业描述",
+          "en": "Job Description"
+        },
+        "description_placeholder": {
+          "cn": "如：作者名、参考的视频攻略链接（如有）等",
+          "en": "Example: Author name, reference video strategy links (if any), etc."
+        },
+        "action_sequence": {
+          "cn": "动作序列",
+          "en": "Action Sequence"
+        },
+        "drag_to_reorder": {
+          "cn": "拖拽以重新排序",
+          "en": "Drag to reorder"
+        },
+        "operators_and_groups": {
+          "cn": "干员与干员组",
+          "en": "Operators and Groups"
+        },
+        "drag_to_reorder_operators": {
+          "cn": "拖拽以重新排序或分配干员",
+          "en": "Drag to reorder or assign operators"
+        },
+        "drag_too_fast_issue": {
+          "cn": "如果拖拽速度过快可能会使动画出现问题，此时请点击",
+          "en": "Dragging too quickly causes animation issues, please click "
+        },
+        "refresh_ui": {
+          "cn": "刷新界面",
+          "en": "refresh UI"
+        },
+        "to_fix_no_data_loss": {
+          "cn": "以修复 （不会丢失数据）",
+          "en": " to fix. (no data will be lost)"
+        }
+      },
+      "useAutosave": {
+        "autosave_info": {
+          "cn": "每隔 {{minutes}} 分钟自动保存编辑过的内容，记录上限为 {{limit}} 条",
+          "en": "Auto-saves edited content every {{minutes}} minutes, with a maximum of {{limit}} records"
+        },
+        "autosaved_at": {
+          "cn": "已自动保存：{{time}}",
+          "en": "Auto-saved: {{time}}"
+        },
+        "not_saved": {
+          "cn": "未保存",
+          "en": "Not saved"
+        },
+        "cancel": {
+          "cn": "取消",
+          "en": "Cancel"
+        },
+        "confirm": {
+          "cn": "确定",
+          "en": "Confirm"
+        },
+        "restore_content": {
+          "cn": "恢复内容",
+          "en": "Restore Content"
+        },
+        "restore_confirmation": {
+          "cn": "当前的编辑内容将会被覆盖，确定要恢复内容吗？",
+          "en": "Current edits will be overwritten. Are you sure you want to restore this content?"
+        }
+      }
+    },
+    "entity": {
+      "EDifficulty": {
+        "regular": {
+          "cn": "普通",
+          "en": "Standard"
+        },
+        "regular_description": {
+          "cn": "本作业支持普通难度作战",
+          "en": "This Job supports Standard mode"
+        },
+        "hard": {
+          "cn": "突袭",
+          "en": "Challenge"
+        },
+        "hard_description": {
+          "cn": "本作业支持突袭难度作战",
+          "en": "This Job supports Challenge mode"
+        },
+        "unknown": {
+          "cn": "未知难度",
+          "en": "Unknown Difficulty"
+        },
+        "unknown_description": {
+          "cn": "本作业并未支持难度支持标识，请自行根据作业的文字描述判断其所支持的作业难度等级。通常来说，未写明支持难度的作业均兼容突袭和普通难度作战。",
+          "en": "This Job doesn't specify supported difficulty levels. Please refer to the Job description to determine compatibility. Generally, Jobs without specified difficulty support both standard and challenge modes."
+        }
+      },
+      "EStage": {
+        "custom_level": {
+          "cn": "自定义关卡",
+          "en": "Custom Stage"
+        }
+      }
+    },
+    "operation-set": {
+      "OperationSetEditor": {
+        "create_job_set": {
+          "cn": "创建作业集",
+          "en": "Create Job Set"
+        },
+        "edit_job_set": {
+          "cn": "编辑作业集",
+          "en": "Edit Job Set"
+        },
+        "update_success": {
+          "cn": "更新作业集成功",
+          "en": "Job set updated successfully"
+        },
+        "create_success": {
+          "cn": "创建作业集成功",
+          "en": "Job set created successfully"
+        },
+        "no_jobs_yet": {
+          "cn": "还没有添加作业哦(￣▽￣)",
+          "en": "No jobs added yet (￣▽￣)"
+        },
+        "add_from_list": {
+          "cn": "请从作业列表中添加",
+          "en": "Please add from the Job list"
+        },
+        "title": {
+          "cn": "标题",
+          "en": "Title"
+        },
+        "title_required": {
+          "cn": "标题不能为空",
+          "en": "Title is required"
+        },
+        "description": {
+          "cn": "描述",
+          "en": "Description"
+        },
+        "visible_to_all": {
+          "cn": "对所有人可见",
+          "en": "Visible to everyone"
+        },
+        "click_save": {
+          "cn": "修改后请点击保存按钮",
+          "en": "Click save after making changes"
+        },
+        "save": {
+          "cn": "保存",
+          "en": "Save"
+        },
+        "create": {
+          "cn": "创建",
+          "en": "Create"
+        },
+        "error": {
+          "cn": "错误",
+          "en": "Error"
+        },
+        "sort_by_level": {
+          "cn": "按关卡",
+          "en": "By Level"
+        },
+        "loading": {
+          "cn": "加载中...",
+          "en": "Loading..."
+        },
+        "level_load_failed": {
+          "cn": "关卡加载失败，使用备用排序",
+          "en": "Level loading failed, using fallback sorting"
+        },
+        "sort_by_title": {
+          "cn": "按标题",
+          "en": "By Title"
+        },
+        "sort_by_id": {
+          "cn": "按 ID",
+          "en": "By ID"
+        },
+        "quick_sort": {
+          "cn": "一键排序",
+          "en": "Quick Sort"
+        },
+        "reverse_list": {
+          "cn": "反转列表",
+          "en": "Reverse List"
+        }
+      }
+    },
+    "uploader": {
+      "OperationUploader": {
+        "wait_upload": {
+          "cn": "正在上传，请等待",
+          "en": "Uploading, please wait"
+        },
+        "wait_parsing": {
+          "cn": "正在解析文件，请等待",
+          "en": "Parsing files, please wait"
+        },
+        "select_files": {
+          "cn": "请选择文件",
+          "en": "Please select files"
+        },
+        "contains_uploaded": {
+          "cn": "文件列表中包含已上传的文件，请重新选择",
+          "en": "File list contains already uploaded files, please select again"
+        },
+        "file_errors": {
+          "cn": "文件存在错误，请修改内容",
+          "en": "Files have errors, please fix content"
+        },
+        "errors_exist": {
+          "cn": "存在错误，请排查问题",
+          "en": "Errors exist, please check issues"
+        },
+        "upload_failed": {
+          "cn": "上传失败：{{error}}",
+          "en": "Upload failed: {{error}}"
+        },
+        "upload_complete": {
+          "cn": "作业上传完成：成功 {{successCount}} 个，失败 {{errorCount}} 个",
+          "en": "Job upload complete: {{successCount}} successful, {{errorCount}} failed"
+        },
+        "upload_local_jobs": {
+          "cn": "上传本地作业",
+          "en": "Upload local Jobs"
+        },
+        "edit_before_upload_message": {
+          "cn": "若需要在上传前进行编辑，请在作业编辑器的",
+          "en": "If you need to edit before uploading, use"
+        },
+        "edit_json": {
+          "cn": "编辑 JSON",
+          "en": "Edit JSON"
+        },
+        "import_job": {
+          "cn": "处导入作业",
+          "en": "in the Job editor to import"
+        },
+        "select_job_files": {
+          "cn": "选择作业文件",
+          "en": "Select Job Files"
+        },
+        "json_files_only": {
+          "cn": "仅支持 .json 文件，可多选",
+          "en": "Only .json files supported, multiple selection allowed"
+        },
+        "browse": {
+          "cn": "浏览",
+          "en": "Browse"
+        },
+        "file_count": {
+          "cn": "{{count}} 个文件",
+          "en": "{{count}} files"
+        },
+        "choose_files": {
+          "cn": "选择文件...",
+          "en": "Choose files..."
+        },
+        "upload": {
+          "cn": "上传",
+          "en": "Upload"
+        },
+        "error": {
+          "cn": "错误",
+          "en": "Error"
+        },
+        "file_details": {
+          "cn": "文件详情",
+          "en": "File Details"
+        },
+        "untitled": {
+          "cn": "无标题",
+          "en": "Untitled"
+        }
+      },
+      "OperationUploaderLauncher": {
+        "upload_local_jobs": {
+          "cn": "上传本地作业",
+          "en": "Upload local Jobs"
+        }
+      }
+    },
     "viewer": {
+      "comment": {
+        "no_comments": {
+          "cn": "还没有评论，发一条评论鼓励作者吧！",
+          "en": "No comments yet. Be the first to encourage the author!"
+        },
+        "encourage_author": {
+          "cn": "(｡･ω･｡)ﾉ♡",
+          "en": "(｡･ω･｡)ﾉ♡"
+        },
+        "reached_bottom": {
+          "cn": "已经到底了哦 (ﾟ▽ﾟ)/",
+          "en": "You've reached the bottom (ﾟ▽ﾟ)/"
+        },
+        "load_more": {
+          "cn": "加载更多",
+          "en": "Load More"
+        },
+        "deleted": {
+          "cn": "（已删除）",
+          "en": "(Deleted)"
+        },
+        "reply": {
+          "cn": "回复",
+          "en": "Reply"
+        },
+        "pinned": {
+          "cn": "置顶",
+          "en": "Pinned"
+        },
+        "delete": {
+          "cn": "删除",
+          "en": "Delete"
+        },
+        "cancel": {
+          "cn": "取消",
+          "en": "Cancel"
+        },
+        "delete_comment": {
+          "cn": "删除评论",
+          "en": "Delete Comment"
+        },
+        "confirm_delete": {
+          "cn": "确定要删除评论吗？",
+          "en": "Are you sure you want to delete this comment?"
+        },
+        "all_subcomments_deleted": {
+          "cn": "所有子评论都会被删除。",
+          "en": "All replies will be deleted as well."
+        },
+        "rating_failed": {
+          "cn": "评分失败：{{error}}",
+          "en": "Rating failed: {{error}}"
+        },
+        "pin_failed": {
+          "cn": "置顶失败：{{error}}",
+          "en": "Pinning failed: {{error}}"
+        },
+        "unpin": {
+          "cn": "取消置顶",
+          "en": "Unpin"
+        },
+        "pin": {
+          "cn": "置顶",
+          "en": "Pin"
+        },
+        "friendly_comment_placeholder": {
+          "cn": "发一条友善的评论吧",
+          "en": "Leave a friendly comment"
+        },
+        "enter_comment": {
+          "cn": "请输入评论内容",
+          "en": "Please enter comment content"
+        },
+        "submit_failed": {
+          "cn": "发表评论失败：{{error}}",
+          "en": "Failed to submit comment: {{error}}"
+        },
+        "reply_target_not_found": {
+          "cn": "要回复的评论不存在",
+          "en": "The comment you're replying to doesn't exist"
+        },
+        "submit_success": {
+          "cn": "发表成功",
+          "en": "Successfully posted"
+        },
+        "post_comment": {
+          "cn": "发表评论",
+          "en": "Post Comment"
+        },
+        "preview_markdown": {
+          "cn": "预览 Markdown",
+          "en": "Preview Markdown"
+        },
+        "no_content": {
+          "cn": "*没有内容*",
+          "en": "*No content*"
+        }
+      },
+      "OperationRating": {
+        "not_enough_ratings_long": {
+          "cn": "还没有足够的评分",
+          "en": "Not enough ratings yet"
+        },
+        "not_enough_ratings_short": {
+          "cn": "评分不足",
+          "en": "Not enough ratings"
+        },
+        "liked_percentage": {
+          "cn": "有{{percent}}%的人为本作业点了个赞（{{ratio}}）",
+          "en": "{{percent}}% of users liked this Job ({{ratio}})"
+        }
+      },
       "OperationSetViewer": {
         "delete_failed": {
           "cn": "删除失败：{{error}}",
@@ -210,9 +826,9 @@
           "cn": "私有",
           "en": "Private"
         },
-        "battle": {
+        "stage": {
           "cn": "作战",
-          "en": "Battle"
+          "en": "Stage"
         },
         "task_rating": {
           "cn": "作业评分",
@@ -244,7 +860,7 @@
         },
         "comments_closed": {
           "cn": "评论区已关闭",
-          "en": "Comments section is closed"
+          "en": "Comment section is closed"
         },
         "feel_the_silence": {
           "cn": "感受…宁静……",
@@ -288,6 +904,104 @@
         }
       }
     },
+    "LevelSelect": {
+      "annihilation": {
+        "cn": "剿灭作战",
+        "en": "Annihilation"
+      },
+      "contingency_contract": {
+        "cn": "危机合约",
+        "en": "Contingency Contract"
+      },
+      "related_levels": {
+        "cn": "相关关卡",
+        "en": "Related Stages"
+      },
+      "search_level": {
+        "cn": "直接搜索关卡 \"{{query}}\"",
+        "en": "Search Stage \"{{query}}\""
+      },
+      "level_search_placeholder": {
+        "cn": "关卡名、类型、编号",
+        "en": "Stage name, category, or ID"
+      },
+      "level": {
+        "cn": "关卡",
+        "en": "Stage"
+      }
+    },
+    "OperationCard": {
+      "private": {
+        "cn": "私有",
+        "en": "Private"
+      },
+      "operators_and_groups": {
+        "cn": "干员/干员组",
+        "en": "Operators/Groups"
+      },
+      "no_operators": {
+        "cn": "无干员",
+        "en": "No operators"
+      },
+      "no_records": {
+        "cn": "无记录",
+        "en": "No records"
+      },
+      "views_count": {
+        "cn": "访问量：{{count}}",
+        "en": "Views: {{count}}"
+      },
+      "download_json": {
+        "cn": "下载原 JSON",
+        "en": "Download Original JSON"
+      },
+      "copy_secret_code": {
+        "cn": "复制神秘代码",
+        "en": "Copy Secret Code"
+      },
+      "add_to_job_set": {
+        "cn": "添加到作业集",
+        "en": "Add to Job Set"
+      }
+    },
+    "OperationList": {
+      "selected_jobs": {
+        "cn": "已选择 {{count}} 份作业",
+        "en": "{{count}} Jobs selected"
+      },
+      "only_loaded_items": {
+        "cn": "只能选择已加载的项目",
+        "en": "Only loaded items can be selected"
+      },
+      "select_all": {
+        "cn": "全选",
+        "en": "Select All"
+      },
+      "clear": {
+        "cn": "清空",
+        "en": "Clear"
+      },
+      "add_to_job_set": {
+        "cn": "添加到作业集",
+        "en": "Add to Job Set"
+      },
+      "no_jobs_found": {
+        "cn": "没有找到任何作业",
+        "en": "No Jobs found"
+      },
+      "sad_face": {
+        "cn": "(つД｀)･ﾟ･",
+        "en": "(つД｀)･ﾟ･"
+      },
+      "reached_bottom": {
+        "cn": "已经到底了哦 (ﾟ▽ﾟ)/",
+        "en": "You've reached the bottom (ﾟ▽ﾟ)/"
+      },
+      "load_more": {
+        "cn": "加载更多",
+        "en": "Load More"
+      }
+    },
     "Operations": {
       "operations": {
         "cn": "作业",
@@ -320,6 +1034,216 @@
       "views": {
         "cn": "访问量",
         "en": "Views"
+      }
+    },
+    "OperationSetCard": {
+      "private": {
+        "cn": "私有",
+        "en": "Private"
+      },
+      "jobs_count": {
+        "cn": "{{count}}份作业",
+        "en": "{{count}} Jobs"
+      },
+      "copy_secret_code": {
+        "cn": "复制神秘代码",
+        "en": "Copy Secret Code"
+      }
+    },
+    "OperationSetList": {
+      "no_job_sets_found": {
+        "cn": "没有找到任何作业集",
+        "en": "No Job Sets found"
+      },
+      "sad_face": {
+        "cn": "(つД｀)･ﾟ･",
+        "en": "(つД｀)･ﾟ･"
+      },
+      "reached_bottom": {
+        "cn": "已经到底了哦 (ﾟ▽ﾟ)/",
+        "en": "You've reached the bottom (ﾟ▽ﾟ)/"
+      },
+      "load_more": {
+        "cn": "加载更多",
+        "en": "Load More"
+      }
+    },
+    "OperatorFilter": {
+      "disable_operator_selection": {
+        "cn": "禁用干员选择",
+        "en": "Disable operator selection"
+      },
+      "operators": {
+        "cn": "干员",
+        "en": "Operators"
+      },
+      "select_operators": {
+        "cn": "选择干员",
+        "en": "Select Operators"
+      },
+      "included_operators": {
+        "cn": "包含的干员",
+        "en": "Included Operators"
+      },
+      "excluded_operators": {
+        "cn": "排除的干员",
+        "en": "Excluded Operators"
+      },
+      "search_help": {
+        "cn": "输入干员名、拼音或拼音首字母以搜索",
+        "en": "Enter operator name, initials to start search"
+      },
+      "cancel": {
+        "cn": "取消",
+        "en": "Cancel"
+      },
+      "confirm": {
+        "cn": "确认",
+        "en": "Confirm"
+      },
+      "remember_selection": {
+        "cn": "记住选择",
+        "en": "Remember Selection"
+      }
+    },
+    "OperatorSelect": {
+      "no_matching_operators": {
+        "cn": "没有匹配的干员",
+        "en": "No matching operators"
+      }
+    },
+    "UserFilter": {
+      "searching": {
+        "cn": "正在搜索...",
+        "en": "Searching..."
+      },
+      "search_failed": {
+        "cn": "搜索失败：",
+        "en": "Search failed: "
+      },
+      "no_user_found": {
+        "cn": "查无此人 (ﾟДﾟ≡ﾟдﾟ)!?",
+        "en": "No user found (ﾟДﾟ≡ﾟдﾟ)!?"
+      },
+      "enter_username": {
+        "cn": "输入用户名以搜索",
+        "en": "Enter username to search"
+      },
+      "username_placeholder": {
+        "cn": "用户名称",
+        "en": "Username"
+      },
+      "author": {
+        "cn": "作者",
+        "en": "Author"
+      },
+      "view_my_jobs": {
+        "cn": "查看我自己的作业",
+        "en": "View my own jobs"
+      },
+      "view_mine": {
+        "cn": "看看我的",
+        "en": "View personal"
+      }
+    }
+  },
+  "pages": {
+    "404": {
+      "page_not_found": {
+        "cn": "未找到页面",
+        "en": "Page Not Found"
+      },
+      "check_url": {
+        "cn": "请检查您的 URL 是否正确",
+        "en": "Please check if your URL is correct"
+      },
+      "return_home": {
+        "cn": "返回首页",
+        "en": "Return to Home"
+      }
+    },
+    "index": {
+      "create_new_task": {
+        "cn": "创建新作业",
+        "en": "Create a new Job"
+      },
+      "advertisement": {
+        "cn": "广告",
+        "en": "Ad"
+      }
+    },
+    "profile": {
+      "invalid_id": {
+        "cn": "ID 无效",
+        "en": "Invalid ID"
+      },
+      "tasks": {
+        "cn": "作业",
+        "en": "Jobs"
+      },
+      "task_sets": {
+        "cn": "作业集",
+        "en": "Job Sets"
+      }
+    },
+    "create": {
+      "publish": {
+        "cn": "发布",
+        "en": "Publish"
+      },
+      "update": {
+        "cn": "更新",
+        "en": "Update"
+      },
+      "task_publish_success": {
+        "cn": "作业发布成功",
+        "en": "Job published successfully"
+      },
+      "task_update_success": {
+        "cn": "作业更新成功",
+        "en": "Job updated successfully"
+      },
+      "task_publish_failed": {
+        "cn": "作业发布失败：{{error}}",
+        "en": "Failed to publish Job: {{error}}"
+      },
+      "task_update_failed": {
+        "cn": "作业更新失败：{{error}}",
+        "en": "Failed to update Job: {{error}}"
+      },
+      "negative_cost_not_supported": {
+        "cn": "目前暂不支持上传费用变化量为负数的动作（第{{actionIndex}}个动作）",
+        "en": "Currently, actions with negative DP changes are not supported (action #{{actionIndex}})"
+      },
+      "untitled": {
+        "cn": "无标题",
+        "en": "Untitled"
+      },
+      "public": {
+        "cn": "公开",
+        "en": "Public"
+      },
+      "public_task_description": {
+        "cn": "公开作业：会在所有列表中显示",
+        "en": "Public Job: Will be visible in all lists"
+      },
+      "private_task_description": {
+        "cn": "私有作业：其他人无法在列表中看见，但可以通过神秘代码访问",
+        "en": "Private Job: Others won't see it in lists, but can be accessed via secret code"
+      }
+    },
+    "about": {
+      "slogan_line1": {
+        "cn": "作业站解君愁",
+        "en": "The Job Site Solves Your Worries"
+      },
+      "slogan_line2": {
+        "cn": "点个收藏不迷路",
+        "en": "Bookmark us so can find your way back!"
+      },
+      "changelog": {
+        "cn": "更新日志",
+        "en": "Changelog"
       }
     }
   }

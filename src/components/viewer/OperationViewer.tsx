@@ -338,7 +338,7 @@ function OperationViewerInner({
         </div>
 
         <div className="flex flex-col">
-          <FactItem title={t('components.viewer.OperationViewer.battle')}>
+          <FactItem title={t('components.viewer.OperationViewer.stage')}>
             <EDifficultyLevel
               level={
                 findLevelByStageName(

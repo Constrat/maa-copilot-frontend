@@ -31,7 +31,7 @@ export const IndexPage: ComponentType = withGlobalErrorBoundary(() => {
           <div className="top-20">
             <Card className="flex flex-col mb-4 space-y-2">
               <CardTitle icon="add" className="mb-4">
-                创建新作业
+                {t('pages.index.create_new_task')}
               </CardTitle>
 
               <OperationEditorLauncher />
@@ -73,7 +73,9 @@ export const IndexPage: ComponentType = withGlobalErrorBoundary(() => {
 })
 
 const Ad = dayjs().isBefore('2025-05-11 00:00:00+8')
-  ? () => (
+  ? () => {
+    const { t } = useTranslation();
+    return (
       // eslint-disable-next-line react/jsx-no-target-blank
       <a
         className="block relative dark:brightness-[85%]"
@@ -82,8 +84,9 @@ const Ad = dayjs().isBefore('2025-05-11 00:00:00+8')
       >
         <img src="/ad_leidian.jpg" alt="雷电模拟器" />
         <div className="absolute bottom-2 right-2 border border-current rounded text-[10px] text-zinc-300 px-1 ">
-          广告
+          {t('pages.index.advertisement')}
         </div>
       </a>
     )
+  }
   : () => null
