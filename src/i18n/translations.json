@@ -1,46 +1,4 @@
 {
-  "links": {
-    "home": {
-      "cn": "首页",
-      "en": "Home"
-    },
-    "create_job": {
-      "cn": "创建作业",
-      "en": "Create Job"
-    },
-    "about": {
-      "cn": "关于",
-      "en": "About"
-    },
-    "official_site": {
-      "cn": "MAA 官网",
-      "en": "MAA Official Site"
-    },
-    "feedback": {
-      "cn": "意见与反馈",
-      "en": "Feedback"
-    },
-    "maa_repo": {
-      "cn": "MAA GitHub Repo",
-      "en": "MAA GitHub Repo"
-    },
-    "frontend_repo": {
-      "cn": "前端 GitHub Repo",
-      "en": "Frontend GitHub Repo"
-    },
-    "backend_repo": {
-      "cn": "后端 GitHub Repo",
-      "en": "Backend GitHub Repo"
-    },
-    "creator_group": {
-      "cn": "作业制作者交流群：{{groupNumber}}",
-      "en": "Creator Community Group: {{groupNumber}}"
-    },
-    "sharing_group": {
-      "cn": "作业分享群",
-      "en": "Job Sharing Group"
-    }
-  },
   "components": {
     "editor": {
       "source": {
@@ -1245,6 +1203,56 @@
         "cn": "更新日志",
         "en": "Changelog"
       }
+    }
+  },
+  "models": {
+    "announcement": {
+      "default_title": {
+        "cn": "公告",
+        "en": "Announcement"
+      }
+    }
+  },
+  "Links": {
+    "home": {
+      "cn": "首页",
+      "en": "Home"
+    },
+    "create_job": {
+      "cn": "创建作业",
+      "en": "Create Job"
+    },
+    "about": {
+      "cn": "关于",
+      "en": "About"
+    },
+    "official_site": {
+      "cn": "MAA 官网",
+      "en": "MAA Official Site"
+    },
+    "feedback": {
+      "cn": "意见与反馈",
+      "en": "Feedback"
+    },
+    "maa_repo": {
+      "cn": "MAA GitHub Repo",
+      "en": "MAA GitHub Repo"
+    },
+    "frontend_repo": {
+      "cn": "前端 GitHub Repo",
+      "en": "Frontend GitHub Repo"
+    },
+    "backend_repo": {
+      "cn": "后端 GitHub Repo",
+      "en": "Backend GitHub Repo"
+    },
+    "creator_group": {
+      "cn": "作业制作者交流群：{{groupNumber}}",
+      "en": "Creator Community Group: {{groupNumber}}"
+    },
+    "sharing_group": {
+      "cn": "作业分享群",
+      "en": "Job Sharing Group"
     }
   }
 }

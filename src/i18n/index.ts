@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import translations from './translations.json';
 
-// Flatten the nested translation structure to work with keys like "links.首页"
+// Flatten the nested translation structure to work with keys like "Links.首页"
 const flattenTranslations = (obj, lang) => {
   const result = {};
 
