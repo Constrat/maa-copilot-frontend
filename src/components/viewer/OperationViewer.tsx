@@ -294,10 +294,23 @@ export const OperationViewer: ComponentType<{
 const OperatorCard: FC<{
   operator: CopilotDocV1.Operator
 }> = ({ operator }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { name, skill } = operator
   const info = OPERATORS.find((o) => o.name === name)
-  const skillStr = [null, '一', '二', '三'][skill ?? 1] ?? t('components.viewer.OperationViewer.unknown')
+
+  const getSkillDisplay = () => {
+    const skillNum = skill ?? 1;
+
+    if (i18n.language === 'cn' || i18n.language.startsWith('zh')) {
+      // Chinese format: 一技能, 二技能, etc.
+      const skillStr = [null, '一', '二', '三'][skillNum] ?? t('components.viewer.OperationViewer.unknown');
+      return `${skillStr}${t('components.viewer.OperationViewer.skill')}`;
+    } else {
+      // English format: S1, S2, S3
+      return `S${skillNum}`;
+    }
+  }
+
   return (
     <div className="min-w-24 flex flex-col items-center">
       <OperatorAvatar
@@ -306,7 +319,7 @@ const OperatorCard: FC<{
         className="w-16 h-16 mb-1"
       />
       <span className={clsx('mb-1 font-bold')}>{name}</span>
-      <span className="text-xs text-zinc-500">{skillStr}技能</span>
+      <span className="text-xs text-zinc-300">{getSkillDisplay()}</span>
     </div>
   )
 }

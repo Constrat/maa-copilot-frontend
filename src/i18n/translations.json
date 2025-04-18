@@ -283,6 +283,468 @@
       }
     },
     "editor": {
+      "action": {
+        "EditorActionAdd": {
+          "add": {
+            "cn": "添加",
+            "en": "Add"
+          },
+          "edit": {
+            "cn": "编辑",
+            "en": "Edit"
+          },
+          "action": {
+            "cn": "动作",
+            "en": " Action"
+          },
+          "save": {
+            "cn": "保存",
+            "en": "Save"
+          },
+          "current_action": {
+            "cn": "正在编辑的动作",
+            "en": "Current Action"
+          },
+          "action_type": {
+            "cn": "动作类型",
+            "en": "Action Type"
+          },
+          "operator_group_name": {
+            "cn": "干员或干员组名",
+            "en": "Operator or Group Name"
+          },
+          "select_operator_description": {
+            "cn": "选择干员、使用干员名、或使用干员组名引用",
+            "en": "Select an operator, use operator name, or reference an operator group"
+          },
+          "search_operator_hint": {
+            "cn": "键入干员名、拼音或拼音首字母以搜索干员列表",
+            "en": "Type operator name, pinyin or initials to search operators"
+          },
+          "reference_group_hint": {
+            "cn": "键入干员组名以引用干员组配置",
+            "en": "Type group name to reference operator group configuration"
+          },
+          "operator_required": {
+            "cn": "必须填写干员或干员组名",
+            "en": "Operator or group name is required"
+          },
+          "skill_usage": {
+            "cn": "技能用法",
+            "en": "Skill Usage"
+          },
+          "skill_usage_count": {
+            "cn": "技能使用次数",
+            "en": "Skill Usage Count"
+          },
+          "camera_movement_hint": {
+            "cn": "移动距离一般不需要修改，只填写前置延迟（15000）和击杀数条件即可",
+            "en": "Movement distance usually doesn't need modification, just fill in pre-delay (15000) and kill count conditions"
+          },
+          "execution_conditions": {
+            "cn": "执行条件",
+            "en": "Execution Conditions"
+          },
+          "log": {
+            "cn": "日志",
+            "en": "Log"
+          },
+          "description": {
+            "cn": "描述",
+            "en": "Description"
+          },
+          "description_placeholder": {
+            "cn": "描述，可选。会显示在界面上，没有实际作用",
+            "en": "Description, optional. Will be displayed in the interface but has no practical effect."
+          },
+          "cancel_edit": {
+            "cn": "取消编辑",
+            "en": "Cancel Edit"
+          }
+        },
+        "EditorActionDelay": {
+          "pre_delay": {
+            "cn": "前置延时",
+            "en": "Pre-delay"
+          },
+          "delay_description": {
+            "cn": "可选，默认为 0，单位毫秒",
+            "en": "Optional, defaults to 0. In milliseconds"
+          },
+          "post_delay": {
+            "cn": "后置延时",
+            "en": "Post-delay"
+          }
+        },
+        "EditorActionDistance": {
+          "distance_required": {
+            "cn": "必须填写移动距离",
+            "en": "Movement distance is required"
+          },
+          "not_valid_number": {
+            "cn": "不是有效的数字",
+            "en": "Not a valid number"
+          },
+          "movement_distance": {
+            "cn": "移动距离",
+            "en": "Movement Distance"
+          },
+          "x_distance": {
+            "cn": "X 距离",
+            "en": "X Distance"
+          },
+          "y_distance": {
+            "cn": "Y 距离",
+            "en": "Y Distance"
+          }
+        },
+        "EditorActionDocColor": {
+          "description_color": {
+            "cn": "描述颜色",
+            "en": "Description Color"
+          },
+          "color_description": {
+            "cn": "在 MAA 中打印描述时的颜色",
+            "en": "Color used when printing descriptions in MAA"
+          }
+        },
+        "EditorActionExecPredicate": {
+          "kill_count_condition": {
+            "cn": "击杀数条件",
+            "en": "Kill Count Condition"
+          },
+          "kill_count_description": {
+            "cn": "如果没达到就一直等待。可选，默认为 0，直接执行",
+            "en": "If not reached, will wait. Optional, defaults to 0 (execute immediately)"
+          },
+          "kill_count": {
+            "cn": "击杀数",
+            "en": "Kill Count"
+          },
+          "cost_condition": {
+            "cn": "费用条件",
+            "en": "DP Cost Condition"
+          },
+          "cost_condition_description": {
+            "cn": "如果没达到就一直等待。可选，默认为 0，直接执行。费用受潜能等影响，可能并不完全正确，仅适合对时间轴要求不严格的战斗，否则请使用下面的费用变化量条件。另外仅在费用是两位数的时候识别的比较准，三位数的费用可能会识别错，不推荐使用。",
+            "en": "If not reached, will wait. Optional, defaults to 0. DP costs can be affected by potentials and may not be completely accurate. Only suitable for battles that don't require strict timing; otherwise use the DP change condition below. Recognition is more reliable with two-digit DP costs; three-digit costs may be recognized incorrectly and are not recommended."
+          },
+          "dp_cost": {
+            "cn": "费用",
+            "en": "DP Cost"
+          },
+          "cost_change_condition": {
+            "cn": "费用变化量条件",
+            "en": "DP Change Condition"
+          },
+          "cost_change_description": {
+            "cn": "如果没达到就一直等待。可选，默认为 0，直接执行。注意：费用变化量是从开始执行本动作时开始计算的（即：使用前一个动作结束时的费用作为基准）。支持负数，即费用变少了（例如\"孑\"等吸费干员使得费用变少了）。另外仅在费用是两位数的时候识别的比较准，三位数的费用可能会识别错，不推荐使用。",
+            "en": "If not reached, will wait. Optional, defaults to 0. Note: DP change is calculated from the start of this action (using the DP at the end of the previous action as baseline). Supports negative values (e.g., when DP decreases due to operators like Jaye). Recognition is more reliable with two-digit DP costs; three-digit costs may be recognized incorrectly and are not recommended."
+          },
+          "dp_change_amount": {
+            "cn": "费用变化量",
+            "en": "DP Change Amount"
+          },
+          "cooldown_operator_condition": {
+            "cn": "CD 中干员数量条件",
+            "en": "Operators on Cooldown Condition"
+          },
+          "cooldown_description": {
+            "cn": "如果没达到就一直等待。可选，默认 -1，不识别",
+            "en": "If not reached, will wait. Optional, defaults to -1 (not recognized)"
+          },
+          "cooldown_count": {
+            "cn": "CD 中干员数量",
+            "en": "N° of Ops on Cooldown"
+          }
+        },
+        "EditorActionOperatorDirection": {
+          "direction_required": {
+            "cn": "必须选择朝向",
+            "en": "Direction is required"
+          },
+          "operator_direction": {
+            "cn": "干员朝向",
+            "en": "Operator Direction"
+          },
+          "direction_description": {
+            "cn": "部署干员的干员朝向",
+            "en": "Direction the operator will face when deployed"
+          }
+        },
+        "EditorActionOperatorLocation": {
+          "location_required": {
+            "cn": "必须填写位置",
+            "en": "Location is required"
+          },
+          "invalid_location": {
+            "cn": "位置不是有效的数字",
+            "en": "Location is not a valid number"
+          },
+          "x_out_of_range": {
+            "cn": "X 坐标超出地图范围 (0-{{max}})",
+            "en": "X coordinate out of map range (0-{{max}})"
+          },
+          "y_out_of_range": {
+            "cn": "Y 坐标超出地图范围 (0-{{max}})",
+            "en": "Y coordinate out of map range (0-{{max}})"
+          },
+          "operator_location": {
+            "cn": "干员位置",
+            "en": "Operator Location"
+          },
+          "map_location_description": {
+            "cn": "填完关卡名后开一局，会在目录下 map 文件夹中生成地图坐标图片",
+            "en": "After entering stage name and starting a game, a map coordinate image will be generated in the 'map' folder"
+          },
+          "click_on_map": {
+            "cn": "可在地图上点击以选择位置",
+            "en": "Click on the map to select a location"
+          },
+          "x_coordinate": {
+            "cn": "X 坐标",
+            "en": "X Coordinate"
+          },
+          "y_coordinate": {
+            "cn": "Y 坐标",
+            "en": "Y Coordinate"
+          }
+        },
+        "EditorActionTypeSelect": {
+          "select_action_type_required": {
+            "cn": "请选择动作类型",
+            "en": "Please select an action type"
+          },
+          "select_action": {
+            "cn": "选择动作",
+            "en": "Select action"
+          }
+        },
+        "EditorActions": {
+          "no_actions": {
+            "cn": "暂无动作",
+            "en": "No actions yet"
+          },
+          "update_action_not_found": {
+            "cn": "未能找到要更新的动作",
+            "en": "Could not find the action to update"
+          }
+        },
+        "validation": {
+          "name_or_location_required": {
+            "cn": "类型为技能、撤退或子弹时间时，必须填写名称或位置其中一个",
+            "en": "When type is Skill, Retreat, or BulletTime, you must provide either a name or location"
+          }
+        }
+      },
+      "floatingMap": {
+        "connection": {
+          "env_var_not_defined": {
+            "cn": "环境变量 VITE_THERESA_SERVER 未定义。",
+            "en": "Environment variable VITE_THERESA_SERVER is not defined."
+          }
+        },
+        "FloatingMap": {
+          "waiting_connection": {
+            "cn": "等待地图连接...",
+            "en": "Waiting for map connection..."
+          },
+          "no_stage_selected": {
+            "cn": "未选择关卡",
+            "en": "No stage selected"
+          },
+          "hide_map": {
+            "cn": "隐藏地图",
+            "en": "Hide map"
+          },
+          "show_map": {
+            "cn": "显示地图",
+            "en": "Show map"
+          },
+          "map": {
+            "cn": "地图",
+            "en": "Map"
+          },
+          "unnamed_stage": {
+            "cn": "未命名关卡",
+            "en": "Unnamed stage"
+          }
+        }
+      },
+      "operator": {
+        "EditorGroupItem": {
+          "drag_operators_here": {
+            "cn": "将干员拖拽到此处",
+            "en": "Drag operators here"
+          }
+        },
+        "EditorOperator": {
+          "operator_or_group": {
+            "cn": "干员或干员组",
+            "en": "Operator or operator group"
+          },
+          "operator": {
+            "cn": "干员",
+            "en": "Operator"
+          },
+          "please_enter_name": {
+            "cn": "请输入{{entityName}}名",
+            "en": "Please enter {{entityName}} name"
+          },
+          "no_matching_entity": {
+            "cn": "没有匹配的{{entityName}}",
+            "en": "No matching {{entityName}}"
+          },
+          "use_custom_name": {
+            "cn": "使用自定义{{entityName}}名 \"{{query}}\"",
+            "en": "Use custom {{entityName}} name \"{{query}}\""
+          },
+          "entity_name": {
+            "cn": "{{entityName}}名",
+            "en": "{{entityName}} name"
+          }
+        },
+        "EditorOperatorGroupSelect": {
+          "create_new_group": {
+            "cn": "创建新的干员组 \"{{query}}\"",
+            "en": "Create new operator group \"{{query}}\""
+          },
+          "no_matching_groups": {
+            "cn": "没有匹配的干员组",
+            "en": "No matching operator groups"
+          },
+          "group_name": {
+            "cn": "干员组名",
+            "en": "Operator group name"
+          }
+        },
+        "EditorOperatorItem": {
+          "first_skill": {
+            "cn": "一",
+            "en": "First"
+          },
+          "second_skill": {
+            "cn": "二",
+            "en": "Second"
+          },
+          "third_skill": {
+            "cn": "三",
+            "en": "Third"
+          },
+          "unknown": {
+            "cn": "未知",
+            "en": "Unknown Skill"
+          },
+          "skill": {
+            "cn": "技能",
+            "en": "Skill"
+          }
+        },
+        "EditorOperatorSelect": {
+          "please_select_operator": {
+            "cn": "请选择干员",
+            "en": "Please select operator"
+          },
+          "operator_deploy_retreat": {
+            "cn": "干员上/退场",
+            "en": "Operator Deploy/Retreat"
+          },
+          "deploy": {
+            "cn": "部署",
+            "en": "Deploy"
+          },
+          "deploy_description": {
+            "cn": "部署干员至指定位置。当费用不够时，会一直等待到费用够（除非 timeout）",
+            "en": "Deploy operator to specified location. When DP is insufficient, will wait until enough (unless timeout)"
+          },
+          "retreat": {
+            "cn": "撤退",
+            "en": "Retreat"
+          },
+          "retreat_description": {
+            "cn": "将干员从作战中撤出",
+            "en": "Withdraw operator from battle"
+          },
+          "operator_skills": {
+            "cn": "干员技能",
+            "en": "Operator Skills"
+          },
+          "use_skill": {
+            "cn": "使用技能",
+            "en": "Use Skill"
+          },
+          "use_skill_description": {
+            "cn": "当技能 CD 没转好时，一直等待到技能 CD 好（除非 timeout）",
+            "en": "When skill cooldown isn't ready, will wait until it is (unless timeout)"
+          },
+          "switch_skill_usage": {
+            "cn": "切换技能用法",
+            "en": "Switch Skill Usage"
+          },
+          "switch_skill_usage_description": {
+            "cn": "切换干员技能用法。例如，刚下桃金娘、需要她帮忙打几个怪，但此时不能自动开技能否则会漏怪，等中后期平稳了才需要她自动开技能，则可以在对应时刻后，将桃金娘的技能用法从「不自动使用」改为「好了就用」。",
+            "en": "Switch operator skill usage. For example, when Perfumer is just deployed and needs to help defeat some enemies, but automatic skill activation would miss enemies, and only in mid/late game should she activate skills automatically, you can change Perfumer's skill usage from 'Do not use automatically' to 'Use when ready'."
+          },
+          "battle_control": {
+            "cn": "作战控制",
+            "en": "Battle Control"
+          },
+          "toggle_speed": {
+            "cn": "切换二倍速",
+            "en": "Toggle 2x Speed"
+          },
+          "toggle_speed_description": {
+            "cn": "执行后切换至二倍速，再次执行切换至一倍速",
+            "en": "After execution, switches to 2x speed; executing again switches to 1x speed"
+          },
+          "bullet_time": {
+            "cn": "进入子弹时间",
+            "en": "Enter Bullet Time"
+          },
+          "bullet_time_description": {
+            "cn": "执行后将点击任意干员，进入 1/5 速度状态；再进行任意动作会恢复正常速度",
+            "en": "After execution, click any operator to enter 1/5 speed state; any further action will restore normal speed"
+          },
+          "auto_mode": {
+            "cn": "开始挂机",
+            "en": "Start Auto Mode"
+          },
+          "auto_mode_description": {
+            "cn": "进入挂机模式。仅使用 \"好了就用\" 的技能，其他什么都不做，直到战斗结束",
+            "en": "Enter auto mode. Only uses skills set to 'Use when ready', does nothing else until battle ends"
+          },
+          "miscellaneous": {
+            "cn": "杂项",
+            "en": "Miscellaneous"
+          },
+          "print_description": {
+            "cn": "打印描述内容",
+            "en": "Print Description"
+          },
+          "print_description_details": {
+            "cn": "对作战没有实际作用，仅用于输出描述内容（用来做字幕之类的）",
+            "en": "Has no actual effect on battle, only outputs description content (for subtitles, etc.)"
+          },
+          "select_operator": {
+            "cn": "选择干员",
+            "en": "Select Operator"
+          }
+        },
+        "EditorOperatorSkill": {
+          "first_skill": {
+            "cn": "一技能",
+            "en": "Skill 1"
+          },
+          "second_skill": {
+            "cn": "二技能",
+            "en": "Skill 2"
+          },
+          "third_skill": {
+            "cn": "三技能",
+            "en": "Skill 3"
+          }
+        }
+      },
       "source": {
         "FileImporter": {
           "cannot_read_file": {
@@ -415,6 +877,58 @@
           }
         }
       },
+      "CardOptions": {
+        "duplicate": {
+          "cn": "复制",
+          "en": "Duplicate"
+        },
+        "edit": {
+          "cn": "编辑",
+          "en": "Edit"
+        },
+        "delete": {
+          "cn": "删除",
+          "en": "Delete"
+        }
+      },
+      "EditorIntegerInput": {
+        "min_value": {
+          "cn": "最小为 {{min}}",
+          "en": "Minimum value is {{min}}"
+        }
+      },
+      "EditorResetButton": {
+        "reset": {
+          "cn": "重置",
+          "en": "Reset"
+        },
+        "cancel": {
+          "cn": "取消",
+          "en": "Cancel"
+        },
+        "reset_entity": {
+          "cn": "重置{{entityName}}",
+          "en": "Reset {{entityName}}"
+        },
+        "confirm_reset": {
+          "cn": "确定要重置{{entityName}}吗？",
+          "en": "Are you sure you want to reset the {{entityName}}?"
+        },
+        "reset_button": {
+          "cn": "重置...",
+          "en": "Reset..."
+        }
+      },
+      "FormError": {
+        "error_occurred": {
+          "cn": "发生错误…",
+          "en": "Errors occurred..."
+        },
+        "unknown_error": {
+          "cn": "未知错误",
+          "en": "Unknown error"
+        }
+      },
       "OperationEditorLauncher": {
         "launch_job_editor": {
           "cn": "启动作业编辑器",
@@ -472,7 +986,7 @@
         },
         "normal": {
           "cn": "普通",
-          "en": "Normal"
+          "en": "Standard"
         },
         "challenge": {
           "cn": "突袭",
@@ -568,6 +1082,20 @@
           "cn": "当前的编辑内容将会被覆盖，确定要恢复内容吗？",
           "en": "Current edits will be overwritten. Are you sure you want to restore this content?"
         }
+      },
+      "validation": {
+        "empty_group": {
+          "cn": "干员组\"$t(name)\"不能为空",
+          "en": "Operator group \"$t(name)\" cannot be empty"
+        },
+        "bullet_time_error": {
+          "cn": "第{{index}}个动作是\"{{actionType}}\"，但它的下一个动作不是\"{{validTypes}}\"其中之一",
+          "en": "Action #{{index}} is \"{{actionType}}\", but the next action is not one of \"{{validTypes}}\""
+        },
+        "bullet_time_separator": {
+          "cn": "\"、\"",
+          "en": "\", \""
+        }
       }
     },
     "entity": {
@@ -597,7 +1125,7 @@
           "en": "This Job doesn't specify supported difficulty levels. Please refer to the Job description to determine compatibility. Generally, Jobs without specified difficulty support both standard and challenge modes."
         }
       },
-      "EStage": {
+      "ELevel": {
         "custom_level": {
           "cn": "自定义关卡",
           "en": "Custom Stage"
@@ -1065,6 +1593,10 @@
         "private": {
           "cn": "私有",
           "en": "Private"
+        },
+        "skill": {
+          "cn": "技能",
+          "en": "Skill"
         },
         "stage": {
           "cn": "作战",

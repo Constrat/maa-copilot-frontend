@@ -5,6 +5,7 @@ import {
   FieldPath,
   UseFormSetError,
 } from 'react-hook-form'
+import i18next from 'i18next'
 
 import { CopilotDocV1 } from 'models/copilot.schema'
 
@@ -22,13 +23,14 @@ export function validateOperation(
     Record<FieldPath<CopilotDocV1.Operation> | 'global', ErrorOption>
   > = {}
   const globalErrors: string[] = []
+  const t = i18next.t;
 
   const { actions, groups } = operation
 
   const emptyGroup = groups?.find((group) => (group?.opers?.length || 0) === 0)
 
   if (emptyGroup) {
-    globalErrors.push(`干员组“${emptyGroup.name}”不能为空`)
+    globalErrors.push(t('components.editor.validation.empty_group', { name: emptyGroup.name }))
   }
 
   if (actions) {
@@ -40,11 +42,13 @@ export function validateOperation(
 
         if (!nextType || !validTypesFollowingBulletTime.includes(nextType)) {
           globalErrors.push(
-            `第${i + 1}个动作是“${
-              findActionType(action.type).alternativeValue
-            }”，但它的下一个动作不是“${validTypesFollowingBulletTime
-              .map((type) => findActionType(type).alternativeValue)
-              .join('”、“')}”其中之一`,
+            t('components.editor.validation.bullet_time_error', {
+              index: i + 1,
+              actionType: findActionType(action.type).alternativeValue,
+              validTypes: validTypesFollowingBulletTime
+                .map((type) => findActionType(type).alternativeValue)
+                .join(t('components.editor.validation.bullet_time_separator'))
+            })
           )
         }
       }
@@ -73,7 +77,10 @@ export function validateOperation(
   )
 
   if (!jsonSchemaValidation && copilotSchemaValidator.errors) {
-    ajvLocalizeZh(copilotSchemaValidator.errors)
+    if (i18next.language === 'cn') {
+      ajvLocalizeZh(copilotSchemaValidator.errors)
+    }
+
     globalErrors.push(
       copilotSchemaValidator.errorsText(undefined, {
         separator: '\n',

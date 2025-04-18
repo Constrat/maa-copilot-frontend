@@ -1,5 +1,6 @@
 import { Button, IconName, MenuItem } from '@blueprintjs/core'
 import { Select2 } from '@blueprintjs/select'
+import { useTranslation } from 'react-i18next'
 
 import { useMemo } from 'react'
 import { useController } from 'react-hook-form'
@@ -20,6 +21,8 @@ export const EditorOperatorSkill = ({
   name,
   control,
 }: EditorOperatorSkillProps) => {
+  const { t } = useTranslation()
+
   const {
     field: { onChange, onBlur, value, ref },
   } = useController({
@@ -31,21 +34,21 @@ export const EditorOperatorSkill = ({
     () => [
       {
         icon: 'cog',
-        title: '一技能',
+        title: t('components.editor.operator.EditorOperatorSkill.first_skill'),
         value: 1,
       },
       {
         icon: 'cog',
-        title: '二技能',
+        title: t('components.editor.operator.EditorOperatorSkill.second_skill'),
         value: 2,
       },
       {
         icon: 'cog',
-        title: '三技能',
+        title: t('components.editor.operator.EditorOperatorSkill.third_skill'),
         value: 3,
       },
     ],
-    [],
+    [t],
   )
 
   const selected = items.find((item) => item.value === (value ?? 1))

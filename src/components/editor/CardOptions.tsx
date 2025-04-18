@@ -1,5 +1,6 @@
 import { Button, ButtonProps, Menu, MenuItem } from '@blueprintjs/core'
 import { Popover2 } from '@blueprintjs/popover2'
+import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import { FC } from 'react'
@@ -7,45 +8,58 @@ import { FC } from 'react'
 export const CardDuplicateOption: FC<ButtonProps> = ({
   className,
   ...props
-}) => (
-  <Button
-    minimal
-    icon="duplicate"
-    title="复制"
-    className={clsx('-my-2', className)}
-    {...props}
-  />
-)
+}) => {
+  const { t } = useTranslation();
 
-export const CardEditOption: FC<ButtonProps> = ({ className, ...props }) => (
-  <Button
-    minimal
-    icon="edit"
-    title="编辑"
-    className={clsx('-my-2', className)}
-    {...props}
-  />
-)
+  return (
+    <Button
+      minimal
+      icon="duplicate"
+      title={t('components.editor.CardOptions.duplicate')}
+      className={clsx('-my-2', className)}
+      {...props}
+    />
+  );
+}
+
+export const CardEditOption: FC<ButtonProps> = ({
+  className, ...props}) => {
+  const { t } = useTranslation();
+
+  return (
+    <Button
+      minimal
+      icon="edit"
+      title={t('components.editor.CardOptions.edit')}
+      className={clsx('-my-2', className)}
+      {...props}
+    />
+  );
+}
 
 export const CardDeleteOption: FC<ButtonProps> = ({
   className,
   onClick,
   ...props
-}) => (
-  <Popover2
-    position="right"
-    content={
-      <Menu className="p-0">
-        <MenuItem intent="danger" text="删除" icon="trash" onClick={onClick} />
-      </Menu>
-    }
-  >
-    <Button
-      minimal
-      icon="trash"
-      title="删除"
-      className={clsx('-my-2', className)}
-      {...props}
-    />
-  </Popover2>
-)
+}) => {
+  const { t } = useTranslation();
+
+  return (
+    <Popover2
+      position="right"
+      content={
+        <Menu className="p-0">
+          <MenuItem intent="danger" text={t('components.editor.CardOptions.delete')} icon="trash" onClick={onClick} />
+        </Menu>
+      }
+    >
+      <Button
+        minimal
+        icon="trash"
+        title={t('components.editor.CardOptions.delete')}
+        className={clsx('-my-2', className)}
+        {...props}
+      />
+    </Popover2>
+  );
+}
