@@ -27,7 +27,6 @@ export const EditorOperatorItem = ({
   listeners,
 }: EditorOperatorItemProps) => {
   const { t, i18n } = useTranslation()
-  const currentLang = i18n.language || 'cn'
 
   const id = OPERATORS.find(({ name }) => name === operator.name)?.id
   const skillUsage = getSkillUsageTitle(
@@ -38,7 +37,7 @@ export const EditorOperatorItem = ({
   const getSkillDisplay = () => {
     const skillNum = operator.skill;
 
-    if (currentLang === 'cn' || currentLang.startsWith('zh')) {
+    if (i18n.language === 'cn') {
       // Chinese format: 一技能, 二技能, etc.
       const skillNumberText = skillNum === 1
         ? t('components.editor.operator.EditorOperatorItem.first_skill')

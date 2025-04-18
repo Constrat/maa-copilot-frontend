@@ -572,6 +572,280 @@
         }
       },
       "operator": {
+        "sheet": {
+          "sheetGroup": {
+            "CollapseButton": {
+              "collapse": {
+                "cn": "折叠所包含干员",
+                "en": "Collapse included operators"
+              },
+              "expand": {
+                "cn": "展开所包含干员",
+                "en": "Expand included operators"
+              }
+            },
+            "SheetGroupItem": {
+              "unsaved_changes": {
+                "cn": "当前干员组名修改未保存，是否放弃修改？",
+                "en": "Current operator group name changes are not saved, discard changes?"
+              },
+              "edit_group_name": {
+                "cn": "修改干员组名称",
+                "en": "Edit operator group name"
+              },
+              "cancel": {
+                "cn": "取消",
+                "en": "Cancel"
+              },
+              "confirm": {
+                "cn": "确认",
+                "en": "Confirm"
+              },
+              "remove_from_favorites": {
+                "cn": "从收藏分组中移除",
+                "en": "Remove from favourite groups"
+              },
+              "will_replace_same_name": {
+                "cn": "此操作会替换同名干员组",
+                "en": "This operation will replace the operator group with the same name"
+              },
+              "add_to_favorites": {
+                "cn": "添加至收藏分组",
+                "en": "Add to favourite groups"
+              },
+              "already_added": {
+                "cn": "已添加",
+                "en": "Already added"
+              },
+              "same_name_detected": {
+                "cn": "检测到同名干员组",
+                "en": "Found operator group with the same name"
+              },
+              "use_recommended_group": {
+                "cn": "使用该推荐分组",
+                "en": "Use this recommended group"
+              }
+            },
+            "SheetOperatorEditor": {
+              "edit_operator_info": {
+                "cn": "编辑干员组中干员信息",
+                "en": "Edit operator information in the group"
+              },
+              "select_operator": {
+                "cn": "选择干员",
+                "en": "Select operator"
+              },
+              "selected_operators": {
+                "cn": "已选择干员",
+                "en": "Selected operators"
+              },
+              "unselected_operators": {
+                "cn": "未选择干员",
+                "en": "Unselected operators"
+              },
+              "operators_in_other_groups": {
+                "cn": "其他分组干员",
+                "en": "Operators in other groups"
+              },
+              "select_all": {
+                "cn": "全选",
+                "en": "Select all"
+              },
+              "confirm": {
+                "cn": "确认",
+                "en": "Confirm"
+              },
+              "unsaved_data_warning": {
+                "cn": "所有未保存的数据均会丢失，确认继续？",
+                "en": "All unsaved data will be lost, continue?"
+              },
+              "continue": {
+                "cn": "继续",
+                "en": "Continue"
+              },
+              "cancel": {
+                "cn": "取消",
+                "en": "Cancel"
+              },
+              "reset": {
+                "cn": "重置",
+                "en": "Reset"
+              }
+            }
+          },
+          "sheetOperator": {
+            "toolbox": {
+              "OperatorBackToTop": {
+                "back_to_top": {
+                  "cn": "回到顶部",
+                  "en": "Back to top"
+                }
+              },
+              "OperatorMutipleSelect": {
+                "deselect_all_operators": {
+                  "cn": "取消选择全部{{count}}位干员",
+                  "en": "Deselect all {{count}} operators"
+                },
+                "select_all_operators": {
+                  "cn": "全选{{count}}位干员",
+                  "en": "Select all {{count}} operators"
+                }
+              },
+              "OperatorRaritySelect": {
+                "display_by_rarity": {
+                  "cn": "按干员星级展示",
+                  "en": "Display by operator rarity"
+                },
+                "reset_selection": {
+                  "cn": "重置选择",
+                  "en": "Reset selection"
+                },
+                "sort_ascending": {
+                  "cn": "按从下至上升序排列",
+                  "en": "Sort in ascending order (bottom to top)"
+                },
+                "sort_descending": {
+                  "cn": "按从下至上降序排列",
+                  "en": "Sort in descending order (bottom to top)"
+                }
+              }
+            },
+            "ProfClassificationWithFilters": {
+              "all": {
+                "cn": "全部",
+                "en": "All"
+              },
+              "favorites": {
+                "cn": "收藏",
+                "en": "Favs"
+              },
+              "others": {
+                "cn": "其它",
+                "en": "Other"
+              },
+              "selected": {
+                "cn": "已选择",
+                "en": "Selected"
+              }
+            },
+            "SheetOperatorItem": {
+              "operator_in_group": {
+                "cn": "干员 {{name}} 已被编组",
+                "en": "Operator {{name}} is already in a group"
+              },
+              "remove_from_favorites": {
+                "cn": "移出收藏",
+                "en": "Remove from favorites"
+              },
+              "will_replace_operator": {
+                "cn": "此操作会覆盖已有干员",
+                "en": "This will replace the existing operator"
+              },
+              "in_group": {
+                "cn": "已被编组",
+                "en": "In a group"
+              }
+            },
+            "ShowMore": {
+              "showing_all_operators": {
+                "cn": "已经展示全部干员了({{total}})",
+                "en": "Showing all operators ({{total}})"
+              },
+              "collapse": {
+                "cn": "收起",
+                "en": "Collapse"
+              },
+              "show_more": {
+                "cn": "显示更多干员(剩余{{remaining}})",
+                "en": "Show more operators ({{remaining}} remaining)"
+              }
+            }
+          },
+          "SheetGroup": {
+            "add_operator_group": {
+              "cn": "添加干员组",
+              "en": "Add Operator Group"
+            },
+            "configured_groups": {
+              "cn": "已设置的干员组",
+              "en": "Configured Operator Groups"
+            },
+            "group_count": {
+              "cn": "已显示全部 {{count}} 个干员组",
+              "en": "Showing all {{count}} operator groups"
+            },
+            "recommended_groups": {
+              "cn": "推荐分组",
+              "en": "Recommended Groups"
+            },
+            "favorite_groups": {
+              "cn": "收藏分组",
+              "en": "Favourite Groups"
+            },
+            "set_operator_groups": {
+              "cn": "设置干员组",
+              "en": "Configure Operator Groups"
+            },
+            "group_name_empty": {
+              "cn": "干员组名不能为空",
+              "en": "Operator group name cannot be empty"
+            },
+            "enter_group_name": {
+              "cn": "输入干员组名",
+              "en": "Enter operator group name"
+            },
+            "add": {
+              "cn": "添加",
+              "en": "Add"
+            },
+            "reset": {
+              "cn": "重置",
+              "en": "Reset"
+            }
+          },
+          "SheetNoneData": {
+            "no_operators": {
+              "cn": "暂无干员",
+              "en": "No operators yet"
+            },
+            "no_groups": {
+              "cn": "暂无干员组",
+              "en": "No operator groups yet"
+            }
+          },
+          "SheetOperator": {
+            "select_operator": {
+              "cn": "选择干员",
+              "en": "Select Operator"
+            }
+          },
+          "SheetOperatorSkillAbout": {
+            "skill": {
+              "cn": "技能",
+              "en": "Skill"
+            },
+            "skill_usage": {
+              "cn": "技能用法",
+              "en": "Skill Usage"
+            },
+            "skill_usage_count": {
+              "cn": "技能使用次数",
+              "en": "Skill Usage Count"
+            },
+            "confirm": {
+              "cn": "确定",
+              "en": "Confirm"
+            },
+            "default_settings_tooltip": {
+              "cn": "若不进行任何设置, 将使用默认值 (一技能 · 不自动使用 · 技能使用次数: 1次)",
+              "en": "If no settings are applied, default values will be used (Skill 1 · Do not use automatically · Usage count: 1)"
+            },
+            "not_set": {
+              "cn": "未设置",
+              "en": "@@@CURRENTLY NOT IN USE@@@Not set"
+            }
+          }
+        },
         "EditorGroupItem": {
           "drag_operators_here": {
             "cn": "将干员拖拽到此处",

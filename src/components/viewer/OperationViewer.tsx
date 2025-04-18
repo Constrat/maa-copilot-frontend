@@ -301,7 +301,7 @@ const OperatorCard: FC<{
   const getSkillDisplay = () => {
     const skillNum = skill ?? 1;
 
-    if (i18n.language === 'cn' || i18n.language.startsWith('zh')) {
+    if (i18n.language === 'cn') {
       // Chinese format: 一技能, 二技能, etc.
       const skillStr = [null, '一', '二', '三'][skillNum] ?? t('components.viewer.OperationViewer.unknown');
       return `${skillStr}${t('components.viewer.OperationViewer.skill')}`;
