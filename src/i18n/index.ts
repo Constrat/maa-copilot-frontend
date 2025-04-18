@@ -4,7 +4,6 @@ import { initReactI18next } from 'react-i18next'
 
 import translations from './translations.json'
 
-// Flatten the nested translation structure to work with keys like "Links.首页"
 const flattenTranslations = (obj, lang) => {
   const result = {}
 
@@ -18,10 +17,8 @@ const flattenTranslations = (obj, lang) => {
         'cn' in value &&
         'en' in value
       ) {
-        // This is a translation entry, use it directly
         result[newKey] = value[lang]
       } else if (value && typeof value === 'object') {
-        // Continue flattening
         flatten(value, newKey)
       }
     })
@@ -29,6 +26,17 @@ const flattenTranslations = (obj, lang) => {
 
   flatten(obj)
   return result
+}
+
+const languageDetectorOptions = {
+  order: ['localStorage', 'navigator'],
+  lookupNavigator: 'language',
+  convertDetectedLanguage: (lng: string) => {
+    if (lng && (lng.startsWith('zh') || lng === 'cn')) {
+      return 'cn';
+    }
+    return 'en';
+  },
 }
 
 i18n
@@ -44,7 +52,7 @@ i18n
       },
     },
     fallbackLng: 'cn',
-    lng: localStorage.getItem('language') || 'cn',
+    detection: languageDetectorOptions,
     debug: process.env.NODE_ENV === 'development',
     interpolation: {
       escapeValue: false,

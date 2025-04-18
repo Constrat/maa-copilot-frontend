@@ -16,7 +16,6 @@ import { ViewPage } from 'pages/view'
 import { clearOutdatedSwrCache } from 'utils/swr'
 
 import { App } from './App'
-import './i18n'
 import { AppLayout } from './layouts/AppLayout'
 import { NotFoundPage } from './pages/404'
 import { IndexPage } from './pages/index'
