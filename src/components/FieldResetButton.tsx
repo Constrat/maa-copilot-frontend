@@ -15,6 +15,7 @@ export const FieldResetButton = ({
   return (
     <Button
       small
+      minimal
       disabled={disabled}
       className={clsx(
         'invisible pointer-events-none',
