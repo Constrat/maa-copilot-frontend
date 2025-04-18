@@ -1,5 +1,249 @@
 {
+  "apis": {
+    "announcement": {
+      "network_error": {
+        "cn": "网络错误",
+        "en": "Network error"
+      }
+    },
+    "comment": {
+      "invalid_operation_id": {
+        "cn": "无效的作业ID",
+        "en": "Invalid operation ID"
+      }
+    },
+    "operation_set": {
+      "search_requires_suspense": {
+        "cn": "useOperationSetSearch 必须使用 suspense",
+        "en": "useOperationSetSearch must be used with suspense"
+      },
+      "search_cannot_be_disabled": {
+        "cn": "useOperationSetSearch 不能被禁用",
+        "en": "useOperationSetSearch cannot be disabled"
+      }
+    }
+  },
   "components": {
+    "account": {
+      "AuthFormShared": {
+        "email_required": {
+          "cn": "邮箱为必填项",
+          "en": "Email is required"
+        },
+        "email_invalid": {
+          "cn": "不合法的邮箱",
+          "en": "Invalid email format"
+        },
+        "password_required": {
+          "cn": "密码为必填项",
+          "en": "Password is required"
+        },
+        "password_min_length": {
+          "cn": "密码长度不能小于 8 位",
+          "en": "Password must be at least 8 characters"
+        },
+        "password_max_length": {
+          "cn": "密码长度不能大于 32 位",
+          "en": "Password cannot be longer than 32 characters"
+        },
+        "username_required": {
+          "cn": "用户名为必填项",
+          "en": "Username is required"
+        },
+        "username_min_length": {
+          "cn": "用户名长度不能小于 4 位",
+          "en": "Username must be at least 4 characters"
+        },
+        "username_max_length": {
+          "cn": "用户名长度不能大于 24 位",
+          "en": "Username cannot be longer than 24 characters"
+        },
+        "token_required": {
+          "cn": "邮箱验证码为必填项",
+          "en": "Email verification code is required"
+        },
+        "token_length": {
+          "cn": "邮箱验证码长度为 6 位",
+          "en": "Email verification code must be 6 characters"
+        },
+        "email": {
+          "cn": "邮箱",
+          "en": "Email"
+        },
+        "email_verification_code": {
+          "cn": "邮箱验证码",
+          "en": "Email Verification Code"
+        },
+        "password": {
+          "cn": "密码",
+          "en": "Password"
+        },
+        "username": {
+          "cn": "用户名",
+          "en": "Username"
+        },
+        "email_verification_note": {
+          "cn": "将通过发送邮件输入验证码确认",
+          "en": "A verification code will be sent to your email"
+        },
+        "enter_email_code": {
+          "cn": "请输入邮件中的验证码",
+          "en": "Please enter the verification code from your email"
+        }
+      },
+      "EditDialog": {
+        "edit_account_info": {
+          "cn": "修改账户信息",
+          "en": "Edit Account Information"
+        },
+        "account_info": {
+          "cn": "账户信息",
+          "en": "Account Info"
+        },
+        "password": {
+          "cn": "密码",
+          "en": "Password"
+        },
+        "update_success": {
+          "cn": "更新成功",
+          "en": "Update successful"
+        },
+        "error": {
+          "cn": "错误",
+          "en": "Error"
+        },
+        "save": {
+          "cn": "保存",
+          "en": "Save"
+        },
+        "current_password": {
+          "cn": "当前密码",
+          "en": "Current Password"
+        },
+        "new_password": {
+          "cn": "新密码",
+          "en": "New Password"
+        },
+        "confirm_new_password": {
+          "cn": "确认新密码",
+          "en": "Confirm New Password"
+        },
+        "forgot_password": {
+          "cn": "忘记密码...",
+          "en": "Forgot Password..."
+        },
+        "passwords_dont_match": {
+          "cn": "两次输入的密码不一致",
+          "en": "The passwords don't match"
+        }
+      },
+      "LoginPanel": {
+        "login_failed": {
+          "cn": "登录失败：{{error}}",
+          "en": "Login failed: {{error}}"
+        },
+        "login_success": {
+          "cn": "登录成功。欢迎回来，{{name}}",
+          "en": "Login successful. Welcome back, {{name}}"
+        },
+        "forgot_password": {
+          "cn": "忘记密码...",
+          "en": "Forgot Password..."
+        },
+        "no_account": {
+          "cn": "还没有账号？",
+          "en": "Don't have an account?"
+        },
+        "go_register": {
+          "cn": "前往注册",
+          "en": "Register now"
+        },
+        "login": {
+          "cn": "登录",
+          "en": "Login"
+        }
+      },
+      "RegisterPanel": {
+        "registration_failed": {
+          "cn": "注册失败：{{error}}",
+          "en": "Registration failed: {{error}}"
+        },
+        "registration_success": {
+          "cn": "注册成功",
+          "en": "Registration successful"
+        },
+        "invalid_email": {
+          "cn": "邮箱输入为空或格式错误,请重新输入",
+          "en": "Email is empty or has an invalid format, please try again"
+        },
+        "send_failed": {
+          "cn": "发送失败：{{error}}",
+          "en": "Sending failed: {{error}}"
+        },
+        "email_sent_success": {
+          "cn": "邮件发送成功",
+          "en": "Email sent successfully"
+        },
+        "retry_seconds": {
+          "cn": "{{seconds}} 秒再试",
+          "en": "Retry in {{seconds}} seconds"
+        },
+        "send_verification_code": {
+          "cn": "发送验证码",
+          "en": "Send Verification Code"
+        },
+        "register": {
+          "cn": "注册",
+          "en": "Register"
+        }
+      },
+      "ResetPasswordDialog": {
+        "reset_success": {
+          "cn": "重置成功，请重新登录",
+          "en": "Reset successful, please log in again"
+        },
+        "reset_password": {
+          "cn": "重置密码",
+          "en": "Reset Password"
+        },
+        "error": {
+          "cn": "错误",
+          "en": "Error"
+        },
+        "verification_code": {
+          "cn": "验证码",
+          "en": "Verification Code"
+        },
+        "code_required": {
+          "cn": "验证码为必填项",
+          "en": "Verification code is required"
+        },
+        "enter_email_code": {
+          "cn": "请填入邮件中的验证码",
+          "en": "Please enter the verification code from your email"
+        },
+        "save": {
+          "cn": "保存",
+          "en": "Save"
+        },
+        "get_code_failed": {
+          "cn": "获取验证码失败：{{error}}",
+          "en": "Failed to get verification code: {{error}}"
+        },
+        "code_sent": {
+          "cn": "验证码已发送至您的邮箱",
+          "en": "Verification code has been sent to your email"
+        },
+        "resend": {
+          "cn": "重新发送",
+          "en": "Resend"
+        },
+        "get_code": {
+          "cn": "获取验证码",
+          "en": "Get Code"
+        }
+      }
+    },
     "announcement": {
       "AnnDialog": {
         "title": {
@@ -23,6 +267,18 @@
         "load_failed": {
           "cn": "公告加载失败：{{error}}",
           "en": "Failed to load announcement: {{error}}"
+        }
+      }
+    },
+    "drawer": {
+      "NavAside": {
+        "create_job_set": {
+          "cn": "创建作业集...",
+          "en": "Create Job Set"
+        },
+        "announcement": {
+          "cn": "公告",
+          "en": "Announcement"
         }
       }
     },
@@ -886,6 +1142,115 @@
           "cn": "作业并未定义任何动作",
           "en": "No actions have been defined for this Job"
         }
+      }
+    },
+    "AccountManager": {
+      "logout_success": {
+        "cn": "已退出登录",
+        "en": "Logged out successfully"
+      },
+      "cancel": {
+        "cn": "取消",
+        "en": "Cancel"
+      },
+      "logout": {
+        "cn": "退出登录",
+        "en": "Log Out"
+      },
+      "logout_confirm": {
+        "cn": "确定要退出登录吗？",
+        "en": "Are you sure you want to log out?"
+      },
+      "account_not_activated": {
+        "cn": "账号未激活，请在退出登录后，以重置密码的方式激活",
+        "en": "Account not activated. Please log out and use the password reset feature to activate."
+      },
+      "profile": {
+        "cn": "个人主页",
+        "en": "Profile"
+      },
+      "edit_info": {
+        "cn": "修改信息...",
+        "en": "Edit Information"
+      },
+      "maa_account": {
+        "cn": "MAA Copilot 账户",
+        "en": "MAA Copilot Account"
+      },
+      "login": {
+        "cn": "登录",
+        "en": "Login"
+      },
+      "register": {
+        "cn": "注册",
+        "en": "Register"
+      },
+      "login_register": {
+        "cn": "登录 / 注册",
+        "en": "Login / Register"
+      }
+    },
+    "ActionCard": {
+      "coordinates": {
+        "cn": "坐标",
+        "en": "Coordinates"
+      },
+      "direction": {
+        "cn": "朝向",
+        "en": "Direction"
+      },
+      "distance": {
+        "cn": "距离",
+        "en": "Distance"
+      },
+      "kills": {
+        "cn": "击杀",
+        "en": "Kills"
+      },
+      "cooling": {
+        "cn": "冷却中",
+        "en": "On Cooldown"
+      },
+      "cost": {
+        "cn": "费用",
+        "en": "DP Cost"
+      },
+      "cost_changes": {
+        "cn": "费用变化",
+        "en": "DP Change"
+      },
+      "pre_delay": {
+        "cn": "前置",
+        "en": "Pre-delay"
+      },
+      "rear_delay": {
+        "cn": "后置",
+        "en": "Post-delay"
+      }
+    },
+    "Confirm": {
+      "cancel": {
+        "cn": "取消",
+        "en": "Cancel"
+      },
+      "confirm": {
+        "cn": "确定",
+        "en": "Confirm"
+      }
+    },
+    "GlobalErrorBoundary": {
+      "error_occurred": {
+        "cn": "发生错误",
+        "en": "Error Occurred",
+        "ja": "エラー発生"
+      },
+      "render_error": {
+        "cn": "页面渲染出现错误；请尝试",
+        "en": "An error occurred while rendering the page; please try"
+      },
+      "refresh_page": {
+        "cn": "刷新页面",
+        "en": "Refreshing the Page"
       }
     },
     "LevelSelect": {

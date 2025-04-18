@@ -3,6 +3,7 @@ import {
   QueriesCommentsAreaRequest,
 } from 'maa-copilot-client'
 import useSWRInfinite from 'swr/infinite'
+import { useTranslation } from 'react-i18next'
 
 import { CommentApi } from 'utils/maa-copilot-client'
 
@@ -23,6 +24,7 @@ export function useComments({
   orderBy,
   suspense,
 }: UseCommentsParams) {
+  const { t } = useTranslation();
   const {
     data: pages,
     setSize,
@@ -35,7 +37,7 @@ export function useComments({
       }
 
       if (!isFinite(+operationId)) {
-        throw new Error('operationId is not a valid number')
+        throw new Error(t('apis.comment.invalid_operation_id'))
       }
 
       return [
@@ -86,6 +88,7 @@ export async function sendComment(req: {
       copilotId: req.operationId,
       fromCommentId: req.fromCommentId,
       notification: false,
+      commentStatus: 'ENABLED'
     },
   })
 }

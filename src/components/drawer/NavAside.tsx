@@ -1,5 +1,6 @@
 import { Drawer, Menu, MenuDivider } from '@blueprintjs/core'
 import { MenuItem2 } from '@blueprintjs/popover2'
+import { useTranslation } from 'react-i18next'
 
 import { useAtomValue, useSetAtom } from 'jotai'
 import { useState } from 'react'
@@ -13,6 +14,7 @@ import { OperationSetEditorDialog } from '../operation-set/OperationSetEditor'
 import { useLinks } from 'hooks/useLinks'
 
 export const NavAside = () => {
+  const { t } = useTranslation();
   const { isMD } = useCurrentSize()
   const nav = useAtomValue(navAtom)
   const toggleNav = useSetAtom(toggleExpandNavAtom)
@@ -53,7 +55,7 @@ export const NavAside = () => {
           <MenuDivider />
           <MenuItem2
             icon="folder-new"
-            text="创建作业集..."
+            text={t('components.drawer.NavAside.create_job_set')}
             className="p-2 rounded-md"
             onClick={() => {
               setShowOperationSetDialog(true)
@@ -64,7 +66,7 @@ export const NavAside = () => {
             trigger={({ handleClick }) => (
               <MenuItem2
                 icon="info-sign"
-                text="公告"
+                text={t('components.drawer.NavAside.announcement')}
                 className="p-2 rounded-md"
                 onClick={handleClick}
               />

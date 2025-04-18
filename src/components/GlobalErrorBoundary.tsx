@@ -1,24 +1,26 @@
 import { Button, NonIdealState } from '@blueprintjs/core'
 import { ErrorBoundary } from '@sentry/react'
+import { useTranslation } from 'react-i18next'
 
 import { ComponentType } from 'react'
 import { FCC } from 'types'
 
 export const GlobalErrorBoundary: FCC = ({ children }) => {
+  const { t } = useTranslation();
   return (
     <ErrorBoundary
       fallback={
         <NonIdealState
           icon="issue"
-          title="エラー発生"
-          description="页面渲染出现错误；请尝试"
+          title={t('components.GlobalErrorBoundary.error_occurred')}
+          description={t('components.GlobalErrorBoundary.render_error')}
           action={
             <Button
               intent="primary"
               icon="refresh"
               onClick={() => window.location.reload()}
             >
-              刷新页面
+              {t('components.GlobalErrorBoundary.refresh_page')}
             </Button>
           }
         />
@@ -28,6 +30,8 @@ export const GlobalErrorBoundary: FCC = ({ children }) => {
     </ErrorBoundary>
   )
 }
+
+
 
 export function withGlobalErrorBoundary<P extends {}>(
   Component: ComponentType<P>,
@@ -46,3 +50,6 @@ export function withGlobalErrorBoundary<P extends {}>(
 
   return Wrapped
 }
+
+
+
