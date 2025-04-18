@@ -33,9 +33,9 @@ const languageDetectorOptions = {
   lookupNavigator: 'language',
   convertDetectedLanguage: (lng: string) => {
     if (lng && (lng.startsWith('zh') || lng === 'cn')) {
-      return 'cn';
+      return 'cn'
     }
-    return 'en';
+    return 'en'
   },
 }
 

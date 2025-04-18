@@ -114,7 +114,7 @@ export const LevelSelect: FC<LevelSelectProps> = ({
     return debouncedQuery.trim()
       ? fuse.search(debouncedQuery).map((el) => el.item)
       : levels
-  }, [debouncedQuery, selectedLevel, levels, fuse, t])
+  }, [debouncedQuery, selectedLevel, levels, fuse])
 
   useEffect(() => {
     if (!selectedLevel) {
