@@ -735,7 +735,7 @@
               },
               "remove_from_favorites": {
                 "cn": "移出收藏",
-                "en": "Remove from favorites"
+                "en": "Remove from favourites"
               },
               "will_replace_operator": {
                 "cn": "此操作会覆盖已有干员",
@@ -965,11 +965,11 @@
           },
           "toggle_speed": {
             "cn": "切换二倍速",
-            "en": "Toggle 2x Speed"
+            "en": "Toggle 2× Speed"
           },
           "toggle_speed_description": {
             "cn": "执行后切换至二倍速，再次执行切换至一倍速",
-            "en": "After execution, switches to 2x speed; executing again switches to 1x speed"
+            "en": "After execution, switches to 2× speed; executing again switches to 1× speed"
           },
           "bullet_time": {
             "cn": "进入子弹时间",
@@ -1569,6 +1569,56 @@
       }
     },
     "operation-set": {
+      "AddToOperationSet": {
+        "add_to_job_set_title": {
+          "cn": "添加 {{count}} 份作业到作业集",
+          "en": "Add {{count}} Jobs to Job Set"
+        },
+        "not_logged_in": {
+          "cn": "未登录",
+          "en": "Not logged in"
+        },
+        "error": {
+          "cn": "错误",
+          "en": "Error"
+        },
+        "no_job_sets_yet": {
+          "cn": "还没有作业集哦(￣▽￣)",
+          "en": "No Job sets yet (￣▽￣)"
+        },
+        "no_added_job_sets_yet": {
+          "cn": "还没有已添加的作业集哦(￣▽￣)",
+          "en": "No Job sets added yet (￣▽￣)"
+        },
+        "added_to_job_set": {
+          "cn": "已添加到作业集",
+          "en": "Added to Job Set"
+        },
+        "click_to_view": {
+          "cn": "点击查看",
+          "en": "Click to view"
+        },
+        "show_only_added": {
+          "cn": "只显示已添加的",
+          "en": "Show only added"
+        },
+        "create_job_set": {
+          "cn": "创建作业集...",
+          "en": "Create Job Set..."
+        },
+        "confirm": {
+          "cn": "确定",
+          "en": "Confirm"
+        },
+        "load_more": {
+          "cn": "加载更多",
+          "en": "Load more"
+        },
+        "private": {
+          "cn": "私有",
+          "en": "Private"
+        }
+      },
       "OperationSetEditor": {
         "create_job_set": {
           "cn": "创建作业集",
@@ -1636,7 +1686,7 @@
         },
         "level_load_failed": {
           "cn": "关卡加载失败，使用备用排序",
-          "en": "Level loading failed, using fallback sorting"
+          "en": "Stage loading failed, using fallback sorting"
         },
         "sort_by_title": {
           "cn": "按标题",
@@ -1747,6 +1797,40 @@
         "upload_local_jobs": {
           "cn": "上传本地作业",
           "en": "Upload local Jobs"
+        }
+      },
+      "utils": {
+        "invalid_object": {
+          "cn": "不是有效的对象",
+          "en": "Not a valid object"
+        },
+        "select_json_file": {
+          "cn": "请选择 JSON 文件",
+          "en": "Please select a JSON file"
+        },
+        "json_parse_failed": {
+          "cn": "请选择合法的 JSON 文件：JSON 解析失败：",
+          "en": "Please select a valid JSON file: JSON parsing failed: "
+        },
+        "job_with_stage_name": {
+          "cn": "作业 {{stageName}}",
+          "en": "Job {{stageName}}"
+        },
+        "stage_not_unique": {
+          "cn": "匹配到的关卡不唯一",
+          "en": "Stage match is not unique"
+        },
+        "stage_not_found": {
+          "cn": "未找到对应关卡",
+          "en": "Corresponding stage not found"
+        },
+        "auto_fix_failed": {
+          "cn": "自动修正失败：",
+          "en": "Auto-correction failed: "
+        },
+        "validation_failed": {
+          "cn": "验证失败：",
+          "en": "Validation failed: "
         }
       }
     },
@@ -2565,10 +2649,340 @@
     }
   },
   "models": {
-    "Announcement": {
+    "announcement": {
       "default_title": {
         "cn": "公告",
         "en": "Announcement"
+      }
+    },
+    "converter": {
+      "invalid_operation_content": {
+        "cn": "无法解析作业内容",
+        "en": "Unable to parse Job content"
+      },
+      "failed_to_parse_operation": {
+        "cn": "解析作业失败",
+        "en": "Failed to parse operation"
+      }
+    },
+    "operator": {
+      "skill_usage": {
+        "none_title": {
+          "cn": "不自动使用",
+          "en": "Do not use automatically"
+        },
+        "none_description": {
+          "cn": "不由 MAA Copilot 自动开启技能、或干员技能并不需要操作开启（自动触发）。若需要手动开启技能，请添加「使用技能」动作",
+          "en": "Skills won't be activated automatically by MAA Copilot, or for operators whose skills don't need manual activation (auto-trigger). If you need to manually activate a skill, add a 'Use Skill' action"
+        },
+        "ready_to_use_title": {
+          "cn": "好了就用",
+          "en": "Use when ready"
+        },
+        "ready_to_use_description": {
+          "cn": "有多少次用多少次，例如：棘刺 3 技能、桃金娘 1 技能等",
+          "en": "Use as many times as available. Examples: Thorns S3, Perfumer S1, etc."
+        },
+        "ready_to_use_times_title": {
+          "cn": "好了就用（指定次数）",
+          "en": "Use when ready (specific times)"
+        },
+        "ready_to_use_times_description": {
+          "cn": "默认仅使用一次，例如：山 2 技能",
+          "en": "By default, only use once. Example: Mountain S2"
+        },
+        "automatically_title": {
+          "cn": "自动判断使用时机",
+          "en": "Automatically determine timing"
+        },
+        "automatically_description": {
+          "cn": "(锐意开发中) 画饼.jpg",
+          "en": "(In development) Coming Soon™"
+        },
+        "unknown_title": {
+          "cn": "未知用法",
+          "en": "Unknown usage"
+        },
+        "format_times": {
+          "cn": "好了就用（{{times}}次）",
+          "en": "Use when ready ({{times}} times)"
+        },
+        "format_specific_times": {
+          "cn": "好了就用（指定次数）",
+          "en": "Use when ready (specific times)"
+        }
+      },
+      "direction": {
+        "none": {
+          "cn": "无",
+          "en": "None"
+        },
+        "up": {
+          "cn": "上",
+          "en": "Up"
+        },
+        "down": {
+          "cn": "下",
+          "en": "Down"
+        },
+        "left": {
+          "cn": "左",
+          "en": "Left"
+        },
+        "right": {
+          "cn": "右",
+          "en": "Right"
+        },
+        "unknown": {
+          "cn": "未知方向",
+          "en": "Unknown direction"
+        }
+      },
+      "color": {
+        "black": {
+          "cn": "黑色",
+          "en": "Black"
+        },
+        "gray": {
+          "cn": "灰色",
+          "en": "Gray"
+        },
+        "dark_red": {
+          "cn": "红色",
+          "en": "Red"
+        },
+        "dark_goldenrod": {
+          "cn": "橙色",
+          "en": "Orange"
+        },
+        "gold": {
+          "cn": "黄色",
+          "en": "Yellow"
+        },
+        "spring_green": {
+          "cn": "绿色",
+          "en": "Green"
+        },
+        "dark_cyan": {
+          "cn": "青色",
+          "en": "Cyan"
+        },
+        "deep_sky_blue": {
+          "cn": "蓝色",
+          "en": "Blue"
+        },
+        "purple": {
+          "cn": "紫色",
+          "en": "Purple"
+        },
+        "pink": {
+          "cn": "粉色",
+          "en": "Pink"
+        }
+      }
+    },
+    "rating": {
+      "overwhelmingly_negative": {
+        "cn": "差评如潮",
+        "en": "Overwhelmingly Negative"
+      },
+      "very_negative": {
+        "cn": "特别差评",
+        "en": "Very Negative"
+      },
+      "negative": {
+        "cn": "差评",
+        "en": "Negative"
+      },
+      "mostly_negative": {
+        "cn": "多半差评",
+        "en": "Mostly Negative"
+      },
+      "mixed": {
+        "cn": "褒贬不一",
+        "en": "Mixed"
+      },
+      "mostly_positive": {
+        "cn": "多半好评",
+        "en": "Mostly Positive"
+      },
+      "positive": {
+        "cn": "好评",
+        "en": "Positive"
+      },
+      "very_positive": {
+        "cn": "特别好评",
+        "en": "Very Positive"
+      },
+      "overwhelmingly_positive": {
+        "cn": "好评如潮",
+        "en": "Overwhelmingly Positive"
+      }
+    },
+    "types": {
+      "action_group": {
+        "operator_deploy_retreat": {
+          "cn": "干员上/退场",
+          "en": "Operator Deploy/Retreat"
+        },
+        "operator_skills": {
+          "cn": "干员技能",
+          "en": "Operator Skills"
+        },
+        "battle_control": {
+          "cn": "作战控制",
+          "en": "Battle Control"
+        },
+        "miscellaneous": {
+          "cn": "杂项",
+          "en": "Miscellaneous"
+        },
+        "unknown": {
+          "cn": "未知",
+          "en": "Unknown"
+        }
+      },
+      "action_type": {
+        "deploy": {
+          "title": {
+            "cn": "部署",
+            "en": "Deploy"
+          },
+          "alternativeValue": {
+            "cn": "部署",
+            "en": "Deploy"
+          },
+          "description": {
+            "cn": "部署干员至指定位置。当费用不够时，会一直等待到费用够（除非 timeout）",
+            "en": "Deploy operator to specified location. When DP is insufficient, will wait until enough (unless timeout)"
+          }
+        },
+        "retreat": {
+          "title": {
+            "cn": "撤退",
+            "en": "Retreat"
+          },
+          "alternativeValue": {
+            "cn": "撤退",
+            "en": "Retreat"
+          },
+          "description": {
+            "cn": "将干员从作战中撤出",
+            "en": "Withdraw operator from battle"
+          }
+        },
+        "skill": {
+          "title": {
+            "cn": "使用技能",
+            "en": "Use Skill"
+          },
+          "alternativeValue": {
+            "cn": "技能",
+            "en": "Skill"
+          },
+          "description": {
+            "cn": "当技能 CD 没转好时，一直等待到技能 CD 好（除非 timeout）",
+            "en": "When skill cooldown isn't ready, will wait until it is (unless timeout)"
+          }
+        },
+        "skill_usage": {
+          "title": {
+            "cn": "切换技能用法",
+            "en": "Switch Skill Usage"
+          },
+          "alternativeValue": {
+            "cn": "技能用法",
+            "en": "Skill Usage"
+          },
+          "description": {
+            "cn": "切换干员技能用法。例如，刚下桃金娘、需要她帮忙打几个怪，但此时不能自动开技能否则会漏怪，等中后期平稳了才需要她自动开技能，则可以在对应时刻后，将桃金娘的技能用法从「不自动使用」改为「好了就用」。",
+            "en": "Switch operator skill usage. For example, when Perfumer is just deployed and needs to help defeat some enemies, but automatic skill activation would miss enemies, and only in mid/late game should she activate skills automatically, you can change Perfumer's skill usage from 'Do not use automatically' to 'Use when ready'."
+          }
+        },
+        "speed_up": {
+          "title": {
+            "cn": "切换二倍速",
+            "en": "Toggle 2× Speed"
+          },
+          "alternativeValue": {
+            "cn": "二倍速",
+            "en": "2× Speed"
+          },
+          "description": {
+            "cn": "执行后切换至二倍速，再次执行切换至一倍速",
+            "en": "After execution, switches to 2× speed; executing again switches to 1× speed"
+          }
+        },
+        "bullet_time": {
+          "title": {
+            "cn": "进入子弹时间",
+            "en": "Enter Bullet Time"
+          },
+          "alternativeValue": {
+            "cn": "子弹时间",
+            "en": "Bullet Time"
+          },
+          "description": {
+            "cn": "执行后将点击任意干员，进入 1/5 速度状态；再进行任意动作会恢复正常速度。下一个任务必须是\"部署\"、\"技能\"、\"撤退\"其中之一，此时会提前点开该干员，等待满足条件后再执行。",
+            "en": "After execution, click any operator to enter 1/5 speed state; any further action will restore normal speed. The next task must be one of 'Deploy', 'Skill', or 'Retreat', which will select that operator in advance and wait until conditions are met before executing."
+          }
+        },
+        "move_camera": {
+          "title": {
+            "cn": "移动相机",
+            "en": "Move Camera"
+          },
+          "alternativeValue": {
+            "cn": "移动相机",
+            "en": "Move Camera"
+          },
+          "description": {
+            "cn": "仅用于引航者试炼模式中切换区域",
+            "en": "Only used for switching areas in Integrated Strategies mode"
+          }
+        },
+        "skill_daemon": {
+          "title": {
+            "cn": "开始挂机",
+            "en": "Start Auto Mode"
+          },
+          "alternativeValue": {
+            "cn": "摆完挂机",
+            "en": "Auto Deploy"
+          },
+          "description": {
+            "cn": "进入挂机模式。仅使用 \"好了就用\" 的技能，其他什么都不做，直到战斗结束",
+            "en": "Enter auto mode. Only uses skills set to 'Use when ready', does nothing else until battle ends"
+          }
+        },
+        "output": {
+          "title": {
+            "cn": "打印描述内容",
+            "en": "Print Description"
+          },
+          "alternativeValue": {
+            "cn": "打印",
+            "en": "Print"
+          },
+          "description": {
+            "cn": "对作战没有实际作用，仅用于输出描述内容（用来做字幕之类的）",
+            "en": "Has no actual effect on battle, only outputs description content (for subtitles, etc.)"
+          }
+        },
+        "unknown": {
+          "title": {
+            "cn": "未知类型",
+            "en": "Unknown Type"
+          },
+          "alternativeValue": {
+            "cn": "未知",
+            "en": "Unknown"
+          },
+          "description": {
+            "cn": "未知动作类型",
+            "en": "Unknown action type"
+          }
+        }
       }
     }
   },

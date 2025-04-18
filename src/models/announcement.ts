@@ -50,7 +50,7 @@ export function parseAnnouncement(raw: string): Announcement {
         const segments = compact(slices.map((s) => s.trim())) // filter out the matched empty lines
 
         const title = segments[0]?.replace(/^#+/, '').trim() ||
-          i18n.t('models.Announcement.default_title', { defaultValue: '公告' })
+          i18n.t('models.announcement.default_title', { defaultValue: '公告' })
 
         let meta: AnnouncementSectionMeta | undefined
         const jsonBlockStart = '```json'

@@ -1,15 +1,16 @@
 import { clamp } from 'lodash-es'
+import i18n from '../i18n'
 
-const ratingLevels = [
-  '差评如潮',
-  '特别差评',
-  '差评',
-  '多半差评',
-  '褒贬不一',
-  '多半好评',
-  '好评',
-  '特别好评',
-  '好评如潮',
+const ratingLevelKeys = [
+  'models.rating.level.overwhelmingly_negative',
+  'models.rating.level.very_negative',
+  'models.rating.level.negative',
+  'models.rating.level.mostly_negative',
+  'models.rating.level.mixed',
+  'models.rating.level.mostly_positive',
+  'models.rating.level.positive',
+  'models.rating.level.very_positive',
+  'models.rating.level.overwhelmingly_positive',
 ]
 
 const minRatingLevel = 0
@@ -19,10 +20,10 @@ export function ratingLevelToString(level: number): string {
   const ratio = level / (maxRatingLevel - minRatingLevel)
 
   const index = clamp(
-    Math.floor(ratio * ratingLevels.length),
+    Math.floor(ratio * ratingLevelKeys.length),
     0,
-    ratingLevels.length - 1,
+    ratingLevelKeys.length - 1,
   )
 
-  return ratingLevels[index]
+  return i18n.t(ratingLevelKeys[index])
 }
