@@ -2548,106 +2548,6 @@
       }
     }
   },
-  "pages": {
-    "404": {
-      "page_not_found": {
-        "cn": "未找到页面",
-        "en": "Page Not Found"
-      },
-      "check_url": {
-        "cn": "请检查您的 URL 是否正确",
-        "en": "Please check if your URL is correct"
-      },
-      "return_home": {
-        "cn": "返回首页",
-        "en": "Return to Home"
-      }
-    },
-    "index": {
-      "create_new_task": {
-        "cn": "创建新作业",
-        "en": "Create a new Job"
-      },
-      "advertisement": {
-        "cn": "广告",
-        "en": "Ad"
-      }
-    },
-    "profile": {
-      "invalid_id": {
-        "cn": "ID 无效",
-        "en": "Invalid ID"
-      },
-      "tasks": {
-        "cn": "作业",
-        "en": "Jobs"
-      },
-      "task_sets": {
-        "cn": "作业集",
-        "en": "Job Sets"
-      }
-    },
-    "create": {
-      "publish": {
-        "cn": "发布",
-        "en": "Publish"
-      },
-      "update": {
-        "cn": "更新",
-        "en": "Update"
-      },
-      "task_publish_success": {
-        "cn": "作业发布成功",
-        "en": "Job published successfully"
-      },
-      "task_update_success": {
-        "cn": "作业更新成功",
-        "en": "Job updated successfully"
-      },
-      "task_publish_failed": {
-        "cn": "作业发布失败：{{error}}",
-        "en": "Failed to publish Job: {{error}}"
-      },
-      "task_update_failed": {
-        "cn": "作业更新失败：{{error}}",
-        "en": "Failed to update Job: {{error}}"
-      },
-      "negative_cost_not_supported": {
-        "cn": "目前暂不支持上传费用变化量为负数的动作（第{{actionIndex}}个动作）",
-        "en": "Currently, actions with negative DP changes are not supported (action #{{actionIndex}})"
-      },
-      "untitled": {
-        "cn": "无标题",
-        "en": "Untitled"
-      },
-      "public": {
-        "cn": "公开",
-        "en": "Public"
-      },
-      "public_task_description": {
-        "cn": "公开作业：会在所有列表中显示",
-        "en": "Public Job: Will be visible in all lists"
-      },
-      "private_task_description": {
-        "cn": "私有作业：其他人无法在列表中看见，但可以通过神秘代码访问",
-        "en": "Private Job: Others won't see it in lists, but can be accessed via secret code"
-      }
-    },
-    "about": {
-      "slogan_line1": {
-        "cn": "作业站解君愁",
-        "en": "The Job Site Solves Your Worries"
-      },
-      "slogan_line2": {
-        "cn": "点个收藏不迷路",
-        "en": "Bookmark us so can find your way back!"
-      },
-      "changelog": {
-        "cn": "更新日志",
-        "en": "Changelog"
-      }
-    }
-  },
   "models": {
     "announcement": {
       "default_title": {
@@ -2986,7 +2886,177 @@
       }
     }
   },
-  "Links": {
+  "pages": {
+    "404": {
+      "page_not_found": {
+        "cn": "未找到页面",
+        "en": "Page Not Found"
+      },
+      "check_url": {
+        "cn": "请检查您的 URL 是否正确",
+        "en": "Please check if your URL is correct"
+      },
+      "return_home": {
+        "cn": "返回首页",
+        "en": "Return to Home"
+      }
+    },
+    "index": {
+      "create_new_task": {
+        "cn": "创建新作业",
+        "en": "Create a new Job"
+      },
+      "advertisement": {
+        "cn": "广告",
+        "en": "Ad"
+      }
+    },
+    "profile": {
+      "invalid_id": {
+        "cn": "ID 无效",
+        "en": "Invalid ID"
+      },
+      "tasks": {
+        "cn": "作业",
+        "en": "Jobs"
+      },
+      "task_sets": {
+        "cn": "作业集",
+        "en": "Job Sets"
+      }
+    },
+    "create": {
+      "publish": {
+        "cn": "发布",
+        "en": "Publish"
+      },
+      "update": {
+        "cn": "更新",
+        "en": "Update"
+      },
+      "task_publish_success": {
+        "cn": "作业发布成功",
+        "en": "Job published successfully"
+      },
+      "task_update_success": {
+        "cn": "作业更新成功",
+        "en": "Job updated successfully"
+      },
+      "task_publish_failed": {
+        "cn": "作业发布失败：{{error}}",
+        "en": "Failed to publish Job: {{error}}"
+      },
+      "task_update_failed": {
+        "cn": "作业更新失败：{{error}}",
+        "en": "Failed to update Job: {{error}}"
+      },
+      "negative_cost_not_supported": {
+        "cn": "目前暂不支持上传费用变化量为负数的动作（第{{actionIndex}}个动作）",
+        "en": "Currently, actions with negative DP changes are not supported (action #{{actionIndex}})"
+      },
+      "untitled": {
+        "cn": "无标题",
+        "en": "Untitled"
+      },
+      "public": {
+        "cn": "公开",
+        "en": "Public"
+      },
+      "public_task_description": {
+        "cn": "公开作业：会在所有列表中显示",
+        "en": "Public Job: Will be visible in all lists"
+      },
+      "private_task_description": {
+        "cn": "私有作业：其他人无法在列表中看见，但可以通过神秘代码访问",
+        "en": "Private Job: Others won't see it in lists, but can be accessed via secret code"
+      }
+    },
+    "about": {
+      "slogan_line1": {
+        "cn": "作业站解君愁",
+        "en": "The Job Site Solves Your Worries"
+      },
+      "slogan_line2": {
+        "cn": "点个收藏不迷路",
+        "en": "Bookmark us so can find your way back!"
+      },
+      "changelog": {
+        "cn": "更新日志",
+        "en": "Changelog"
+      }
+    }
+  },
+  "services": {
+    "operation": {
+      "json_downloaded": {
+        "cn": "已下载作业 JSON 文件，前往 MAA 选择即可使用~",
+        "en": "Job JSON file downloaded, go to MAA to use it~"
+      },
+      "json_download_failed": {
+        "cn": "JSON下载失败：{{error}}",
+        "en": "JSON download failed: {{error}}"
+      },
+      "json_data_error": {
+        "cn": "JSON 数据错误，请联系开发者",
+        "en": "JSON data error, please contact the developer"
+      },
+      "shortcode_copied": {
+        "cn": "已复制神秘代码，前往 MAA 粘贴即可使用~",
+        "en": "Secret code copied, paste it in MAA to use it~"
+      },
+      "shortcode_copy_failed": {
+        "cn": "复制神秘代码失败：{{error}}",
+        "en": "Failed to copy secret code: {{error}}"
+      }
+    }
+  },
+  "utils": {
+    "error": {
+      "unknown_error": {
+        "cn": "未知错误",
+        "en": "Unknown error"
+      },
+      "unauthorized": {
+        "cn": "未登录，请先登录",
+        "en": "Not logged in, please login first"
+      },
+      "token_expired": {
+        "cn": "登录已过期，请重新登录",
+        "en": "Login has expired, please login again"
+      },
+      "invalid_token": {
+        "cn": "登录失效，请重新登录",
+        "en": "Login is invalid, please login again"
+      },
+      "not_found": {
+        "cn": "资源不存在",
+        "en": "Resource not found"
+      },
+      "network_error": {
+        "cn": "网络错误",
+        "en": "Network error"
+      },
+      "api_error": {
+        "cn": "请求错误",
+        "en": "Request error"
+      }
+    },
+    "maa_copilot_client": {
+      "invalid_response": {
+        "cn": "返回值无效",
+        "en": "Invalid response"
+      },
+      "server_error": {
+        "cn": "服务器错误",
+        "en": "Server error"
+      },
+      "serialization_comment": {
+        "cn": "默认的序列化会把 undefined 转成字符串，我真的会谢",
+        "en": "Default serialization converts undefined to string, which is undesirable"
+      }
+    }
+  },
+  "links": {
     "home": {
       "cn": "首页",
       "en": "Home"

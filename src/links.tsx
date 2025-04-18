@@ -5,17 +5,17 @@ import simpleIconsQQ from '@iconify/icons-simple-icons/tencentqq'
 export const NAV_CONFIG = [
   {
     to: '/',
-    labelKey: 'Links.home',
+    labelKey: 'links.home',
     icon: 'home',
   },
   {
     to: '/create',
-    labelKey: 'Links.create_job',
+    labelKey: 'links.create_job',
     icon: 'add',
   },
   {
     to: '/about',
-    labelKey: 'Links.about',
+    labelKey: 'links.about',
     icon: 'info-sign',
   },
 ]
@@ -25,43 +25,43 @@ export const SOCIAL_CONFIG = [
     iconType: 'blueprint',
     iconName: 'globe',
     href: 'https://maa.plus',
-    labelKey: 'Links.official_site',
+    labelKey: 'links.official_site',
   },
   {
     iconType: 'blueprint',
     iconName: 'edit',
     href: 'https://github.com/MaaAssistantArknights/maa-copilot-frontend/issues/new/choose',
-    labelKey: 'Links.feedback',
+    labelKey: 'links.feedback',
   },
   {
     iconType: 'iconify',
     iconSource: simpleIconsGitHub,
     href: 'https://github.com/MaaAssistantArknights/MaaAssistantArknights',
-    labelKey: 'Links.maa_repo',
+    labelKey: 'links.maa_repo',
   },
   {
     iconType: 'iconify',
     iconSource: simpleIconsGitHub,
     href: 'https://github.com/MaaAssistantArknights/maa-copilot-frontend',
-    labelKey: 'Links.frontend_repo',
+    labelKey: 'links.frontend_repo',
   },
   {
     iconType: 'iconify',
     iconSource: simpleIconsGitHub,
     href: 'https://github.com/MaaAssistantArknights/MaaBackendCenter',
-    labelKey: 'Links.backend_repo',
+    labelKey: 'links.backend_repo',
   },
   {
     iconType: 'iconify',
     iconSource: simpleIconsQQ,
     href: 'https://jq.qq.com/?_wv=1027&k=ElimpMzQ',
-    labelKey: 'Links.creator_group',
+    labelKey: 'links.creator_group',
     labelParams: { groupNumber: '1169188429' }  // Modifiable group number
   },
   {
     iconType: 'iconify',
     iconSource: simpleIconsQQ,
     href: 'https://ota.maa.plus/MaaAssistantArknights/api/qqgroup/index.html',
-    labelKey: 'Links.sharing_group',
+    labelKey: 'links.sharing_group',
   },
 ]
