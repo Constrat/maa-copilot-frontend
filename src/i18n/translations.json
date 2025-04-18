@@ -319,7 +319,7 @@
           },
           "search_operator_hint": {
             "cn": "键入干员名、拼音或拼音首字母以搜索干员列表",
-            "en": "Type operator name, pinyin or initials to search operators"
+            "en": "Enter operator name, initials to start search"
           },
           "reference_group_hint": {
             "cn": "键入干员组名以引用干员组配置",
@@ -742,6 +742,168 @@
           "third_skill": {
             "cn": "三技能",
             "en": "Skill 3"
+          }
+        },
+        "EditorOperatorSkillTimes": {
+          "skill_usage_count": {
+            "cn": "技能使用次数",
+            "en": "Skill Usage Count"
+          }
+        },
+        "EditorOperatorSkillUsage": {
+          "select_skill_usage": {
+            "cn": "选择技能用法",
+            "en": "Select Skill Usage"
+          }
+        },
+        "EditorPerformer": {
+          "no_operators": {
+            "cn": "暂无干员",
+            "en": "No operators yet"
+          },
+          "no_operator_groups": {
+            "cn": "暂无干员组",
+            "en": "No operator groups yet"
+          },
+          "operators": {
+            "cn": "干员",
+            "en": "Operators"
+          },
+          "operator_groups": {
+            "cn": "干员组",
+            "en": "Operator Groups"
+          },
+          "update_operator_not_found": {
+            "cn": "未能找到要更新的干员",
+            "en": "Could not find the operator to update"
+          },
+          "update_group_not_found": {
+            "cn": "未能找到要更新的干员组",
+            "en": "Could not find the operator group to update"
+          },
+          "operator_already_exists": {
+            "cn": "干员已存在",
+            "en": "Operator already exists"
+          },
+          "group_already_exists": {
+            "cn": "干员组已存在",
+            "en": "Operator group already exists"
+          },
+          "ungrouped_operators": {
+            "cn": "未加入干员",
+            "en": "Ungrouped operators"
+          }
+        },
+        "EditorPerformerAdd": {
+          "add": {
+            "cn": "添加",
+            "en": "Add"
+          },
+          "operator": {
+            "cn": "干员",
+            "en": "Operator"
+          },
+          "operator_group": {
+            "cn": "干员组",
+            "en": "Operator Group"
+          }
+        },
+        "EditorPerformerGroup": {
+          "editing_operator_group": {
+            "cn": "正在编辑的干员组",
+            "en": "Operator group being edited"
+          },
+          "what_is_group": {
+            "cn": "什么是干员组？",
+            "en": "What is an operator group?"
+          },
+          "group_explanation": {
+            "cn": "编队时将选择组内练度最高的一位干员；组内前后顺序并不影响判断",
+            "en": "When forming a team, the operator with the highest level in the group will be selected; order within the group does not affect selection"
+          },
+          "group_name": {
+            "cn": "干员组名",
+            "en": "Operator Group Name"
+          },
+          "name_description": {
+            "cn": "任意名称，用于在动作中引用。例如：速狙、群奶",
+            "en": "Any name, used for reference in actions. Examples: Fast-Snipers, AoE-Healers"
+          },
+          "name_required": {
+            "cn": "请输入干员组名",
+            "en": "Please enter an operator group name"
+          },
+          "name_placeholder": {
+            "cn": "干员组名",
+            "en": "Operator group name"
+          },
+          "add": {
+            "cn": "添加",
+            "en": "Add"
+          },
+          "save": {
+            "cn": "保存",
+            "en": "Save"
+          },
+          "cancel_edit": {
+            "cn": "取消编辑",
+            "en": "Cancel Edit"
+          }
+        },
+        "EditorPerformerOperator": {
+          "editing_operator": {
+            "cn": "正在编辑的干员",
+            "en": "Operator being edited"
+          },
+          "operator_name": {
+            "cn": "干员名",
+            "en": "Operator Name"
+          },
+          "operator_description": {
+            "cn": "选择干员或直接使用搜索内容创建干员",
+            "en": "Select an operator or create one directly using the search content"
+          },
+          "search_hint": {
+            "cn": "键入干员名、拼音或拼音首字母以从干员列表中搜索",
+            "en": "Enter operator name, initials to start search"
+          },
+          "group_membership": {
+            "cn": "所属干员组",
+            "en": "Operator Group Membership"
+          },
+          "group_membership_description": {
+            "cn": "该干员的所属干员组，如果不存在则会自动创建",
+            "en": "The operator group this operator belongs to; if it doesn't exist, it will be created automatically"
+          },
+          "skill": {
+            "cn": "技能",
+            "en": "Skill"
+          },
+          "skill_usage": {
+            "cn": "技能用法",
+            "en": "Skill Usage"
+          },
+          "skill_usage_count": {
+            "cn": "技能使用次数",
+            "en": "Skill Usage Count"
+          },
+          "add": {
+            "cn": "添加",
+            "en": "Add"
+          },
+          "save": {
+            "cn": "保存",
+            "en": "Save"
+          },
+          "cancel_edit": {
+            "cn": "取消编辑",
+            "en": "Cancel Edit"
+          }
+        },
+        "EditorSheet": {
+          "quick_edit": {
+            "cn": "快捷编辑",
+            "en": "Quick Edit"
           }
         }
       },
