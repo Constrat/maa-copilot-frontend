@@ -45,7 +45,10 @@ export const AddToOperationSetButton: FC<AddToOperationSetButtonProps> = memo(
           onClick={() => setIsOpen(true)}
         />
         <Dialog
-          title={t('components.operation-set.AddToOperationSet.add_to_job_set_title', { count: operationIds.length })}
+          title={t(
+            'components.operation-set.AddToOperationSet.add_to_job_set_title',
+            { count: operationIds.length },
+          )}
           icon="add-to-folder"
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
@@ -105,7 +108,11 @@ function AddToOperationSet({
   )
 
   const error =
-    submitError || listError || (!auth.userId ? t('components.operation-set.AddToOperationSet.not_logged_in') : undefined)
+    submitError ||
+    listError ||
+    (!auth.userId
+      ? t('components.operation-set.AddToOperationSet.not_logged_in')
+      : undefined)
 
   const operationSetList =
     singleOperationId && onlyShowAdded
@@ -169,7 +176,9 @@ function AddToOperationSet({
 
         AppToaster.show({
           intent: 'success',
-          message: t('components.operation-set.AddToOperationSet.added_to_job_set'),
+          message: t(
+            'components.operation-set.AddToOperationSet.added_to_job_set',
+          ),
           action,
         })
       }
@@ -185,7 +194,11 @@ function AddToOperationSet({
     <>
       <div className="py-2 px-px">
         {error && (
-          <Callout intent="danger" icon="error" title={t('components.operation-set.AddToOperationSet.error')}>
+          <Callout
+            intent="danger"
+            icon="error"
+            title={t('components.operation-set.AddToOperationSet.error')}
+          >
             {formatError(error)}
           </Callout>
         )}
@@ -195,8 +208,12 @@ function AddToOperationSet({
             icon="helicopter"
             description={
               operationSets?.length === 0
-                ? t('components.operation-set.AddToOperationSet.no_job_sets_yet')
-                : t('components.operation-set.AddToOperationSet.no_added_job_sets_yet')
+                ? t(
+                    'components.operation-set.AddToOperationSet.no_job_sets_yet',
+                  )
+                : t(
+                    'components.operation-set.AddToOperationSet.no_added_job_sets_yet',
+                  )
             }
           />
         )}
@@ -247,7 +264,9 @@ function AddToOperationSet({
       <div className="flex p-4 gap-3">
         {!!singleOperationId && (
           <Checkbox
-            label={t('components.operation-set.AddToOperationSet.show_only_added')}
+            label={t(
+              'components.operation-set.AddToOperationSet.show_only_added',
+            )}
             checked={onlyShowAdded}
             onChange={(e) =>
               setOnlyShowAdded((e.target as HTMLInputElement).checked)

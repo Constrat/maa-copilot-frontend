@@ -1,10 +1,11 @@
 import { Button } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
+
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 export const OperationEditorLauncher: FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <>

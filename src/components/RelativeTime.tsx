@@ -16,12 +16,13 @@ export const RelativeTime: FC<RelativeTimeProps> = ({
   Tooltip2Props,
 }) => {
   // Convert to timestamp if needed
-  const timestamp = typeof moment === 'string' || moment instanceof Date
-    ? new Date(moment).getTime()
-    : moment;
+  const timestamp =
+    typeof moment === 'string' || moment instanceof Date
+      ? new Date(moment).getTime()
+      : moment
 
-  const formattedDate = formatDate(timestamp);
-  const relativeTime = formatRelativeTime(timestamp);
+  const formattedDate = formatDate(timestamp)
+  const relativeTime = formatRelativeTime(timestamp)
 
   return (
     <Tooltip2

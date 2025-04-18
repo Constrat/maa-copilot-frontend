@@ -1,5 +1,4 @@
 import { Button, NonIdealState } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import {
   UseOperationSetsParams,
@@ -7,6 +6,7 @@ import {
 } from 'apis/operation-set'
 import { useAtomValue } from 'jotai'
 import { ComponentType, ReactNode, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { neoLayoutAtom } from 'store/pref'
 
@@ -20,7 +20,7 @@ interface OperationSetListProps extends UseOperationSetsParams {
 export const OperationSetList: ComponentType<OperationSetListProps> =
   withSuspensable(
     ({ onUpdate, ...params }) => {
-      const { t } = useTranslation();
+      const { t } = useTranslation()
       const neoLayout = useAtomValue(neoLayoutAtom)
 
       const { operationSets, total, setSize, isValidating, isReachingEnd } =

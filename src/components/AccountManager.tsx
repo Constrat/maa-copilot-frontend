@@ -13,10 +13,10 @@ import {
   Tabs,
 } from '@blueprintjs/core'
 import { Popover2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
 import { useAtom } from 'jotai'
 import { ComponentType, FC, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { LoginPanel } from 'components/account/LoginPanel'
 import { authAtom } from 'store/auth'
@@ -31,7 +31,7 @@ import { EditDialog } from './account/EditDialog'
 import { RegisterPanel } from './account/RegisterPanel'
 
 const AccountMenu: FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [authState, setAuthState] = useAtom(authAtom)
   const [logoutDialogOpen, setLogoutDialogOpen] = useState(false)
   const [editDialogOpen, setEditDialogOpen] = useState(false)
@@ -77,7 +77,10 @@ const AccountMenu: FC = () => {
 
         <MenuItem
           icon="person"
-          text={(isSM ? authState.username + ' - ' : '') + t('components.AccountManager.profile')}
+          text={
+            (isSM ? authState.username + ' - ' : '') +
+            t('components.AccountManager.profile')
+          }
           href={`/profile/${authState.userId}`}
         />
         <MenuItem
@@ -104,7 +107,7 @@ export const AccountAuthDialog: ComponentType<{
   open?: boolean
   onClose?: () => void
 }> = withGlobalErrorBoundary(({ open, onClose }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState<TabId>('login')
 
   return (
@@ -130,7 +133,9 @@ export const AccountAuthDialog: ComponentType<{
               title={
                 <div>
                   <Icon icon="person" />
-                  <span className="ml-1">{t('components.AccountManager.login')}</span>
+                  <span className="ml-1">
+                    {t('components.AccountManager.login')}
+                  </span>
                 </div>
               }
               panel={
@@ -145,7 +150,9 @@ export const AccountAuthDialog: ComponentType<{
               title={
                 <div>
                   <Icon icon="new-person" />
-                  <span className="ml-1">{t('components.AccountManager.register')}</span>
+                  <span className="ml-1">
+                    {t('components.AccountManager.register')}
+                  </span>
                 </div>
               }
               panel={<RegisterPanel onComplete={() => setActiveTab('login')} />}
@@ -158,7 +165,7 @@ export const AccountAuthDialog: ComponentType<{
 })
 
 export const AccountManager: ComponentType = withGlobalErrorBoundary(() => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const [authState] = useAtom(authAtom)
   const { isSM } = useCurrentSize()

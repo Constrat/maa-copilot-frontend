@@ -26,7 +26,9 @@ export const EditorActionDistance = ({
     name,
     control,
     rules: {
-      required: t('components.editor.action.EditorActionDistance.distance_required'),
+      required: t(
+        'components.editor.action.EditorActionDistance.distance_required',
+      ),
       validate: (v) => {
         // v being undefined is allowed because the `required` rule will handle it properly
         if (v) {
@@ -37,7 +39,9 @@ export const EditorActionDistance = ({
               v.every((i) => Number.isFinite(i))
             )
           ) {
-            return t('components.editor.action.EditorActionDistance.not_valid_number')
+            return t(
+              'components.editor.action.EditorActionDistance.not_valid_number',
+            )
           }
         }
         return undefined
@@ -67,7 +71,9 @@ export const EditorActionDistance = ({
   return (
     <FormField2
       asterisk
-      label={t('components.editor.action.EditorActionDistance.movement_distance')}
+      label={t(
+        'components.editor.action.EditorActionDistance.movement_distance',
+      )}
       field={name}
       error={errors[name]}
       className="mr-4"
@@ -76,7 +82,9 @@ export const EditorActionDistance = ({
         <NumericInput2
           selectAllOnFocus
           className="mr-2"
-          placeholder={t('components.editor.action.EditorActionDistance.x_distance')}
+          placeholder={t(
+            'components.editor.action.EditorActionDistance.x_distance',
+          )}
           stepSize={0.5}
           onValueChange={(value) => onChange(transform.fromX(value))}
           onBlur={onBlur}
@@ -91,7 +99,9 @@ export const EditorActionDistance = ({
 
         <NumericInput2
           selectAllOnFocus
-          placeholder={t('components.editor.action.EditorActionDistance.y_distance')}
+          placeholder={t(
+            'components.editor.action.EditorActionDistance.y_distance',
+          )}
           stepSize={0.5}
           onValueChange={(value) => onChange(transform.fromY(value))}
           onBlur={onBlur}

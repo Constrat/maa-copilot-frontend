@@ -1,10 +1,10 @@
 import { Button, Classes, MenuDivider, MenuItem } from '@blueprintjs/core'
 import { getCreateNewItem } from '@blueprintjs/select'
-import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import Fuse from 'fuse.js'
 import { FC, useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { useLevels } from '../apis/level'
 import { createCustomLevel, isCustomLevel, isHardMode } from '../models/level'
@@ -23,7 +23,7 @@ export const LevelSelect: FC<LevelSelectProps> = ({
   value,
   onChange,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { data } = useLevels()
   const levels = useMemo(
     () =>
@@ -193,7 +193,9 @@ export const LevelSelect: FC<LevelSelectProps> = ({
           icon="area-of-interest"
           rightIcon="chevron-down"
         >
-          {selectedLevel ? selectedLevel.catThree : t('components.LevelSelect.level')}
+          {selectedLevel
+            ? selectedLevel.catThree
+            : t('components.LevelSelect.level')}
         </Button>
       }
     </Select>

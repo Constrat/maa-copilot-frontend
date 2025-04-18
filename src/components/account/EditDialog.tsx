@@ -7,12 +7,12 @@ import {
   TabId,
   Tabs,
 } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { updatePassword, updateUserInfo } from 'apis/auth'
 import { useAtom } from 'jotai'
 import { FC, useEffect, useState } from 'react'
 import { FieldErrors, useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 import { useLatest } from 'react-use'
 
 import { AppToaster } from 'components/Toaster'
@@ -29,11 +29,16 @@ interface EditDialogProps {
 }
 
 export const EditDialog: FC<EditDialogProps> = ({ isOpen, onClose }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState<TabId>('info')
 
   return (
-    <Dialog title={t('components.account.EditDialog.edit_account_info')} icon="user" isOpen={isOpen} onClose={onClose}>
+    <Dialog
+      title={t('components.account.EditDialog.edit_account_info')}
+      icon="user"
+      isOpen={isOpen}
+      onClose={onClose}
+    >
       <div className="p-4 pt-2">
         <GlobalErrorBoundary>
           <Tabs
@@ -50,7 +55,9 @@ export const EditDialog: FC<EditDialogProps> = ({ isOpen, onClose }) => {
               title={
                 <div>
                   <Icon icon="manually-entered-data" />
-                  <span className="ml-1">{t('components.account.EditDialog.account_info')}</span>
+                  <span className="ml-1">
+                    {t('components.account.EditDialog.account_info')}
+                  </span>
                 </div>
               }
               panel={<InfoPanel onClose={onClose} />}
@@ -60,7 +67,9 @@ export const EditDialog: FC<EditDialogProps> = ({ isOpen, onClose }) => {
               title={
                 <div>
                   <Icon icon="key" />
-                  <span className="ml-1">{t('components.account.EditDialog.password')}</span>
+                  <span className="ml-1">
+                    {t('components.account.EditDialog.password')}
+                  </span>
                 </div>
               }
               panel={<PasswordPanel onClose={onClose} />}
@@ -73,7 +82,7 @@ export const EditDialog: FC<EditDialogProps> = ({ isOpen, onClose }) => {
 }
 
 const InfoPanel = ({ onClose }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   interface FormValues {
     username: string
@@ -123,7 +132,11 @@ const InfoPanel = ({ onClose }) => {
   return (
     <form>
       {globalError && (
-        <Callout intent="danger" icon="error" title={t('components.account.EditDialog.error')}>
+        <Callout
+          intent="danger"
+          icon="error"
+          title={t('components.account.EditDialog.error')}
+        >
           {globalError}
         </Callout>
       )}
@@ -155,7 +168,7 @@ const InfoPanel = ({ onClose }) => {
 }
 
 const PasswordPanel = ({ onClose }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   interface FormValues {
     original: string
@@ -178,7 +191,9 @@ const PasswordPanel = ({ onClose }) => {
   const onSubmit = handleSubmit(
     async ({ original, newPassword, newPassword2 }) => {
       if (newPassword !== newPassword2) {
-        setError('newPassword2', { message: t('components.account.EditDialog.passwords_dont_match') })
+        setError('newPassword2', {
+          message: t('components.account.EditDialog.passwords_dont_match'),
+        })
         return
       }
 
@@ -201,7 +216,11 @@ const PasswordPanel = ({ onClose }) => {
     <>
       <form>
         {globalError && (
-          <Callout intent="danger" icon="error" title={t('components.account.EditDialog.error')}>
+          <Callout
+            intent="danger"
+            icon="error"
+            title={t('components.account.EditDialog.error')}
+          >
             {globalError}
           </Callout>
         )}

@@ -1,9 +1,10 @@
 import { Drawer, Menu, MenuDivider } from '@blueprintjs/core'
 import { MenuItem2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
+import { useLinks } from 'hooks/useLinks'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 
 import { navAtom, toggleExpandNavAtom } from 'store/nav'
@@ -11,17 +12,16 @@ import { navAtom, toggleExpandNavAtom } from 'store/nav'
 import { useCurrentSize } from '../../utils/useCurrenSize'
 import { AnnPanel } from '../announcement/AnnPanel'
 import { OperationSetEditorDialog } from '../operation-set/OperationSetEditor'
-import { useLinks } from 'hooks/useLinks'
 
 export const NavAside = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { isMD } = useCurrentSize()
   const nav = useAtomValue(navAtom)
   const toggleNav = useSetAtom(toggleExpandNavAtom)
 
   const [showOperationSetDialog, setShowOperationSetDialog] = useState(false)
 
-  const { NAV_LINKS, SOCIAL_LINKS } = useLinks();
+  const { NAV_LINKS, SOCIAL_LINKS } = useLinks()
 
   if (!isMD) return null
 

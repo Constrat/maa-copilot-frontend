@@ -1,7 +1,8 @@
 import { Button, ButtonGroup, Card } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
+
 import { useAtom } from 'jotai'
 import { ComponentType, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Navigate, useParams } from 'react-router-dom'
 
 import { OperationList } from 'components/OperationList'
@@ -15,7 +16,7 @@ import { withSuspensable } from '../components/Suspensable'
 import { NotFoundError } from '../utils/error'
 
 const _ProfilePage: ComponentType = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { id } = useParams()
   if (!id) {
     // edge case?
@@ -42,14 +43,16 @@ const _ProfilePage: ComponentType = () => {
               active={listMode === 'operation'}
               onClick={() => setListMode('operation')}
             >
-              {t('pages.profile.tasks')}{operationCount === -1 ? '' : ` (${operationCount})`}
+              {t('pages.profile.tasks')}
+              {operationCount === -1 ? '' : ` (${operationCount})`}
             </Button>
             <Button
               icon="folder-close"
               active={listMode === 'operationSet'}
               onClick={() => setListMode('operationSet')}
             >
-              {t('pages.profile.task_sets')}{operationSetCount === -1 ? '' : ` (${operationSetCount})`}
+              {t('pages.profile.task_sets')}
+              {operationSetCount === -1 ? '' : ` (${operationSetCount})`}
             </Button>
           </ButtonGroup>
         </div>

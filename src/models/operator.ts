@@ -7,8 +7,8 @@ import {
   DetailedSelectItem,
   isChoice,
 } from '../components/editor/DetailedSelect'
-import { OPERATORS, PROFESSIONS } from '../models/generated/operators.json'
 import i18n from '../i18n'
+import { OPERATORS, PROFESSIONS } from '../models/generated/operators.json'
 
 export { OPERATORS, PROFESSIONS }
 
@@ -40,14 +40,18 @@ export const operatorSkillUsages: readonly DetailedSelectItem[] = [
     icon: 'circle',
     title: i18n.t('models.operator.skill_usage.ready_to_use_times_title'),
     value: CopilotDocV1.SkillUsageType.ReadyToUseTimes,
-    description: i18n.t('models.operator.skill_usage.ready_to_use_times_description'),
+    description: i18n.t(
+      'models.operator.skill_usage.ready_to_use_times_description',
+    ),
   },
   {
     type: 'choice',
     icon: 'predictive-analysis',
     title: i18n.t('models.operator.skill_usage.automatically_title'),
     value: CopilotDocV1.SkillUsageType.Automatically,
-    description: i18n.t('models.operator.skill_usage.automatically_description'),
+    description: i18n.t(
+      'models.operator.skill_usage.automatically_description',
+    ),
     disabled: true,
   },
 ]
@@ -75,7 +79,9 @@ export function getSkillUsageTitle(
 ) {
   if (skillUsage === CopilotDocV1.SkillUsageType.ReadyToUseTimes) {
     return skillTimes
-      ? i18n.t('models.operator.skill_usage.format_times', { times: skillTimes })
+      ? i18n.t('models.operator.skill_usage.format_times', {
+          times: skillTimes,
+        })
       : i18n.t('models.operator.skill_usage.format_specific_times')
   }
   return findOperatorSkillUsage(skillUsage).title

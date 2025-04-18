@@ -12,7 +12,6 @@ import {
   TextArea,
 } from '@blueprintjs/core'
 import { Popover2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 import {
   DndContext,
   DragEndEvent,
@@ -44,6 +43,7 @@ import {
   useState,
 } from 'react'
 import { Controller, UseFormSetError, useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { FormField } from 'components/FormField'
 import { AppToaster } from 'components/Toaster'
@@ -56,7 +56,7 @@ import { useLevels } from '../../apis/level'
 import { findLevelByStageName } from '../../models/level'
 
 export function OperationSetEditorLauncher() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -84,7 +84,7 @@ export function OperationSetEditorDialog({
   operationSet,
   ...props
 }: OperationSetEditorDialogProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const isEdit = !!operationSet
 
   const refreshOperationSets = useRefreshOperationSets()
@@ -110,7 +110,9 @@ export function OperationSetEditorDialog({
 
         AppToaster.show({
           intent: 'success',
-          message: t('components.operation-set.OperationSetEditor.update_success'),
+          message: t(
+            'components.operation-set.OperationSetEditor.update_success',
+          ),
         })
       } else {
         await createOperationSet({
@@ -122,7 +124,9 @@ export function OperationSetEditorDialog({
 
         AppToaster.show({
           intent: 'success',
-          message: t('components.operation-set.OperationSetEditor.create_success'),
+          message: t(
+            'components.operation-set.OperationSetEditor.create_success',
+          ),
         })
       }
 
@@ -140,7 +144,11 @@ export function OperationSetEditorDialog({
 
   return (
     <Dialog
-      title={isEdit ? t('components.operation-set.OperationSetEditor.edit_job_set') : t('components.operation-set.OperationSetEditor.create_job_set')}
+      title={
+        isEdit
+          ? t('components.operation-set.OperationSetEditor.edit_job_set')
+          : t('components.operation-set.OperationSetEditor.create_job_set')
+      }
       icon="folder-close"
       className="w-auto"
       isOpen={isOpen}
@@ -175,7 +183,7 @@ interface FormValues {
 }
 
 function OperationSetForm({ operationSet, onSubmit }: FormProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const isEdit = !!operationSet
 
   const operationSelectorRef = useRef<OperationSelectorRef>(null)
@@ -231,9 +239,13 @@ function OperationSetForm({ operationSet, onSubmit }: FormProps) {
                 icon="helicopter"
                 description={
                   <>
-                    {t('components.operation-set.OperationSetEditor.no_jobs_yet')}
+                    {t(
+                      'components.operation-set.OperationSetEditor.no_jobs_yet',
+                    )}
                     <br />
-                    {t('components.operation-set.OperationSetEditor.add_from_list')}
+                    {t(
+                      'components.operation-set.OperationSetEditor.add_from_list',
+                    )}
                   </>
                 }
               />
@@ -248,7 +260,11 @@ function OperationSetForm({ operationSet, onSubmit }: FormProps) {
             control={control}
             error={errors.name}
             ControllerProps={{
-              rules: { required: t('components.operation-set.OperationSetEditor.title_required') },
+              rules: {
+                required: t(
+                  'components.operation-set.OperationSetEditor.title_required',
+                ),
+              },
               render: (renderProps) => (
                 <InputGroup
                   {...renderProps.field}
@@ -289,7 +305,9 @@ function OperationSetForm({ operationSet, onSubmit }: FormProps) {
                       : 'PRIVATE',
                   )
                 }
-                label={t('components.operation-set.OperationSetEditor.visible_to_all')}
+                label={t(
+                  'components.operation-set.OperationSetEditor.visible_to_all',
+                )}
               />
             )}
           />
@@ -299,7 +317,8 @@ function OperationSetForm({ operationSet, onSubmit }: FormProps) {
       <div className="flex items-end">
         {isEdit && (
           <div className="text-xs text-gray-500">
-            <Icon icon="info-sign" /> {t('components.operation-set.OperationSetEditor.click_save')}
+            <Icon icon="info-sign" />{' '}
+            {t('components.operation-set.OperationSetEditor.click_save')}
           </div>
         )}
 
@@ -311,12 +330,18 @@ function OperationSetForm({ operationSet, onSubmit }: FormProps) {
           icon="floppy-disk"
           className="ml-auto"
         >
-          {isEdit ? t('components.operation-set.OperationSetEditor.save') : t('components.operation-set.OperationSetEditor.create')}
+          {isEdit
+            ? t('components.operation-set.OperationSetEditor.save')
+            : t('components.operation-set.OperationSetEditor.create')}
         </Button>
       </div>
 
       {globalError && (
-        <Callout intent="danger" icon="error" title={t('components.operation-set.OperationSetEditor.error')}>
+        <Callout
+          intent="danger"
+          icon="error"
+          title={t('components.operation-set.OperationSetEditor.error')}
+        >
           {globalError}
         </Callout>
       )}
@@ -341,7 +366,7 @@ function OperationSelector({
   operationSet,
   selectorRef,
 }: OperationSelectorProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { operations, error } = useOperations({
     operationIds: operationSet.copilotIds,
   })
@@ -447,29 +472,49 @@ function OperationSelector({
                 disabled={levelLoading}
                 icon="sort-alphabetical"
                 text={
-                  t('components.operation-set.OperationSetEditor.sort_by_level') +
+                  t(
+                    'components.operation-set.OperationSetEditor.sort_by_level',
+                  ) +
                   (levelLoading
-                    ? ' (' + t('components.operation-set.OperationSetEditor.loading') + ')'
+                    ? ' (' +
+                      t('components.operation-set.OperationSetEditor.loading') +
+                      ')'
                     : levelError
-                      ? ' (' + t('components.operation-set.OperationSetEditor.level_load_failed') + ')'
+                      ? ' (' +
+                        t(
+                          'components.operation-set.OperationSetEditor.level_load_failed',
+                        ) +
+                        ')'
                       : '')
                 }
                 onClick={() => sort('level')}
               />
               <MenuItem
                 icon="sort-alphabetical"
-                text={t('components.operation-set.OperationSetEditor.sort_by_title')}
+                text={t(
+                  'components.operation-set.OperationSetEditor.sort_by_title',
+                )}
                 onClick={() => sort('title')}
               />
               <MenuItem
                 icon="sort-numerical"
-                text={t('components.operation-set.OperationSetEditor.sort_by_id')}
+                text={t(
+                  'components.operation-set.OperationSetEditor.sort_by_id',
+                )}
                 onClick={() => sort('id')}
               />
             </Menu>
           }
         >
-          <Button small minimal icon="sort" text={t('components.operation-set.OperationSetEditor.quick_sort') + '...'} />
+          <Button
+            small
+            minimal
+            icon="sort"
+            text={
+              t('components.operation-set.OperationSetEditor.quick_sort') +
+              '...'
+            }
+          />
         </Popover2>
         <Button
           small
@@ -481,7 +526,11 @@ function OperationSelector({
       </div>
 
       {error && (
-        <Callout intent="danger" icon="error" title={t('components.operation-set.OperationSetEditor.error')}>
+        <Callout
+          intent="danger"
+          icon="error"
+          title={t('components.operation-set.OperationSetEditor.error')}
+        >
           {formatError(error)}
         </Callout>
       )}
@@ -508,8 +557,8 @@ function OperationSelector({
                     className={clsx(
                       'flex items-center m-0 p-2 !pl-10 flex-1',
                       checkboxOverrides[id] !== undefined &&
-                      checkboxOverrides[id] !== alreadyAdded(id) &&
-                      'font-bold',
+                        checkboxOverrides[id] !== alreadyAdded(id) &&
+                        'font-bold',
                     )}
                     checked={checkboxOverrides[id] ?? alreadyAdded(id)}
                     onChange={(e) => {

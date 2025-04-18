@@ -1,6 +1,6 @@
 import { useFormState } from 'react-hook-form'
-import { SetOptional } from 'type-fest'
 import { useTranslation } from 'react-i18next'
+import { SetOptional } from 'type-fest'
 
 import { EditorFieldProps } from 'components/editor/EditorFieldProps'
 import { EditorIntegerInput } from 'components/editor/EditorIntegerInput'
@@ -25,11 +25,15 @@ export const EditorActionPreDelay = ({
       className="mr-2 lg:mr-4"
       field={name}
       error={errors[name]}
-      description={t('components.editor.action.EditorActionDelay.delay_description')}
+      description={t(
+        'components.editor.action.EditorActionDelay.delay_description',
+      )}
     >
       <EditorIntegerInput
         NumericInputProps={{
-          placeholder: t('components.editor.action.EditorActionDelay.pre_delay'),
+          placeholder: t(
+            'components.editor.action.EditorActionDelay.pre_delay',
+          ),
           min: 0,
           stepSize: 100,
           minorStepSize: 10,
@@ -56,11 +60,15 @@ export const EditorActionRearDelay = ({
       label={t('components.editor.action.EditorActionDelay.post_delay')}
       field={name}
       error={errors[name]}
-      description={t('components.editor.action.EditorActionDelay.delay_description')}
+      description={t(
+        'components.editor.action.EditorActionDelay.delay_description',
+      )}
     >
       <EditorIntegerInput
         NumericInputProps={{
-          placeholder: t('components.editor.action.EditorActionDelay.post_delay'),
+          placeholder: t(
+            'components.editor.action.EditorActionDelay.post_delay',
+          ),
           min: 0,
           stepSize: 100,
           minorStepSize: 10,

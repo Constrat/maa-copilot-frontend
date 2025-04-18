@@ -1,7 +1,7 @@
 import { Button, Drawer, DrawerSize } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { FC, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { CopilotDocV1 } from 'models/copilot.schema'
 

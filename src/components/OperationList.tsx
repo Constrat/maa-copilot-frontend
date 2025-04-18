@@ -1,10 +1,10 @@
 import { Button, Callout, NonIdealState } from '@blueprintjs/core'
 import { Tooltip2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
 import { UseOperationsParams, useOperations } from 'apis/operation'
 import { useAtomValue } from 'jotai'
 import { ComponentType, ReactNode, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { neoLayoutAtom } from 'store/pref'
 
@@ -20,7 +20,7 @@ interface OperationListProps extends UseOperationsParams {
 
 export const OperationList: ComponentType<OperationListProps> = withSuspensable(
   ({ multiselect, onUpdate, ...params }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation()
     const neoLayout = useAtomValue(neoLayoutAtom)
 
     const { operations, total, setSize, isValidating, isReachingEnd } =
@@ -84,7 +84,9 @@ export const OperationList: ComponentType<OperationListProps> = withSuspensable(
           <Callout className="mb-4 p-0 select-none">
             <details>
               <summary className="px-2 py-4 cursor-pointer hover:bg-zinc-500 hover:bg-opacity-5">
-                {t('components.OperationList.selected_jobs', { count: selectedOperations.length })}
+                {t('components.OperationList.selected_jobs', {
+                  count: selectedOperations.length,
+                })}
               </summary>
               <div className="p-2 flex flex-wrap gap-1">
                 {selectedOperations.map((operation) => (
@@ -102,7 +104,10 @@ export const OperationList: ComponentType<OperationListProps> = withSuspensable(
               </div>
             </details>
             <div className="absolute top-2 right-2 flex">
-              <Tooltip2 content={t('components.OperationList.only_loaded_items')} placement="top">
+              <Tooltip2
+                content={t('components.OperationList.only_loaded_items')}
+                placement="top"
+              >
                 <Button
                   minimal
                   icon="tick"

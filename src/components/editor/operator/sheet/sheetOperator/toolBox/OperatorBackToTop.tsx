@@ -23,7 +23,9 @@ export const OperatorBackToTop: FC<OperatorBackToTopProp> = ({ toTop }) => {
       minimal
       icon="symbol-triangle-up"
       disabled={current < 3}
-      title={t('components.editor.operator.sheet.sheetOperator.toolbox.OperatorBackToTop.back_to_top')}
+      title={t(
+        'components.editor.operator.sheet.sheetOperator.toolbox.OperatorBackToTop.back_to_top',
+      )}
       onClick={() => setPaginationFilter(defaultPagination)}
     />
   )

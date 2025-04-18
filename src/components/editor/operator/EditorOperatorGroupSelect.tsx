@@ -1,7 +1,7 @@
 import { MenuItem } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { useController } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { CopilotDocV1 } from '../../../models/copilot.schema'
 import { Suggest } from '../../Suggest'
@@ -54,15 +54,27 @@ export const EditorOperatorGroupSelect = ({
       createNewItemRenderer={(query, active, handleClick) => (
         <MenuItem
           key="create-new-item"
-          text={t('components.editor.operator.EditorOperatorGroupSelect.create_new_group', { query })}
+          text={t(
+            'components.editor.operator.EditorOperatorGroupSelect.create_new_group',
+            { query },
+          )}
           icon="text-highlight"
           onClick={handleClick}
           selected={active}
         />
       )}
-      noResults={<MenuItem disabled text={t('components.editor.operator.EditorOperatorGroupSelect.no_matching_groups')} />}
+      noResults={
+        <MenuItem
+          disabled
+          text={t(
+            'components.editor.operator.EditorOperatorGroupSelect.no_matching_groups',
+          )}
+        />
+      }
       inputProps={{
-        placeholder: t('components.editor.operator.EditorOperatorGroupSelect.group_name'),
+        placeholder: t(
+          'components.editor.operator.EditorOperatorGroupSelect.group_name',
+        ),
         large: true,
         onBlur,
       }}

@@ -2,8 +2,8 @@ import {
   CommentsAreaInfo,
   QueriesCommentsAreaRequest,
 } from 'maa-copilot-client'
-import useSWRInfinite from 'swr/infinite'
 import { useTranslation } from 'react-i18next'
+import useSWRInfinite from 'swr/infinite'
 
 import { CommentApi } from 'utils/maa-copilot-client'
 
@@ -24,7 +24,7 @@ export function useComments({
   orderBy,
   suspense,
 }: UseCommentsParams) {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const {
     data: pages,
     setSize,
@@ -88,7 +88,7 @@ export async function sendComment(req: {
       copilotId: req.operationId,
       fromCommentId: req.fromCommentId,
       notification: false,
-      commentStatus: 'ENABLED'
+      commentStatus: 'ENABLED',
     },
   })
 }

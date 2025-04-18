@@ -1,11 +1,11 @@
 import { Button, Checkbox } from '@blueprintjs/core'
 import { Tooltip2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
 import { isEqual } from 'lodash-es'
 import { CopilotInfoStatusEnum } from 'maa-copilot-client'
 import { ComponentType, useMemo, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 
 import { withGlobalErrorBoundary } from 'components/GlobalErrorBoundary'
@@ -50,12 +50,14 @@ const isDirty = (operation: CopilotDocV1.Operation) =>
 
 export const CreatePage: ComponentType = withGlobalErrorBoundary(
   withSuspensable(() => {
-    const { t } = useTranslation();
+    const { t } = useTranslation()
     const params = useParams()
     const id = params.id ? +params.id : undefined
 
     const isNew = !id
-    const submitAction = isNew ? t('pages.create.publish') : t('pages.create.update')
+    const submitAction = isNew
+      ? t('pages.create.publish')
+      : t('pages.create.update')
 
     const apiOperation = useOperation({ id, suspense: true }).data
 
@@ -140,8 +142,8 @@ export const CreatePage: ComponentType = withGlobalErrorBoundary(
             if (actionWithNegativeCostChanges !== -1) {
               throw new Error(
                 t('pages.create.negative_cost_not_supported', {
-                  actionIndex: actionWithNegativeCostChanges + 1
-                })
+                  actionIndex: actionWithNegativeCostChanges + 1,
+                }),
               )
             }
           }
@@ -179,7 +181,9 @@ export const CreatePage: ComponentType = withGlobalErrorBoundary(
               className="!text-xs opacity-75"
               archive={archive}
               options={autosaveOptions}
-              itemTitle={(record) => record.v.doc?.title || t('pages.create.untitled')}
+              itemTitle={(record) =>
+                record.v.doc?.title || t('pages.create.untitled')
+              }
               onRestore={(value) => reset(value, { keepDefaultValues: true })}
             />
             <SourceEditorButton
@@ -222,7 +226,9 @@ export const CreatePage: ComponentType = withGlobalErrorBoundary(
                     )
                   }
                 >
-                  <span className="-ml-1 opacity-75">{t('pages.create.public')}</span>
+                  <span className="-ml-1 opacity-75">
+                    {t('pages.create.public')}
+                  </span>
                 </Checkbox>
               </Tooltip2>
             </div>

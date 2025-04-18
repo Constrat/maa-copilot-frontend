@@ -1,6 +1,7 @@
 import { Button, Drawer } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
+
 import { FC, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { SourceEditor, SourceEditorProps } from './SourceEditor'
 
@@ -13,7 +14,7 @@ export const SourceEditorButton: FC<SourceEditorButtonProps> = ({
   triggerValidation,
   ...editorProps
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (

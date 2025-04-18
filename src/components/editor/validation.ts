@@ -1,11 +1,11 @@
 import ajvLocalizeZh from 'ajv-i18n/localize/zh'
+import i18next from 'i18next'
 import {
   DeepPartial,
   ErrorOption,
   FieldPath,
   UseFormSetError,
 } from 'react-hook-form'
-import i18next from 'i18next'
 
 import { CopilotDocV1 } from 'models/copilot.schema'
 
@@ -23,14 +23,16 @@ export function validateOperation(
     Record<FieldPath<CopilotDocV1.Operation> | 'global', ErrorOption>
   > = {}
   const globalErrors: string[] = []
-  const t = i18next.t;
+  const t = i18next.t
 
   const { actions, groups } = operation
 
   const emptyGroup = groups?.find((group) => (group?.opers?.length || 0) === 0)
 
   if (emptyGroup) {
-    globalErrors.push(t('components.editor.validation.empty_group', { name: emptyGroup.name }))
+    globalErrors.push(
+      t('components.editor.validation.empty_group', { name: emptyGroup.name }),
+    )
   }
 
   if (actions) {
@@ -47,8 +49,8 @@ export function validateOperation(
               actionType: findActionType(action.type).alternativeValue,
               validTypes: validTypesFollowingBulletTime
                 .map((type) => findActionType(type).alternativeValue)
-                .join(t('components.editor.validation.bullet_time_separator'))
-            })
+                .join(t('components.editor.validation.bullet_time_separator')),
+            }),
           )
         }
       }

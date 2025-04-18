@@ -7,11 +7,12 @@ import {
   H6,
   Tag,
 } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
+
 import clsx from 'clsx'
 import { getDefaultStore, useAtom } from 'jotai'
 import { compact } from 'lodash-es'
 import { FC, useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { OPERATORS } from '../models/operator'
 import {
@@ -51,7 +52,7 @@ export const OperatorFilter: FC<OperatorFilterProps> = ({
   filter,
   onChange,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [savedFilter, setSavedFilter] = useAtom(operatorFilterAtom)
   const [dialogOpen, setDialogOpen] = useState(false)
   const [editingFilter, setEditingFilter] = useState<typeof savedFilter>(filter)
@@ -186,12 +187,16 @@ export const OperatorFilter: FC<OperatorFilterProps> = ({
         title={t('components.OperatorFilter.select_operators')}
       >
         <DialogBody>
-          <H6 className="mb-4">{t('components.OperatorFilter.included_operators')}</H6>
+          <H6 className="mb-4">
+            {t('components.OperatorFilter.included_operators')}
+          </H6>
           <OperatorSelect
             operators={editingFilter.included}
             onChange={(included) => updateEditingFilter(included, undefined)}
           />
-          <H6 className="mt-6 mb-4">{t('components.OperatorFilter.excluded_operators')}</H6>
+          <H6 className="mt-6 mb-4">
+            {t('components.OperatorFilter.excluded_operators')}
+          </H6>
           <OperatorSelect
             operators={editingFilter.excluded}
             onChange={(excluded) => updateEditingFilter(undefined, excluded)}

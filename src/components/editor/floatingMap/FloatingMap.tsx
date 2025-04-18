@@ -1,10 +1,10 @@
 import { Button, Card, NonIdealState, Spinner } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import { clamp, isNil } from 'lodash-es'
 import { useCallback, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { useTranslation } from 'react-i18next'
 import { Rnd, RndResizeCallback } from 'react-rnd'
 import { useWindowSize } from 'react-use'
 
@@ -200,12 +200,23 @@ export function FloatingMap() {
                     icon={
                       <Spinner className="[&_.bp4-spinner-head]:stroke-current" />
                     }
-                    description={iframeWindow ? undefined : t('components.editor.floatingMap.FloatingMap.waiting_connection')}
+                    description={
+                      iframeWindow
+                        ? undefined
+                        : t(
+                            'components.editor.floatingMap.FloatingMap.waiting_connection',
+                          )
+                    }
                   />
                 )}
               </div>
             ) : (
-              <NonIdealState icon="area-of-interest" title={t('components.editor.floatingMap.FloatingMap.no_stage_selected')} />
+              <NonIdealState
+                icon="area-of-interest"
+                title={t(
+                  'components.editor.floatingMap.FloatingMap.no_stage_selected',
+                )}
+              />
             )}
           </Card>
         </Rnd>
@@ -255,7 +266,11 @@ function FloatingMapHeader({
         minimal
         style={{ height: HEADER_HEIGHT }}
         className="px-4"
-        title={config.show ? t('components.editor.floatingMap.FloatingMap.hide_map') : t('components.editor.floatingMap.FloatingMap.show_map')}
+        title={
+          config.show
+            ? t('components.editor.floatingMap.FloatingMap.hide_map')
+            : t('components.editor.floatingMap.FloatingMap.show_map')
+        }
         icon={config.show ? 'caret-down' : 'caret-up'}
         onClick={() => setConfig({ ...config, show: !config.show })}
       >

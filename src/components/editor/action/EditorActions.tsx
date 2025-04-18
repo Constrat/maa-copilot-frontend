@@ -8,11 +8,11 @@ import {
   useSensors,
 } from '@dnd-kit/core'
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable'
-import { useTranslation } from 'react-i18next'
 
 import { uniqueId, unset } from 'lodash-es'
 import { useMemo, useState } from 'react'
 import { Control, useFieldArray } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import type { CopilotDocV1 } from 'models/copilot.schema'
 
@@ -85,7 +85,11 @@ export const EditorActions = ({ control }: EditorActionsProps) => {
         update(index, action)
         setEditingAction(undefined)
       } else {
-        setError('global' as any, { message: t('components.editor.action.EditorActions.update_action_not_found') })
+        setError('global' as any, {
+          message: t(
+            'components.editor.action.EditorActions.update_action_not_found',
+          ),
+        })
         return false
       }
     } else {
@@ -155,7 +159,11 @@ export const EditorActions = ({ control }: EditorActionsProps) => {
           </DndContext>
 
           {actions.length === 0 && (
-            <NonIdealState title={t('components.editor.action.EditorActions.no_actions')} className="" icon="inbox" />
+            <NonIdealState
+              title={t('components.editor.action.EditorActions.no_actions')}
+              className=""
+              icon="inbox"
+            />
           )}
         </div>
       </div>

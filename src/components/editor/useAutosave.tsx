@@ -8,10 +8,10 @@ import {
   MenuItem,
 } from '@blueprintjs/core'
 import { Popover2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
 import { first, isEqual } from 'lodash-es'
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { formatRelativeTime } from '../../utils/times'
 
@@ -145,13 +145,13 @@ export const AutosaveSheet = <T,>({
   onRestore,
   ...buttonProps
 }: AutosaveSheetProps<T>) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [restoreDialogOpen, setRestoreDialogOpen] = useState(false)
   const restoringRecord = useRef<Record<T>>()
 
   const formatTime = (timestamp?: number) => {
-    if (!timestamp) return '';
-    return formatRelativeTime(timestamp);
+    if (!timestamp) return ''
+    return formatRelativeTime(timestamp)
   }
 
   const handleRestore = () => {
@@ -170,7 +170,7 @@ export const AutosaveSheet = <T,>({
             <Callout intent="primary">
               {t('components.editor.useAutosave.autosave_info', {
                 minutes: ~~(interval / 1000 / 60),
-                limit
+                limit,
               })}
             </Callout>
             <Menu className="mt-2 p-0">
@@ -202,8 +202,8 @@ export const AutosaveSheet = <T,>({
           text={
             archive.length
               ? t('components.editor.useAutosave.autosaved_at', {
-                time: formatTime(first(archive)?.t)
-              })
+                  time: formatTime(first(archive)?.t),
+                })
               : t('components.editor.useAutosave.not_saved')
           }
           {...buttonProps}

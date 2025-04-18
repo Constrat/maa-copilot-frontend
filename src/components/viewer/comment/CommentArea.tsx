@@ -1,5 +1,5 @@
 import { Alert, Button, Card, H4, NonIdealState, Tag } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
+
 import { useOperation } from 'apis/operation'
 import clsx from 'clsx'
 import { useAtom, useAtomValue } from 'jotai'
@@ -12,6 +12,7 @@ import {
   useMemo,
   useState,
 } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import {
   deleteComment,
@@ -294,7 +295,8 @@ const CommentActions = ({
     setPending(true)
 
     await wrapErrorMessage(
-      (e) => t('components.viewer.comment.rating_failed', { error: formatError(e) }),
+      (e) =>
+        t('components.viewer.comment.rating_failed', { error: formatError(e) }),
       deleteComment({ commentId: comment.commentId }),
     ).catch(console.warn)
 
@@ -375,7 +377,8 @@ const CommentRatingButtons = ({ comment }: { comment: CommentInfo }) => {
     setPending(true)
 
     await wrapErrorMessage(
-      (e) => t('components.viewer.comment.rating_failed', { error: formatError(e) }),
+      (e) =>
+        t('components.viewer.comment.rating_failed', { error: formatError(e) }),
       rateComment({ commentId, rating }),
     ).catch(console.warn)
 
@@ -419,7 +422,8 @@ const CommentTopButton = ({ comment }: { comment: MainCommentInfo }) => {
     setPending(true)
 
     await wrapErrorMessage(
-      (e) => t('components.viewer.comment.pin_failed', { error: formatError(e) }),
+      (e) =>
+        t('components.viewer.comment.pin_failed', { error: formatError(e) }),
       topComment({ commentId, topping: !topping }),
     ).catch(console.warn)
 
@@ -429,7 +433,9 @@ const CommentTopButton = ({ comment }: { comment: MainCommentInfo }) => {
 
   return (
     <Button minimal small className="!font-normal !text-[13px]" onClick={top}>
-      {topping ? t('components.viewer.comment.unpin') : t('components.viewer.comment.pin')}
+      {topping
+        ? t('components.viewer.comment.unpin')
+        : t('components.viewer.comment.pin')}
     </Button>
   )
 }

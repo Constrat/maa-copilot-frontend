@@ -1,4 +1,5 @@
 import { clamp } from 'lodash-es'
+
 import i18n from '../i18n'
 
 const ratingLevelKeys = [

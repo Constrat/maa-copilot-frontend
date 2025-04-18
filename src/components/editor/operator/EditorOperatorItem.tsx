@@ -1,7 +1,7 @@
 import { Card, Elevation, Icon } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
+import { useTranslation } from 'react-i18next'
 
 import type { CopilotDocV1 } from 'models/copilot.schema'
 
@@ -35,23 +35,26 @@ export const EditorOperatorItem = ({
   )
 
   const getSkillDisplay = () => {
-    const skillNum = operator.skill;
+    const skillNum = operator.skill
 
     if (i18n.language === 'cn') {
       // Chinese format: 一技能, 二技能, etc.
-      const skillNumberText = skillNum === 1
-        ? t('components.editor.operator.EditorOperatorItem.first_skill')
-        : skillNum === 2
-          ? t('components.editor.operator.EditorOperatorItem.second_skill')
-          : skillNum === 3
-            ? t('components.editor.operator.EditorOperatorItem.third_skill')
-            : t('components.editor.operator.EditorOperatorItem.unknown');
+      const skillNumberText =
+        skillNum === 1
+          ? t('components.editor.operator.EditorOperatorItem.first_skill')
+          : skillNum === 2
+            ? t('components.editor.operator.EditorOperatorItem.second_skill')
+            : skillNum === 3
+              ? t('components.editor.operator.EditorOperatorItem.third_skill')
+              : t('components.editor.operator.EditorOperatorItem.unknown')
 
-      return `${skillNumberText}${t('components.editor.operator.EditorOperatorItem.skill')}：${skillUsage}`;
+      return `${skillNumberText}${t('components.editor.operator.EditorOperatorItem.skill')}：${skillUsage}`
     } else {
       // English format: S1, S2, S3
-      const skillText = skillNum ? `S${skillNum}` : t('components.editor.operator.EditorOperatorItem.unknown');
-      return `${skillText}: ${skillUsage}`;
+      const skillText = skillNum
+        ? `S${skillNum}`
+        : t('components.editor.operator.EditorOperatorItem.unknown')
+      return `${skillText}: ${skillUsage}`
     }
   }
 

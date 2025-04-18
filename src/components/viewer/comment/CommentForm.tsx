@@ -1,8 +1,9 @@
 import { Button, Card, Checkbox, TextArea } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
+
 import { sendComment } from 'apis/comment'
 import clsx from 'clsx'
 import { useContext, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { MAX_COMMENT_LENGTH } from '../../../models/comment'
 import { formatError } from '../../../utils/error'
@@ -26,10 +27,12 @@ export const CommentForm = ({
   inputAutoFocus,
   maxLength = MAX_COMMENT_LENGTH,
 }: CommentFormProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { operationId, replyTo, reload } = useContext(CommentAreaContext)
 
-  const defaultPlaceholder = t('components.viewer.comment.friendly_comment_placeholder');
+  const defaultPlaceholder = t(
+    'components.viewer.comment.friendly_comment_placeholder',
+  )
 
   const [message, setMessage] = useState('')
   const [showMarkdownPreview, setShowMarkdownPreview] = useState(false)
@@ -51,14 +54,17 @@ export const CommentForm = ({
     setIsSubmitting(true)
 
     await wrapErrorMessage(
-      (e) => t('components.viewer.comment.submit_failed', { error: formatError(e) }),
+      (e) =>
+        t('components.viewer.comment.submit_failed', { error: formatError(e) }),
       (async () => {
         if (primary) {
           // this comment is a main comment and does not reply to others
           await sendComment({ message, operationId })
         } else {
           if (!replyTo) {
-            throw new Error(t('components.viewer.comment.reply_target_not_found'))
+            throw new Error(
+              t('components.viewer.comment.reply_target_not_found'),
+            )
           }
           await sendComment({
             message,
@@ -102,7 +108,9 @@ export const CommentForm = ({
           loading={isSubmitting}
           onClick={handleSubmit}
         >
-          {primary ? t('components.viewer.comment.post_comment') : t('components.viewer.comment.reply')}
+          {primary
+            ? t('components.viewer.comment.post_comment')
+            : t('components.viewer.comment.reply')}
         </Button>
 
         <Checkbox
@@ -122,7 +130,9 @@ export const CommentForm = ({
 
       {showMarkdownPreview && (
         <Card className="mt-2 border-2">
-          <Markdown>{message || t('components.viewer.comment.no_content')}</Markdown>
+          <Markdown>
+            {message || t('components.viewer.comment.no_content')}
+          </Markdown>
         </Card>
       )}
     </form>

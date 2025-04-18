@@ -1,10 +1,10 @@
 import { Callout } from '@blueprintjs/core'
 import { Tooltip2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
 import camelcaseKeys from 'camelcase-keys'
 import { FC, useMemo, useState } from 'react'
 import { UseFormReturn } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { CopilotDocV1 } from '../../../models/copilot.schema'
 import { useAfterRender } from '../../../utils/useAfterRender'
@@ -26,7 +26,7 @@ export const SourceEditor: FC<SourceEditorProps> = ({
   },
   triggerValidation,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const hasValidationErrors = !!Object.keys(errors).length
 
   const initialText = useMemo(() => {
@@ -88,22 +88,36 @@ export const SourceEditor: FC<SourceEditorProps> = ({
               refer to: https://github.com/philipwalton/flexbugs#flexbug-7 */}
           <div className="flex-1">
             <Callout
-              title={t('components.editor.source.SourceEditor.json_validation', {
-                status: jsonError ? t('components.editor.source.SourceEditor.syntax_error_short') : t('components.editor.source.SourceEditor.passed')
-              })}
+              title={t(
+                'components.editor.source.SourceEditor.json_validation',
+                {
+                  status: jsonError
+                    ? t(
+                        'components.editor.source.SourceEditor.syntax_error_short',
+                      )
+                    : t('components.editor.source.SourceEditor.passed'),
+                },
+              )}
               intent={jsonError ? 'warning' : 'success'}
             />
           </div>
           <Tooltip2
             className="flex-1"
-            content={t('components.editor.source.SourceEditor.see_errors_in_form')}
+            content={t(
+              'components.editor.source.SourceEditor.see_errors_in_form',
+            )}
             position="bottom"
             disabled={!hasValidationErrors}
           >
             <Callout
-              title={t('components.editor.source.SourceEditor.form_validation', {
-                status: hasValidationErrors ? t('components.editor.source.SourceEditor.not_passed') : t('components.editor.source.SourceEditor.passed')
-              })}
+              title={t(
+                'components.editor.source.SourceEditor.form_validation',
+                {
+                  status: hasValidationErrors
+                    ? t('components.editor.source.SourceEditor.not_passed')
+                    : t('components.editor.source.SourceEditor.passed'),
+                },
+              )}
               intent={hasValidationErrors ? 'warning' : 'success'}
             />
           </Tooltip2>

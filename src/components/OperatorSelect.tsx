@@ -1,11 +1,12 @@
 import { Classes, MenuItem } from '@blueprintjs/core'
 import { MenuItem2 } from '@blueprintjs/popover2'
 import { MultiSelect2 } from '@blueprintjs/select'
-import { useTranslation } from 'react-i18next'
+
 import clsx from 'clsx'
 import Fuse from 'fuse.js'
 import { compact } from 'lodash-es'
 import { FC, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { OPERATORS } from '../models/operator'
 import { useDebouncedQuery } from '../utils/useDebouncedQuery'
@@ -24,7 +25,7 @@ export const OperatorSelect: FC<OperatorSelectProps> = ({
   operators,
   onChange,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { query, trimmedDebouncedQuery, updateQuery, onOptionMouseDown } =
     useDebouncedQuery()
 
@@ -102,7 +103,11 @@ export const OperatorSelect: FC<OperatorSelectProps> = ({
       placeholder=""
       noResults={
         trimmedDebouncedQuery ? (
-          <MenuItem roleStructure="listoption" disabled text={t('components.OperatorSelect.no_matching_operators')} />
+          <MenuItem
+            roleStructure="listoption"
+            disabled
+            text={t('components.OperatorSelect.no_matching_operators')}
+          />
         ) : undefined
       }
       tagInputProps={{

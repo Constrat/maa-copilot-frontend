@@ -1,10 +1,10 @@
 import { Button, Classes, IconSize, MenuItem, Spinner } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import { useAtomValue } from 'jotai'
 import { MaaUserInfo } from 'maa-copilot-client'
 import { FC, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { useUserSearch } from '../apis/user'
 import { authAtom } from '../store/auth'
@@ -33,7 +33,7 @@ export const UserFilter: FC<UserFilterProps> = ({
   user,
   onChange,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const auth = useAtomValue(authAtom)
   const { query, debouncedQuery, updateQuery, onOptionMouseDown } =
     useDebouncedQuery({ debounceTime: 500 })
@@ -82,7 +82,8 @@ export const UserFilter: FC<UserFilterProps> = ({
               isLoading
                 ? t('components.UserFilter.searching')
                 : error
-                  ? t('components.UserFilter.search_failed') + formatError(error)
+                  ? t('components.UserFilter.search_failed') +
+                    formatError(error)
                   : query && debouncedQuery
                     ? t('components.UserFilter.no_user_found')
                     : t('components.UserFilter.enter_username')
@@ -105,7 +106,9 @@ export const UserFilter: FC<UserFilterProps> = ({
           icon="person"
           rightIcon="chevron-down"
         >
-          {user && !isMyself(user) ? user.userName : t('components.UserFilter.author')}
+          {user && !isMyself(user)
+            ? user.userName
+            : t('components.UserFilter.author')}
         </Button>
       </Select>
       {!!auth.token && (

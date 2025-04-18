@@ -1,6 +1,7 @@
 import { Card } from '@blueprintjs/core'
 
 import dayjs from 'dayjs'
+import { useLinks } from 'hooks/useLinks'
 import { ComponentType } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -13,7 +14,6 @@ import { OperationSetEditorLauncher } from 'components/operation-set/OperationSe
 import { OperationUploaderLauncher } from 'components/uploader/OperationUploaderLauncher'
 
 import { AnnPanel } from '../components/announcement/AnnPanel'
-import { useLinks } from 'hooks/useLinks'
 import { useCurrentSize } from '../utils/useCurrenSize'
 
 export const IndexPage: ComponentType = withGlobalErrorBoundary(() => {
@@ -74,19 +74,19 @@ export const IndexPage: ComponentType = withGlobalErrorBoundary(() => {
 
 const Ad = dayjs().isBefore('2025-05-11 00:00:00+8')
   ? () => {
-    const { t } = useTranslation();
-    return (
-      // eslint-disable-next-line react/jsx-no-target-blank
-      <a
-        className="block relative dark:brightness-[85%]"
-        href="https://www.ldmnq.com/ldy/ldymuban/#/landing/9651"
-        target="_blank"
-      >
-        <img src="/ad_leidian.jpg" alt="雷电模拟器" />
-        <div className="absolute bottom-2 right-2 border border-current rounded text-[10px] text-zinc-300 px-1 ">
-          {t('pages.index.advertisement')}
-        </div>
-      </a>
-    )
-  }
+      const { t } = useTranslation()
+      return (
+        // eslint-disable-next-line react/jsx-no-target-blank
+        <a
+          className="block relative dark:brightness-[85%]"
+          href="https://www.ldmnq.com/ldy/ldymuban/#/landing/9651"
+          target="_blank"
+        >
+          <img src="/ad_leidian.jpg" alt="雷电模拟器" />
+          <div className="absolute bottom-2 right-2 border border-current rounded text-[10px] text-zinc-300 px-1 ">
+            {t('pages.index.advertisement')}
+          </div>
+        </a>
+      )
+    }
   : () => null

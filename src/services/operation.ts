@@ -1,12 +1,12 @@
 import { AppToaster } from 'components/Toaster'
 
+import i18n from '../i18n'
 import { CopilotDocV1 } from '../models/copilot.schema'
 import { ShortCodeContent, toShortCode } from '../models/shortCode'
 import { formatError } from '../utils/error'
 import { OperationApi } from '../utils/maa-copilot-client'
 import { snakeCaseKeysUnicode } from '../utils/object'
 import { wrapErrorMessage } from '../utils/wrapErrorMessage'
-import i18n from '../i18n'
 
 const doTriggerDownloadJSON = (content: string, filename: string) => {
   const blob = new Blob([content], {
@@ -39,7 +39,10 @@ export const handleDownloadJSON = (operationDoc: CopilotDocV1.Operation) => {
 
 export const handleLazyDownloadJSON = async (id: number, title: string) => {
   const resp = await wrapErrorMessage(
-    (e) => i18n.t('services.operation.json_download_failed', { error: formatError(e) }),
+    (e) =>
+      i18n.t('services.operation.json_download_failed', {
+        error: formatError(e),
+      }),
     new OperationApi().getCopilotById({
       id: id,
     }),
@@ -83,7 +86,9 @@ export const copyShortCode = async (target: { id: number }) => {
     })
   } catch (e) {
     AppToaster.show({
-      message: i18n.t('services.operation.shortcode_copy_failed', { error: formatError(e) }),
+      message: i18n.t('services.operation.shortcode_copy_failed', {
+        error: formatError(e),
+      }),
       intent: 'danger',
     })
   }

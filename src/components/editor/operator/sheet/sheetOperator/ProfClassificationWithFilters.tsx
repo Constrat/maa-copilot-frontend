@@ -1,9 +1,9 @@
 import { Button, Divider, H4, H5 } from '@blueprintjs/core'
 import { Popover2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import { FC, ImgHTMLAttributes, useEffect, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { PROFESSIONS } from 'models/operator'
 
@@ -86,9 +86,13 @@ export const ProfClassificationWithFilters: FC<
           <ProfIcon
             key={id}
             profId={id}
-            name={name === 'all' || name === 'favorites' || name === 'others'
-              ? t(`components.editor.operator.sheet.sheetOperator.ProfClassificationWithFilters.${name}`)
-              : name}
+            name={
+              name === 'all' || name === 'favorites' || name === 'others'
+                ? t(
+                    `components.editor.operator.sheet.sheetOperator.ProfClassificationWithFilters.${name}`,
+                  )
+                : name
+            }
             selected={selectedProf.includes(id)}
             onProfClick={() =>
               setProfFilter((prev) => ({
@@ -118,9 +122,13 @@ export const ProfClassificationWithFilters: FC<
                 }
               >
                 {name === 'all'
-                  ? t('components.editor.operator.sheet.sheetOperator.ProfClassificationWithFilters.all')
+                  ? t(
+                      'components.editor.operator.sheet.sheetOperator.ProfClassificationWithFilters.all',
+                    )
                   : name === 'selected'
-                    ? t('components.editor.operator.sheet.sheetOperator.ProfClassificationWithFilters.selected')
+                    ? t(
+                        'components.editor.operator.sheet.sheetOperator.ProfClassificationWithFilters.selected',
+                      )
                     : name}
               </H4>
             </li>

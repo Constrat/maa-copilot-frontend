@@ -24,12 +24,16 @@ export const OperatorRaritySelect: FC<OperatorRaritySelectProp> = () => {
     <>
       <div className="flex items-center">
         <H5 className="m-0 mr-1">
-          {t('components.editor.operator.sheet.sheetOperator.toolbox.OperatorRaritySelect.display_by_rarity')}
+          {t(
+            'components.editor.operator.sheet.sheetOperator.toolbox.OperatorRaritySelect.display_by_rarity',
+          )}
         </H5>
         <Button
           icon="reset"
           minimal
-          title={t('components.editor.operator.sheet.sheetOperator.toolbox.OperatorRaritySelect.reset_selection')}
+          title={t(
+            'components.editor.operator.sheet.sheetOperator.toolbox.OperatorRaritySelect.reset_selection',
+          )}
           onClick={() => setRarityFilter(defaultRarityFilter)}
         />
       </div>
@@ -73,7 +77,9 @@ export const OperatorRaritySelect: FC<OperatorRaritySelectProp> = () => {
               reverse: false,
             }))
           }
-          title={t('components.editor.operator.sheet.sheetOperator.toolbox.OperatorRaritySelect.sort_ascending')}
+          title={t(
+            'components.editor.operator.sheet.sheetOperator.toolbox.OperatorRaritySelect.sort_ascending',
+          )}
         />
         <Button
           minimal
@@ -86,7 +92,9 @@ export const OperatorRaritySelect: FC<OperatorRaritySelectProp> = () => {
               reverse: true,
             }))
           }
-          title={t('components.editor.operator.sheet.sheetOperator.toolbox.OperatorRaritySelect.sort_descending')}
+          title={t(
+            'components.editor.operator.sheet.sheetOperator.toolbox.OperatorRaritySelect.sort_descending',
+          )}
         />
       </div>
       <Divider />

@@ -1,19 +1,18 @@
 import { Button, Navbar, Tag } from '@blueprintjs/core'
 
+import { useLinks } from 'hooks/useLinks'
 import { Link, NavLink } from 'react-router-dom'
 import { FCC } from 'types'
 
 import { AccountManager } from 'components/AccountManager'
 import { BackToTop } from 'components/BackToTop'
+import { LanguageSwitcher } from 'components/LanguageSwitcher'
 import { NavExpandButton } from 'components/NavExpandButton'
 import { ThemeSwitchButton } from 'components/ThemeSwitchButton'
-import { LanguageSwitcher } from 'components/LanguageSwitcher'
 import { NavAside } from 'components/drawer/NavAside'
 
-import { useLinks } from 'hooks/useLinks'
-
 export const AppLayout: FCC = ({ children }) => {
-  const { NAV_LINKS } = useLinks();
+  const { NAV_LINKS } = useLinks()
 
   return (
     <div className="flex flex-col h-full w-full bg-zinc-50 ">
@@ -61,5 +60,5 @@ export const AppLayout: FCC = ({ children }) => {
 
       <BackToTop />
     </div>
-  );
-};
+  )
+}

@@ -1,12 +1,12 @@
 import { Button, NonIdealState } from '@blueprintjs/core'
 import { ErrorBoundary } from '@sentry/react'
-import { useTranslation } from 'react-i18next'
 
 import { ComponentType } from 'react'
+import { useTranslation } from 'react-i18next'
 import { FCC } from 'types'
 
 export const GlobalErrorBoundary: FCC = ({ children }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <ErrorBoundary
       fallback={
@@ -31,8 +31,6 @@ export const GlobalErrorBoundary: FCC = ({ children }) => {
   )
 }
 
-
-
 export function withGlobalErrorBoundary<P extends {}>(
   Component: ComponentType<P>,
 ): ComponentType<P> {
@@ -50,6 +48,3 @@ export function withGlobalErrorBoundary<P extends {}>(
 
   return Wrapped
 }
-
-
-

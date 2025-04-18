@@ -1,10 +1,10 @@
 import { Button } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { login } from 'apis/auth'
 import { useSetAtom } from 'jotai'
 import { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { AppToaster } from 'components/Toaster'
 import { authAtom, fromCredentials } from 'store/auth'
@@ -23,7 +23,7 @@ export const LoginPanel: FC<{
   onNavigateRegisterPanel: () => void
   onComplete: () => void
 }> = ({ onNavigateRegisterPanel, onComplete }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [resetPasswordDialogOpen, setResetPasswordDialogOpen] = useState(false)
 
   const {
@@ -35,13 +35,18 @@ export const LoginPanel: FC<{
 
   const onSubmit = async ({ email, password }: LoginFormValues) => {
     const res = await wrapErrorMessage(
-      (e) => t('components.account.LoginPanel.login_failed', { error: formatError(e) }),
+      (e) =>
+        t('components.account.LoginPanel.login_failed', {
+          error: formatError(e),
+        }),
       login({ email, password }),
     )
     setAuthState(fromCredentials(res))
     AppToaster.show({
       intent: 'success',
-      message: t('components.account.LoginPanel.login_success', { name: res.userInfo.userName }),
+      message: t('components.account.LoginPanel.login_success', {
+        name: res.userInfo.userName,
+      }),
     })
     onComplete()
   }
@@ -74,7 +79,9 @@ export const LoginPanel: FC<{
         />
 
         <div className="mt-6 flex items-center">
-          <span className="text-zinc-500">{t('components.account.LoginPanel.no_account')}</span>
+          <span className="text-zinc-500">
+            {t('components.account.LoginPanel.no_account')}
+          </span>
           <Button minimal onClick={onNavigateRegisterPanel}>
             {t('components.account.LoginPanel.go_register')}
           </Button>

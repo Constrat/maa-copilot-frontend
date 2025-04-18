@@ -1,11 +1,13 @@
 import { H2 } from '@blueprintjs/core'
+
 import { useTranslation } from 'react-i18next'
+
 import { Markdown } from 'components/Markdown'
 
 import changelog from '../../CHANGELOG.md?raw'
 
 export const AboutPage = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <div className="max-w-screen-md mx-auto">
       <div className="mt-8 flex flex-col items-center">
@@ -14,7 +16,9 @@ export const AboutPage = () => {
             <div className="ml-[3.2em] mr-[0.2em] !text-inherit">
               {t('pages.about.slogan_line1')}
             </div>
-            <div className="text-[1.2em] !text-inherit">{t('pages.about.slogan_line2')}</div>
+            <div className="text-[1.2em] !text-inherit">
+              {t('pages.about.slogan_line2')}
+            </div>
           </div>
           <div className="bg-rainbow !bg-clip-content h-[0.1em] pr-[1em]" />
         </div>

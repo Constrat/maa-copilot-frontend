@@ -1,14 +1,14 @@
 import { MenuItem } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { ChangeEventHandler, FC, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { AppToaster } from '../../Toaster'
 
 export const FileImporter: FC<{ onImport: (content: string) => void }> = ({
   onImport,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const inputRef = useRef<HTMLInputElement>(null)
 
   const handleUpload: ChangeEventHandler<HTMLInputElement> = async (e) => {

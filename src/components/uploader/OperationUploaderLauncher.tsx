@@ -1,12 +1,12 @@
 import { Button, Drawer } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { FC, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { OperationUploader } from 'components/uploader/OperationUploader'
 
 export const OperationUploaderLauncher: FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [uploaderActive, setUploaderActive] = useState(false)
 
   return (

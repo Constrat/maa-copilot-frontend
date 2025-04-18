@@ -1,9 +1,9 @@
 import { Button } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { groupBy } from 'lodash-es'
 import { useMemo } from 'react'
 import { useController } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import {
   DetailedSelect,
@@ -21,7 +21,11 @@ export const EditorActionTypeSelect = (
   const {
     field: { onChange, onBlur, value, ref },
   } = useController({
-    rules: { required: t('components.editor.action.EditorActionTypeSelect.select_action_type_required') },
+    rules: {
+      required: t(
+        'components.editor.action.EditorActionTypeSelect.select_action_type_required',
+      ),
+    },
     ...props,
   })
 
@@ -48,7 +52,11 @@ export const EditorActionTypeSelect = (
       <Button
         large
         icon={selectedAction?.icon || 'slash'}
-        text={selectedAction ? selectedAction.title : t('components.editor.action.EditorActionTypeSelect.select_action')}
+        text={
+          selectedAction
+            ? selectedAction.title
+            : t('components.editor.action.EditorActionTypeSelect.select_action')
+        }
         rightIcon="double-caret-vertical"
         onBlur={onBlur}
         ref={ref}

@@ -6,9 +6,9 @@ import {
   CopilotSetStatus,
   CopilotSetUpdateReq,
 } from 'maa-copilot-client'
+import { useTranslation } from 'react-i18next'
 import useSWR from 'swr'
 import useSWRInfinite from 'swr/infinite'
-import { useTranslation } from 'react-i18next'
 
 import { OperationSetApi } from 'utils/maa-copilot-client'
 import { useSWRRefresh } from 'utils/swr'
@@ -100,7 +100,7 @@ export function useOperationSetSearch({
   disabled,
   ...params
 }: UseOperationSetsParams) {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   if (!suspense) {
     throw new Error(t('apis.operation_set.search_requires_suspense'))
   }

@@ -29,7 +29,9 @@ export const EditorOperatorSkillTimes = <
       defaultValue={0}
       onValueChange={(val) => onChange(Math.min(val, 100))}
       onBlur={onBlur}
-      placeholder={t('components.editor.operator.EditorOperatorSkillTimes.skill_usage_count')}
+      placeholder={t(
+        'components.editor.operator.EditorOperatorSkillTimes.skill_usage_count',
+      )}
       value={value ?? ''}
       large
       min={1}

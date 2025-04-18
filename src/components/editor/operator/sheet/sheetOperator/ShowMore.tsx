@@ -1,7 +1,7 @@
 import { H6 } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { FC, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import {
   defaultPagination,
@@ -32,14 +32,19 @@ export const ShowMore: FC<ShowMoreProp> = ({ toTop }) => {
       {lastIndex >= dataTotal ? (
         <>
           <H6>
-            {t('components.editor.operator.sheet.sheetOperator.ShowMore.showing_all_operators', { total: dataTotal })}
+            {t(
+              'components.editor.operator.sheet.sheetOperator.ShowMore.showing_all_operators',
+              { total: dataTotal },
+            )}
           </H6>
           {dataTotal > size && (
             <H6
               className="ml-1 cursor-pointer text-sm text-gray-500 hover:text-inherit hover:underline"
               onClick={() => setPagination(defaultPagination)}
             >
-              {t('components.editor.operator.sheet.sheetOperator.ShowMore.collapse')}
+              {t(
+                'components.editor.operator.sheet.sheetOperator.ShowMore.collapse',
+              )}
             </H6>
           )}
         </>
@@ -53,7 +58,10 @@ export const ShowMore: FC<ShowMoreProp> = ({ toTop }) => {
             }))
           }
         >
-          {t('components.editor.operator.sheet.sheetOperator.ShowMore.show_more', { remaining: dataTotal - lastIndex })}
+          {t(
+            'components.editor.operator.sheet.sheetOperator.ShowMore.show_more',
+            { remaining: dataTotal - lastIndex },
+          )}
         </H6>
       )}
     </div>

@@ -1,8 +1,8 @@
 import { Button } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { useCallback, useEffect } from 'react'
 import { SubmitHandler, UseFormSetError, useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { CardTitle } from 'components/CardTitle'
 import { EditorResetButton } from 'components/editor/EditorResetButton'
@@ -110,26 +110,38 @@ export const EditorPerformerOperator = ({
 
         <EditorResetButton<CopilotDocV1.Operator>
           reset={reset}
-          entityName={t('components.editor.operator.EditorPerformerOperator.editing_operator')}
+          entityName={t(
+            'components.editor.operator.EditorPerformerOperator.editing_operator',
+          )}
         />
       </div>
 
       <FormField2
-        label={t('components.editor.operator.EditorPerformerOperator.operator_name')}
-        description={t('components.editor.operator.EditorPerformerOperator.operator_description')}
+        label={t(
+          'components.editor.operator.EditorPerformerOperator.operator_name',
+        )}
+        description={t(
+          'components.editor.operator.EditorPerformerOperator.operator_description',
+        )}
         field="name"
         error={errors.name}
         asterisk
         FormGroupProps={{
-          helperText: t('components.editor.operator.EditorPerformerOperator.search_hint'),
+          helperText: t(
+            'components.editor.operator.EditorPerformerOperator.search_hint',
+          ),
         }}
       >
         <EditorOperatorName control={control} name="name" />
       </FormField2>
 
       <FormField2
-        label={t('components.editor.operator.EditorPerformerOperator.group_membership')}
-        description={t('components.editor.operator.EditorPerformerOperator.group_membership_description')}
+        label={t(
+          'components.editor.operator.EditorPerformerOperator.group_membership',
+        )}
+        description={t(
+          'components.editor.operator.EditorPerformerOperator.group_membership_description',
+        )}
         field="groupName"
         error={errors.groupName}
       >
@@ -150,7 +162,9 @@ export const EditorPerformerOperator = ({
         </FormField2>
 
         <FormField2
-          label={t('components.editor.operator.EditorPerformerOperator.skill_usage')}
+          label={t(
+            'components.editor.operator.EditorPerformerOperator.skill_usage',
+          )}
           field="skillUsage"
           error={errors.skillUsage}
         >
@@ -159,7 +173,9 @@ export const EditorPerformerOperator = ({
 
         {skillUsage === CopilotDocV1.SkillUsageType.ReadyToUseTimes && (
           <FormField2
-            label={t('components.editor.operator.EditorPerformerOperator.skill_usage_count')}
+            label={t(
+              'components.editor.operator.EditorPerformerOperator.skill_usage_count',
+            )}
             field="skillTimes"
             error={errors.skillTimes}
           >
@@ -170,12 +186,16 @@ export const EditorPerformerOperator = ({
 
       <div className="flex">
         <FormSubmitButton control={control} icon={isNew ? 'add' : 'edit'}>
-          {isNew ? t('components.editor.operator.EditorPerformerOperator.add') : t('components.editor.operator.EditorPerformerOperator.save')}
+          {isNew
+            ? t('components.editor.operator.EditorPerformerOperator.add')
+            : t('components.editor.operator.EditorPerformerOperator.save')}
         </FormSubmitButton>
 
         {!isNew && (
           <Button icon="cross" className="ml-2" onClick={onCancel}>
-            {t('components.editor.operator.EditorPerformerOperator.cancel_edit')}
+            {t(
+              'components.editor.operator.EditorPerformerOperator.cancel_edit',
+            )}
           </Button>
         )}
       </div>

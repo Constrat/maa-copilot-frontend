@@ -1,6 +1,9 @@
 import i18n from '../i18n'
 
-export function formatError(e: unknown, fallback = i18n.t('utils.error.unknown_error')): string {
+export function formatError(
+  e: unknown,
+  fallback = i18n.t('utils.error.unknown_error'),
+): string {
   if (typeof e === 'string') {
     return e || fallback
   }

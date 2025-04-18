@@ -28,7 +28,7 @@ import { withSuspensable } from './Suspensable'
 import { UserFilter } from './UserFilter'
 
 export const Operations: ComponentType = withSuspensable(() => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [queryParams, setQueryParams] = useState<
     Omit<UseOperationsParams, 'operator'>
   >({
@@ -147,7 +147,9 @@ export const Operations: ComponentType = withSuspensable(() => {
                 onChange={setOperatorFilter}
               />
               <div className="flex flex-wrap items-center ml-auto">
-                <H6 className="mb-0 mr-1 opacity-75">{t('components.Operations.sort_by')}</H6>
+                <H6 className="mb-0 mr-1 opacity-75">
+                  {t('components.Operations.sort_by')}
+                </H6>
                 <ButtonGroup minimal className="flex-wrap">
                   {(
                     [

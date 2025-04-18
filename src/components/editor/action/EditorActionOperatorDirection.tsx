@@ -2,8 +2,8 @@ import { Button, MenuItem } from '@blueprintjs/core'
 import { Select2 } from '@blueprintjs/select'
 
 import { useController } from 'react-hook-form'
-import { SetOptional } from 'type-fest'
 import { useTranslation } from 'react-i18next'
+import { SetOptional } from 'type-fest'
 
 import { EditorFieldProps } from 'components/editor/EditorFieldProps'
 import type { CopilotDocV1 } from 'models/copilot.schema'
@@ -29,7 +29,11 @@ export const EditorActionOperatorDirection = ({
   } = useController({
     name,
     control,
-    rules: { required: t('components.editor.action.EditorActionOperatorDirection.direction_required') },
+    rules: {
+      required: t(
+        'components.editor.action.EditorActionOperatorDirection.direction_required',
+      ),
+    },
     defaultValue: 'None' as CopilotDocV1.Direction.None,
     ...controllerProps,
   })
@@ -38,10 +42,14 @@ export const EditorActionOperatorDirection = ({
 
   return (
     <FormField2
-      label={t('components.editor.action.EditorActionOperatorDirection.operator_direction')}
+      label={t(
+        'components.editor.action.EditorActionOperatorDirection.operator_direction',
+      )}
       field={name}
       error={errors[name]}
-      description={t('components.editor.action.EditorActionOperatorDirection.direction_description')}
+      description={t(
+        'components.editor.action.EditorActionOperatorDirection.direction_description',
+      )}
     >
       <Select2<OperatorDirection>
         filterable={false}

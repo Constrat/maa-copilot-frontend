@@ -56,7 +56,7 @@ export const SOCIAL_CONFIG = [
     iconSource: simpleIconsQQ,
     href: 'https://jq.qq.com/?_wv=1027&k=ElimpMzQ',
     labelKey: 'links.creator_group',
-    labelParams: { groupNumber: '1169188429' }  // Modifiable group number
+    labelParams: { groupNumber: '1169188429' }, // Modifiable group number
   },
   {
     iconType: 'iconify',

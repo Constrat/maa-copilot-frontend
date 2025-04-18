@@ -1,9 +1,9 @@
 import { Button, Callout, Dialog, InputGroup } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { resetPassword, sendResetPasswordEmail } from 'apis/auth'
 import { FC, useState } from 'react'
 import { FieldErrors, useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { formatError } from '../../utils/error'
 import { useNetworkState } from '../../utils/useNetworkState'
@@ -28,7 +28,7 @@ export const ResetPasswordDialog: FC<ResetPasswordDialogProps> = ({
   isOpen,
   onClose,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const {
     control,
@@ -71,7 +71,11 @@ export const ResetPasswordDialog: FC<ResetPasswordDialogProps> = ({
         <GlobalErrorBoundary>
           <form>
             {globalError && (
-              <Callout intent="danger" icon="error" title={t('components.account.ResetPasswordDialog.error')}>
+              <Callout
+                intent="danger"
+                icon="error"
+                title={t('components.account.ResetPasswordDialog.error')}
+              >
                 {globalError}
               </Callout>
             )}
@@ -91,17 +95,25 @@ export const ResetPasswordDialog: FC<ResetPasswordDialogProps> = ({
             />
 
             <FormField
-              label={t('components.account.ResetPasswordDialog.verification_code')}
+              label={t(
+                'components.account.ResetPasswordDialog.verification_code',
+              )}
               field="token"
               control={control}
               error={errors.token}
               ControllerProps={{
-                rules: { required: t('components.account.ResetPasswordDialog.code_required') },
+                rules: {
+                  required: t(
+                    'components.account.ResetPasswordDialog.code_required',
+                  ),
+                },
                 render: ({ field: { value, ...binding } }) => (
                   <InputGroup
                     id="token"
                     value={value || ''}
-                    placeholder={t('components.account.ResetPasswordDialog.enter_email_code')}
+                    placeholder={t(
+                      'components.account.ResetPasswordDialog.enter_email_code',
+                    )}
                     {...binding}
                   />
                 ),
@@ -144,14 +156,17 @@ const RequestTokenButton = ({
   email: string
   disabled: boolean
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { networkState, start, finish } = useNetworkState()
   const [sent, setSent] = useState(false)
 
   const handleClick = () => {
     start()
     wrapErrorMessage(
-      (e) => t('components.account.ResetPasswordDialog.get_code_failed', { error: formatError(e) }),
+      (e) =>
+        t('components.account.ResetPasswordDialog.get_code_failed', {
+          error: formatError(e),
+        }),
       sendResetPasswordEmail({ email }),
     )
       .then(() => {
@@ -174,7 +189,9 @@ const RequestTokenButton = ({
       onClick={handleClick}
       loading={networkState.loading}
     >
-      {sent ? t('components.account.ResetPasswordDialog.resend') : t('components.account.ResetPasswordDialog.get_code')}
+      {sent
+        ? t('components.account.ResetPasswordDialog.resend')
+        : t('components.account.ResetPasswordDialog.get_code')}
     </Button>
   )
 }

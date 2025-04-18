@@ -1,8 +1,8 @@
 import { Button, Callout, InputGroup } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { useEffect } from 'react'
 import { SubmitHandler, UseFormSetError, useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { CardTitle } from 'components/CardTitle'
 import { FormField } from 'components/FormField'
@@ -68,7 +68,9 @@ export const EditorPerformerGroup = ({
 
         <EditorResetButton
           reset={reset}
-          entityName={t('components.editor.operator.EditorPerformerGroup.editing_operator_group')}
+          entityName={t(
+            'components.editor.operator.EditorPerformerGroup.editing_operator_group',
+          )}
         />
       </div>
 
@@ -76,10 +78,16 @@ export const EditorPerformerGroup = ({
         <FactItem
           dense
           icon="info-sign"
-          title={t('components.editor.operator.EditorPerformerGroup.what_is_group')}
+          title={t(
+            'components.editor.operator.EditorPerformerGroup.what_is_group',
+          )}
           className="font-bold"
         />
-        <div>{t('components.editor.operator.EditorPerformerGroup.group_explanation')}</div>
+        <div>
+          {t(
+            'components.editor.operator.EditorPerformerGroup.group_explanation',
+          )}
+        </div>
       </Callout>
 
       <FormField
@@ -87,13 +95,23 @@ export const EditorPerformerGroup = ({
         field="name"
         control={control}
         error={errors.name}
-        description={t('components.editor.operator.EditorPerformerGroup.name_description')}
+        description={t(
+          'components.editor.operator.EditorPerformerGroup.name_description',
+        )}
         ControllerProps={{
-          rules: { validate: (value) => !!value.trim() || t('components.editor.operator.EditorPerformerGroup.name_required') },
+          rules: {
+            validate: (value) =>
+              !!value.trim() ||
+              t(
+                'components.editor.operator.EditorPerformerGroup.name_required',
+              ),
+          },
           render: ({ field }) => (
             <InputGroup
               large
-              placeholder={t('components.editor.operator.EditorPerformerGroup.name_placeholder')}
+              placeholder={t(
+                'components.editor.operator.EditorPerformerGroup.name_placeholder',
+              )}
               {...field}
             />
           ),
@@ -102,7 +120,9 @@ export const EditorPerformerGroup = ({
 
       <div className="flex">
         <FormSubmitButton control={control} icon={isNew ? 'add' : 'edit'}>
-          {isNew ? t('components.editor.operator.EditorPerformerGroup.add') : t('components.editor.operator.EditorPerformerGroup.save')}
+          {isNew
+            ? t('components.editor.operator.EditorPerformerGroup.add')
+            : t('components.editor.operator.EditorPerformerGroup.save')}
         </FormSubmitButton>
 
         {!isNew && (

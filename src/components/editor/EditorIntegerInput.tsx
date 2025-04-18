@@ -1,8 +1,8 @@
 import { NumericInputProps } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { isNil } from 'lodash-es'
 import { FieldValues, useController } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { EditorFieldProps } from 'components/editor/EditorFieldProps'
 
@@ -24,8 +24,8 @@ export const EditorIntegerInput = <T extends FieldValues>({
   NumericInputProps,
   ...controllerProps
 }: EditorIntegerInputProps<T>) => {
-  const { t } = useTranslation();
-  const { min } = NumericInputProps;
+  const { t } = useTranslation()
+  const { min } = NumericInputProps
 
   const {
     field: { onChange, onBlur, value, ref },
@@ -35,10 +35,14 @@ export const EditorIntegerInput = <T extends FieldValues>({
     control,
     ...controllerProps,
     rules: {
-      min: isNil(min) ? undefined : {
-        value: min,
-        message: t('components.editor.EditorIntegerInput.min_value', { min })
-      },
+      min: isNil(min)
+        ? undefined
+        : {
+            value: min,
+            message: t('components.editor.EditorIntegerInput.min_value', {
+              min,
+            }),
+          },
       ...rules,
     },
   })

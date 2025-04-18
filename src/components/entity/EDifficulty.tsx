@@ -1,9 +1,9 @@
 import { Tag } from '@blueprintjs/core'
 import { Tooltip2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import { FC, ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { OpDifficulty, OpDifficultyBitFlag } from 'models/operation'
 
@@ -34,7 +34,7 @@ const DifficultyTag: FC<{
 export const EDifficulty: FC<{
   difficulty: OpDifficulty
 }> = ({ difficulty }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const descriptions = {
     regular: {
       title: t('components.entity.EDifficulty.regular'),
@@ -44,7 +44,7 @@ export const EDifficulty: FC<{
       title: t('components.entity.EDifficulty.hard'),
       description: t('components.entity.EDifficulty.hard_description'),
     },
-  };
+  }
 
   if (difficulty === OpDifficulty.UNKNOWN) {
     return <></>

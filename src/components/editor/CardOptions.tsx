@@ -1,15 +1,15 @@
 import { Button, ButtonProps, Menu, MenuItem } from '@blueprintjs/core'
 import { Popover2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export const CardDuplicateOption: FC<ButtonProps> = ({
   className,
   ...props
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <Button
@@ -19,12 +19,11 @@ export const CardDuplicateOption: FC<ButtonProps> = ({
       className={clsx('-my-2', className)}
       {...props}
     />
-  );
+  )
 }
 
-export const CardEditOption: FC<ButtonProps> = ({
-  className, ...props}) => {
-  const { t } = useTranslation();
+export const CardEditOption: FC<ButtonProps> = ({ className, ...props }) => {
+  const { t } = useTranslation()
 
   return (
     <Button
@@ -34,7 +33,7 @@ export const CardEditOption: FC<ButtonProps> = ({
       className={clsx('-my-2', className)}
       {...props}
     />
-  );
+  )
 }
 
 export const CardDeleteOption: FC<ButtonProps> = ({
@@ -42,14 +41,19 @@ export const CardDeleteOption: FC<ButtonProps> = ({
   onClick,
   ...props
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <Popover2
       position="right"
       content={
         <Menu className="p-0">
-          <MenuItem intent="danger" text={t('components.editor.CardOptions.delete')} icon="trash" onClick={onClick} />
+          <MenuItem
+            intent="danger"
+            text={t('components.editor.CardOptions.delete')}
+            icon="trash"
+            onClick={onClick}
+          />
         </Menu>
       }
     >
@@ -61,5 +65,5 @@ export const CardDeleteOption: FC<ButtonProps> = ({
         {...props}
       />
     </Popover2>
-  );
+  )
 }

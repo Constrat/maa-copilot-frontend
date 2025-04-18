@@ -3,6 +3,7 @@ import { isString } from '@sentry/utils'
 import ajvLocalizeZh from 'ajv-i18n/localize/zh'
 import { isFinite, isPlainObject } from 'lodash-es'
 
+import i18n from '../../i18n'
 import { CopilotDocV1 } from '../../models/copilot.schema'
 import { copilotSchemaValidator } from '../../models/copilot.schema.validator'
 import {
@@ -14,7 +15,6 @@ import {
 import { Level, OpDifficulty } from '../../models/operation'
 import { formatError } from '../../utils/error'
 import { AppToaster } from '../Toaster'
-import i18n from '../../i18n'
 
 export async function parseOperationFile(file: File): Promise<object> {
   const { t } = i18n
@@ -34,7 +34,9 @@ export async function parseOperationFile(file: File): Promise<object> {
 
     return json
   } catch (e) {
-    throw new Error(t('components.uploader.utils.json_parse_failed') + formatError(e))
+    throw new Error(
+      t('components.uploader.utils.json_parse_failed') + formatError(e),
+    )
   }
 }
 
@@ -71,7 +73,10 @@ export function patchOperation(operation: object, levels: Level[]): object {
         !isString(operation['doc']['details']) ||
         operation['doc']['details'] === ''
       ) {
-        operation['doc']['details'] = t('components.uploader.utils.job_with_stage_name', { stageName: stage_name })
+        operation['doc']['details'] = t(
+          'components.uploader.utils.job_with_stage_name',
+          { stageName: stage_name },
+        )
       }
 
       // i18n compatibility of level id
@@ -143,6 +148,8 @@ export function validateOperation(
       )
     }
   } catch (e) {
-    throw new Error(t('components.uploader.utils.validation_failed') + formatError(e))
+    throw new Error(
+      t('components.uploader.utils.validation_failed') + formatError(e),
+    )
   }
 }

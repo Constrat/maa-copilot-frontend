@@ -9,7 +9,6 @@ import {
   Position,
 } from '@blueprintjs/core'
 import { Popover2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import {
@@ -21,6 +20,7 @@ import {
   useMemo,
   useState,
 } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { OperatorAvatar } from '../../EditorOperator'
 import { Group } from '../../EditorSheet'
@@ -32,7 +32,7 @@ import { OperatorNoData } from '../SheetNoneData'
 import { useSheet } from '../SheetProvider'
 import { CollapseButton } from './CollapseButton'
 
-export interface SheetOperatorEditorProp extends SheetOperatorEditorFormProp { }
+export interface SheetOperatorEditorProp extends SheetOperatorEditorFormProp {}
 
 export const SheetOperatorEditor: FC<SheetOperatorEditorProp> = ({
   ...SheetOperatorEditorFormProps
@@ -48,7 +48,9 @@ export const SheetOperatorEditor: FC<SheetOperatorEditorProp> = ({
       <Card
         className="flex items-center justify-center"
         interactive
-        title={t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.edit_operator_info')}
+        title={t(
+          'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.edit_operator_info',
+        )}
       >
         <Icon icon="plus" size={30} />
       </Card>
@@ -157,12 +159,19 @@ const SheetOperatorEditorForm: FC<SheetOperatorEditorFormProp> = ({
   }
 
   return (
-    <SheetContainerSkeleton title={t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.select_operator')} icon="select">
+    <SheetContainerSkeleton
+      title={t(
+        'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.select_operator',
+      )}
+      icon="select"
+    >
       <form className="mt-3" onSubmit={onSubmit}>
         <div className="max-h-96 overflow-y-auto overflow-x-hidden">
           <OperatorSelectorSkeleton
             icon="person"
-            title={t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.selected_operators')}
+            title={t(
+              'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.selected_operators',
+            )}
             collapseDisabled={!opers.length}
           >
             <OperatorSelectorItem
@@ -171,7 +180,9 @@ const SheetOperatorEditorForm: FC<SheetOperatorEditorFormProp> = ({
           </OperatorSelectorSkeleton>
           <OperatorSelectorSkeleton
             icon="person"
-            title={t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.unselected_operators')}
+            title={t(
+              'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.unselected_operators',
+            )}
             collapseDisabled={!existedOperators.length}
           >
             <OperatorSelectorItem
@@ -184,7 +195,9 @@ const SheetOperatorEditorForm: FC<SheetOperatorEditorFormProp> = ({
           </OperatorSelectorSkeleton>
           <OperatorSelectorSkeleton
             icon="people"
-            title={t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.operators_in_other_groups')}
+            title={t(
+              'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.operators_in_other_groups',
+            )}
             collapseDisabled={!otherGroups?.length}
           >
             {otherGroups.map(({ name: otherGroupName, opers }) => (
@@ -194,7 +207,9 @@ const SheetOperatorEditorForm: FC<SheetOperatorEditorFormProp> = ({
                   <Button
                     minimal
                     icon="arrow-top-left"
-                    title={t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.select_all')}
+                    title={t(
+                      'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.select_all',
+                    )}
                     onClick={() =>
                       opers?.forEach(({ name }) => {
                         if (
@@ -225,7 +240,9 @@ const SheetOperatorEditorForm: FC<SheetOperatorEditorFormProp> = ({
         </div>
         <div className="flex p-0.5">
           <Button
-            text={t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.confirm')}
+            text={t(
+              'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.confirm',
+            )}
             className={Classes.POPOVER_DISMISS}
             type="submit"
           />
@@ -233,19 +250,36 @@ const SheetOperatorEditorForm: FC<SheetOperatorEditorFormProp> = ({
             captureDismiss
             content={
               <div className="flex items-center">
-                <p>{t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.unsaved_data_warning')}</p>
+                <p>
+                  {t(
+                    'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.unsaved_data_warning',
+                  )}
+                </p>
                 <Button
                   type="reset"
-                  text={t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.continue')}
+                  text={t(
+                    'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.continue',
+                  )}
                   onClick={onReset}
                   className={clsx(Classes.POPOVER_DISMISS, 'mx-1')}
                 />
-                <Button text={t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.cancel')} className={Classes.POPOVER_DISMISS} />
+                <Button
+                  text={t(
+                    'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.cancel',
+                  )}
+                  className={Classes.POPOVER_DISMISS}
+                />
               </div>
             }
             position={Position.TOP}
           >
-            <Button intent={Intent.DANGER} className="ml-1" text={t('components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.reset')} />
+            <Button
+              intent={Intent.DANGER}
+              className="ml-1"
+              text={t(
+                'components.editor.operator.sheet.sheetGroup.SheetOperatorEditor.reset',
+              )}
+            />
           </Popover2>
         </div>
       </form>
@@ -261,7 +295,6 @@ const OperatorSelectorItem: FC<{
   groupName?: OperatorInSheetOperatorEditor['groupName']
   opers: Group['opers']
 }> = ({ selectedOperators, setSelectedOperators, groupName, opers }) => {
-
   return (
     <div className="flex flex-wrap">
       {opers?.map(({ name }) => {
@@ -280,9 +313,9 @@ const OperatorSelectorItem: FC<{
               setSelectedOperators((prev) =>
                 selected
                   ? prev.filter(
-                    ({ operName: selectedOperName }) =>
-                      selectedOperName !== name,
-                  )
+                      ({ operName: selectedOperName }) =>
+                        selectedOperName !== name,
+                    )
                   : [...prev, { groupName, operName: name }],
               )
             }}

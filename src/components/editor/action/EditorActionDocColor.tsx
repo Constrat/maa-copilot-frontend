@@ -1,8 +1,8 @@
 import { Button, Icon, MenuItem } from '@blueprintjs/core'
 import { Select2 } from '@blueprintjs/select'
-import { useTranslation } from 'react-i18next'
 
 import { useController } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 import { SetOptional } from 'type-fest'
 
 import { FormField2 } from 'components/FormField'
@@ -34,10 +34,14 @@ export const EditorActionDocColor = ({
 
   return (
     <FormField2
-      label={t('components.editor.action.EditorActionDocColor.description_color')}
+      label={t(
+        'components.editor.action.EditorActionDocColor.description_color',
+      )}
       field={name}
       error={errors[name]}
-      description={t('components.editor.action.EditorActionDocColor.color_description')}
+      description={t(
+        'components.editor.action.EditorActionDocColor.color_description',
+      )}
     >
       <Select2
         filterable={false}

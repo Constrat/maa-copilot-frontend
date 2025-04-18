@@ -1,6 +1,5 @@
 import { Button, Callout, Card, TextArea } from '@blueprintjs/core'
 import { DevTool } from '@hookform/devtools'
-import { useTranslation } from 'react-i18next'
 
 import { useEffect, useMemo } from 'react'
 import {
@@ -11,6 +10,7 @@ import {
   useForm,
   useWatch,
 } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { CardTitle } from 'components/CardTitle'
 import { FormField, FormField2 } from 'components/FormField'
@@ -198,18 +198,27 @@ export const EditorActionAdd = ({
       <Card className="mb-2 pb-8 pt-4 overflow-auto">
         <div className="flex items-center mb-4">
           <CardTitle className="mb-0" icon={isNew ? 'add' : 'edit'}>
-            <span>{isNew ? t('components.editor.action.EditorActionAdd.add') : t('components.editor.action.EditorActionAdd.edit')}{t('components.editor.action.EditorActionAdd.action')}</span>
+            <span>
+              {isNew
+                ? t('components.editor.action.EditorActionAdd.add')
+                : t('components.editor.action.EditorActionAdd.edit')}
+              {t('components.editor.action.EditorActionAdd.action')}
+            </span>
           </CardTitle>
 
           <div className="flex-1" />
 
           <FormSubmitButton control={control} icon={isNew ? 'add' : 'edit'}>
-            {isNew ? t('components.editor.action.EditorActionAdd.add') : t('components.editor.action.EditorActionAdd.save')}
+            {isNew
+              ? t('components.editor.action.EditorActionAdd.add')
+              : t('components.editor.action.EditorActionAdd.save')}
           </FormSubmitButton>
 
           <EditorResetButton
             reset={() => reset(resettingValues)}
-            entityName={t('components.editor.action.EditorActionAdd.current_action')}
+            entityName={t(
+              'components.editor.action.EditorActionAdd.current_action',
+            )}
           />
         </div>
 
@@ -238,8 +247,12 @@ export const EditorActionAdd = ({
               | CopilotDocV1.ActionDeploy
               | CopilotDocV1.ActionSkillOrRetreatOrBulletTime
             >
-              label={t('components.editor.action.EditorActionAdd.operator_group_name')}
-              description={t('components.editor.action.EditorActionAdd.select_operator_description')}
+              label={t(
+                'components.editor.action.EditorActionAdd.operator_group_name',
+              )}
+              description={t(
+                'components.editor.action.EditorActionAdd.select_operator_description',
+              )}
               field="name"
               error={
                 (
@@ -253,8 +266,16 @@ export const EditorActionAdd = ({
               FormGroupProps={{
                 helperText: (
                   <>
-                    <p>{t('components.editor.action.EditorActionAdd.search_operator_hint')}</p>
-                    <p>{t('components.editor.action.EditorActionAdd.reference_group_hint')}</p>
+                    <p>
+                      {t(
+                        'components.editor.action.EditorActionAdd.search_operator_hint',
+                      )}
+                    </p>
+                    <p>
+                      {t(
+                        'components.editor.action.EditorActionAdd.reference_group_hint',
+                      )}
+                    </p>
                   </>
                 ),
               }}
@@ -268,7 +289,9 @@ export const EditorActionAdd = ({
                 rules={{
                   required:
                     (type === 'Deploy' || type === 'SkillUsage') &&
-                    t('components.editor.action.EditorActionAdd.operator_required'),
+                    t(
+                      'components.editor.action.EditorActionAdd.operator_required',
+                    ),
                 }}
               />
             </FormField2>
@@ -320,7 +343,9 @@ export const EditorActionAdd = ({
 
             {skillUsage === CopilotDocV1.SkillUsageType.ReadyToUseTimes && (
               <FormField2
-                label={t('components.editor.action.EditorActionAdd.skill_usage_count')}
+                label={t(
+                  'components.editor.action.EditorActionAdd.skill_usage_count',
+                )}
                 field="skillTimes"
                 error={
                   (errors as FieldErrors<CopilotDocV1.ActionSkillUsage>)
@@ -339,7 +364,9 @@ export const EditorActionAdd = ({
         {type === 'MoveCamera' && (
           <>
             <Callout>
-              {t('components.editor.action.EditorActionAdd.camera_movement_hint')}
+              {t(
+                'components.editor.action.EditorActionAdd.camera_movement_hint',
+              )}
             </Callout>
             <div className="flex mt-2">
               <EditorActionDistance
@@ -354,7 +381,9 @@ export const EditorActionAdd = ({
         <div className="h-px w-full bg-gray-200 mt-4 mb-6" />
 
         <EditorActionModule
-          title={t('components.editor.action.EditorActionAdd.execution_conditions')}
+          title={t(
+            'components.editor.action.EditorActionAdd.execution_conditions',
+          )}
           icon="stopwatch"
           className="font-bold"
         >
@@ -397,7 +426,9 @@ export const EditorActionAdd = ({
                     growVertically
                     large
                     id="doc"
-                    placeholder={t('components.editor.action.EditorActionAdd.description_placeholder')}
+                    placeholder={t(
+                      'components.editor.action.EditorActionAdd.description_placeholder',
+                    )}
                     {...field}
                     value={field.value || ''}
                   />
@@ -409,7 +440,9 @@ export const EditorActionAdd = ({
 
         <div className="mt-4 flex">
           <FormSubmitButton control={control} icon={isNew ? 'add' : 'edit'}>
-            {isNew ? t('components.editor.action.EditorActionAdd.add') : t('components.editor.action.EditorActionAdd.save')}
+            {isNew
+              ? t('components.editor.action.EditorActionAdd.add')
+              : t('components.editor.action.EditorActionAdd.save')}
           </FormSubmitButton>
 
           {!isNew && (

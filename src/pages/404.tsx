@@ -1,12 +1,13 @@
 import { Button, NonIdealState } from '@blueprintjs/core'
+
 import { ComponentType } from 'react'
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 import { withGlobalErrorBoundary } from 'components/GlobalErrorBoundary'
 
 export const NotFoundPage: ComponentType = withGlobalErrorBoundary(() => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <NonIdealState

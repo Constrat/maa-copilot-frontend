@@ -1,8 +1,8 @@
 import { Alert, Button, H4 } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { useState } from 'react'
 import { FieldValues, UseFormReset } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 export const EditorResetButton = <T extends FieldValues>({
   reset,
@@ -11,7 +11,7 @@ export const EditorResetButton = <T extends FieldValues>({
   reset: UseFormReset<T>
   entityName: string
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const [resetDialogOpen, setResetDialogOpen] = useState(false)
 
   return (
@@ -29,8 +29,16 @@ export const EditorResetButton = <T extends FieldValues>({
           setResetDialogOpen(false)
         }}
       >
-        <H4>{t('components.editor.EditorResetButton.reset_entity', { entityName })}</H4>
-        <p>{t('components.editor.EditorResetButton.confirm_reset', { entityName })}</p>
+        <H4>
+          {t('components.editor.EditorResetButton.reset_entity', {
+            entityName,
+          })}
+        </H4>
+        <p>
+          {t('components.editor.EditorResetButton.confirm_reset', {
+            entityName,
+          })}
+        </p>
       </Alert>
 
       <Button

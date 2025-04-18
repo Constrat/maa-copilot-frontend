@@ -1,9 +1,9 @@
 import { Button, IconName, MenuItem } from '@blueprintjs/core'
 import { Select2 } from '@blueprintjs/select'
-import { useTranslation } from 'react-i18next'
 
 import { useMemo } from 'react'
 import { useController } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { EditorFieldProps } from 'components/editor/EditorFieldProps'
 import type { CopilotDocV1 } from 'models/copilot.schema'

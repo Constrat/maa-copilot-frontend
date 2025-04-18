@@ -1,9 +1,9 @@
 import { Card, Elevation, Icon, NonIdealState } from '@blueprintjs/core'
 import { UniqueIdentifier } from '@dnd-kit/core'
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable'
-import { useTranslation } from 'react-i18next'
 
 import { clsx } from 'clsx'
+import { useTranslation } from 'react-i18next'
 
 import type { CopilotDocV1 } from 'models/copilot.schema'
 
@@ -87,7 +87,11 @@ export const EditorGroupItem = ({
         </ul>
 
         {!group.opers?.length && (
-          <NonIdealState>{t('components.editor.operator.EditorGroupItem.drag_operators_here')}</NonIdealState>
+          <NonIdealState>
+            {t(
+              'components.editor.operator.EditorGroupItem.drag_operators_here',
+            )}
+          </NonIdealState>
         )}
       </SortableContext>
     </Card>

@@ -1,7 +1,7 @@
 import { IconName } from '@blueprintjs/core'
 
-import { CopilotDocV1 } from './copilot.schema'
 import i18n from '../i18n'
+import { CopilotDocV1 } from './copilot.schema'
 
 interface ActionType {
   type: 'choice'
@@ -33,7 +33,9 @@ export const ACTION_TYPES: ActionType[] = [
     accent: accent.red,
     title: i18n.t('models.types.action_type.deploy.title'),
     value: CopilotDocV1.Type.Deploy,
-    alternativeValue: i18n.t('models.types.action_type.deploy.alternativeValue'),
+    alternativeValue: i18n.t(
+      'models.types.action_type.deploy.alternativeValue',
+    ),
     description: i18n.t('models.types.action_type.deploy.description'),
     group: i18n.t('models.types.action_group.operator_deploy_retreat'),
   },
@@ -43,7 +45,9 @@ export const ACTION_TYPES: ActionType[] = [
     accent: accent.amber,
     title: i18n.t('models.types.action_type.retreat.title'),
     value: CopilotDocV1.Type.Retreat,
-    alternativeValue: i18n.t('models.types.action_type.retreat.alternativeValue'),
+    alternativeValue: i18n.t(
+      'models.types.action_type.retreat.alternativeValue',
+    ),
     description: i18n.t('models.types.action_type.retreat.description'),
     group: i18n.t('models.types.action_group.operator_deploy_retreat'),
   },
@@ -63,7 +67,9 @@ export const ACTION_TYPES: ActionType[] = [
     accent: accent.emerald,
     title: i18n.t('models.types.action_type.skill_usage.title'),
     value: CopilotDocV1.Type.SkillUsage,
-    alternativeValue: i18n.t('models.types.action_type.skill_usage.alternativeValue'),
+    alternativeValue: i18n.t(
+      'models.types.action_type.skill_usage.alternativeValue',
+    ),
     description: i18n.t('models.types.action_type.skill_usage.description'),
     group: i18n.t('models.types.action_group.operator_skills'),
   },
@@ -73,7 +79,9 @@ export const ACTION_TYPES: ActionType[] = [
     accent: accent.cyan,
     title: i18n.t('models.types.action_type.speed_up.title'),
     value: CopilotDocV1.Type.SpeedUp,
-    alternativeValue: i18n.t('models.types.action_type.speed_up.alternativeValue'),
+    alternativeValue: i18n.t(
+      'models.types.action_type.speed_up.alternativeValue',
+    ),
     description: i18n.t('models.types.action_type.speed_up.description'),
     group: i18n.t('models.types.action_group.battle_control'),
   },
@@ -83,7 +91,9 @@ export const ACTION_TYPES: ActionType[] = [
     accent: accent.blue,
     title: i18n.t('models.types.action_type.bullet_time.title'),
     value: CopilotDocV1.Type.BulletTime,
-    alternativeValue: i18n.t('models.types.action_type.bullet_time.alternativeValue'),
+    alternativeValue: i18n.t(
+      'models.types.action_type.bullet_time.alternativeValue',
+    ),
     description: i18n.t('models.types.action_type.bullet_time.description'),
     group: i18n.t('models.types.action_group.battle_control'),
   },
@@ -93,7 +103,9 @@ export const ACTION_TYPES: ActionType[] = [
     accent: accent.blue,
     title: i18n.t('models.types.action_type.move_camera.title'),
     value: CopilotDocV1.Type.MoveCamera,
-    alternativeValue: i18n.t('models.types.action_type.move_camera.alternativeValue'),
+    alternativeValue: i18n.t(
+      'models.types.action_type.move_camera.alternativeValue',
+    ),
     description: i18n.t('models.types.action_type.move_camera.description'),
     group: i18n.t('models.types.action_group.battle_control'),
   },
@@ -103,7 +115,9 @@ export const ACTION_TYPES: ActionType[] = [
     accent: accent.violet,
     title: i18n.t('models.types.action_type.skill_daemon.title'),
     value: CopilotDocV1.Type.SkillDaemon,
-    alternativeValue: i18n.t('models.types.action_type.skill_daemon.alternativeValue'),
+    alternativeValue: i18n.t(
+      'models.types.action_type.skill_daemon.alternativeValue',
+    ),
     description: i18n.t('models.types.action_type.skill_daemon.description'),
     group: i18n.t('models.types.action_group.battle_control'),
   },
@@ -113,7 +127,9 @@ export const ACTION_TYPES: ActionType[] = [
     accent: accent.fuchsia,
     title: i18n.t('models.types.action_type.output.title'),
     value: CopilotDocV1.Type.Output,
-    alternativeValue: i18n.t('models.types.action_type.output.alternativeValue'),
+    alternativeValue: i18n.t(
+      'models.types.action_type.output.alternativeValue',
+    ),
     description: i18n.t('models.types.action_type.output.description'),
     group: i18n.t('models.types.action_group.miscellaneous'),
   },

@@ -1,7 +1,7 @@
 import { Button } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { useController } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import {
   DetailedSelect,
@@ -44,7 +44,13 @@ export const EditorOperatorSkillUsage = <
     >
       <Button
         icon={selectedAction?.icon || 'slash'}
-        text={selectedAction ? selectedAction.title : t('components.editor.operator.EditorOperatorSkillUsage.select_skill_usage')}
+        text={
+          selectedAction
+            ? selectedAction.title
+            : t(
+                'components.editor.operator.EditorOperatorSkillUsage.select_skill_usage',
+              )
+        }
         rightIcon="double-caret-vertical"
         onBlur={onBlur}
         ref={ref}

@@ -1,8 +1,8 @@
 import { Card, Elevation } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import { FC, ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 import { FCC } from 'types'
 
 import { CardTitle } from 'components/CardTitle'
@@ -24,7 +24,7 @@ export const ActionCard: FC<ActionCardProps> = ({
   action,
   title,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const type = findActionType(action.type)
 
   title ??= (
@@ -62,13 +62,21 @@ export const ActionCard: FC<ActionCardProps> = ({
           )}
 
           {'location' in action && action.location && (
-            <FactItem dense title={t('components.ActionCard.coordinates')} icon="map-marker">
+            <FactItem
+              dense
+              title={t('components.ActionCard.coordinates')}
+              icon="map-marker"
+            >
               <span className="font-mono">{action.location.join(', ')}</span>
             </FactItem>
           )}
 
           {'direction' in action && (
-            <FactItem dense title={t('components.ActionCard.direction')} icon="compass">
+            <FactItem
+              dense
+              title={t('components.ActionCard.direction')}
+              icon="compass"
+            >
               <span className="font-mono">
                 {findOperatorDirection(action.direction).title}
               </span>
@@ -76,7 +84,11 @@ export const ActionCard: FC<ActionCardProps> = ({
           )}
 
           {'distance' in action && action.distance && (
-            <FactItem dense title={t('components.ActionCard.distance')} icon="camera">
+            <FactItem
+              dense
+              title={t('components.ActionCard.distance')}
+              icon="camera"
+            >
               <span className="font-mono">{action.distance.join(', ')}</span>
             </FactItem>
           )}
@@ -85,11 +97,15 @@ export const ActionCard: FC<ActionCardProps> = ({
 
       {/* direction:rtl is for the grid to place columns from right to left; need to set it back to ltr for the children */}
       <div className="grid grid-flow-row grid-cols-2 gap-y-2 text-right [direction:rtl] [&>*]:[direction:ltr]">
-        <InlineCondition title={t('components.ActionCard.kills')}>{action.kills || '-'}</InlineCondition>
+        <InlineCondition title={t('components.ActionCard.kills')}>
+          {action.kills || '-'}
+        </InlineCondition>
         <InlineCondition title={t('components.ActionCard.cooling')}>
           {action.cooling || '-'}
         </InlineCondition>
-        <InlineCondition title={t('components.ActionCard.cost')}>{action.costs || '-'}</InlineCondition>
+        <InlineCondition title={t('components.ActionCard.cost')}>
+          {action.costs || '-'}
+        </InlineCondition>
         <InlineCondition title={t('components.ActionCard.cost_changes')}>
           {action.costChanges || '-'}
         </InlineCondition>

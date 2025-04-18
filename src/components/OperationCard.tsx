@@ -1,9 +1,9 @@
 import { Button, Card, Elevation, H4, H5, Icon, Tag } from '@blueprintjs/core'
 import { Tooltip2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
 import clsx from 'clsx'
 import { CopilotInfoStatusEnum } from 'maa-copilot-client'
+import { useTranslation } from 'react-i18next'
 import { copyShortCode, handleLazyDownloadJSON } from 'services/operation'
 
 import { RelativeTime } from 'components/RelativeTime'
@@ -30,7 +30,7 @@ export const NeoOperationCard = ({
   selected?: boolean
   onSelect?: (operation: Operation, selected: boolean) => void
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { data: levels } = useLevels()
 
   return (
@@ -99,7 +99,12 @@ export const NeoOperationCard = ({
           </div>
           <div className="flex-1" />
 
-          <Tooltip2 placement="top" content={t('components.OperationCard.views_count', { count: operation.views })}>
+          <Tooltip2
+            placement="top"
+            content={t('components.OperationCard.views_count', {
+              count: operation.views,
+            })}
+          >
             <div>
               <Icon icon="eye-open" className="mr-1.5" />
               <span>{operation.views}</span>
@@ -137,7 +142,7 @@ export const NeoOperationCard = ({
 }
 
 export const OperationCard = ({ operation }: { operation: Operation }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { data: levels } = useLevels()
 
   return (
@@ -186,7 +191,12 @@ export const OperationCard = ({ operation }: { operation: Operation }) => {
               />
             </div>
 
-            <Tooltip2 placement="top" content={t('components.OperationCard.views_count', { count: operation.views })}>
+            <Tooltip2
+              placement="top"
+              content={t('components.OperationCard.views_count', {
+                count: operation.views,
+              })}
+            >
               <div>
                 <Icon icon="eye-open" className="mr-1.5" />
                 <span>{operation.views}</span>
@@ -234,7 +244,7 @@ export const OperationCard = ({ operation }: { operation: Operation }) => {
 }
 
 const OperatorTags = ({ operation }: { operation: Operation }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { opers, groups } = operation.parsedContent
 
   return opers?.length || groups?.length ? (
@@ -260,7 +270,9 @@ const OperatorTags = ({ operation }: { operation: Operation }) => {
       ))}
     </div>
   ) : (
-    <div className="text-gray-500">{t('components.OperationCard.no_records')}</div>
+    <div className="text-gray-500">
+      {t('components.OperationCard.no_records')}
+    </div>
   )
 }
 
@@ -277,7 +289,7 @@ const CardActions = ({
   selected?: boolean
   onSelect?: (operation: Operation, selected: boolean) => void
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return selectable ? (
     <Button
       small
@@ -292,7 +304,11 @@ const CardActions = ({
     <div className={clsx('flex gap-1', className)}>
       <Tooltip2
         placement="bottom"
-        content={<div className="max-w-sm dark:text-slate-900">{t('components.OperationCard.download_json')}</div>}
+        content={
+          <div className="max-w-sm dark:text-slate-900">
+            {t('components.OperationCard.download_json')}
+          </div>
+        }
       >
         <Button
           small
@@ -307,7 +323,11 @@ const CardActions = ({
       </Tooltip2>
       <Tooltip2
         placement="bottom"
-        content={<div className="max-w-sm dark:text-slate-900">{t('components.OperationCard.copy_secret_code')}</div>}
+        content={
+          <div className="max-w-sm dark:text-slate-900">
+            {t('components.OperationCard.copy_secret_code')}
+          </div>
+        }
       >
         <Button
           small
@@ -317,7 +337,11 @@ const CardActions = ({
       </Tooltip2>
       <Tooltip2
         placement="bottom"
-        content={<div className="max-w-sm dark:text-slate-900">{t('components.OperationCard.add_to_job_set')}</div>}
+        content={
+          <div className="max-w-sm dark:text-slate-900">
+            {t('components.OperationCard.add_to_job_set')}
+          </div>
+        }
       >
         <AddToOperationSetButton
           small

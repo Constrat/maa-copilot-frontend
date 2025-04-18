@@ -1,9 +1,9 @@
 import { Button, NonIdealState, Spinner } from '@blueprintjs/core'
 import { ErrorBoundary } from '@sentry/react'
 
+import { TFunction } from 'i18next'
 import { ComponentType, FC, Suspense, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { TFunction } from 'i18next'
 import { FCC } from 'types'
 
 interface SuspensableProps {
@@ -84,12 +84,15 @@ export const Suspensable: FCC<SuspensableProps> = ({
 interface SuspensableOptions {
   pendingTitle?: string | ((t: TFunction) => string)
   retryOnChange?: string[]
-  errorFallback?: (params: { error: Error; resetError: () => void }) => JSX.Element | undefined
+  errorFallback?: (params: {
+    error: Error
+    resetError: () => void
+  }) => JSX.Element | undefined
 }
 
 export function withSuspensable<P extends object>(
   Component: ComponentType<P>,
-  options: SuspensableOptions = {}
+  options: SuspensableOptions = {},
 ): FC<P> {
   const { pendingTitle, retryOnChange = [] } = options
 
@@ -97,15 +100,19 @@ export function withSuspensable<P extends object>(
     const { t } = useTranslation()
     const resetErrorRef = useRef<(() => void) | undefined>()
 
-    useEffect(() => {
-      resetErrorRef.current?.()
-      resetErrorRef.current = undefined
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, retryOnChange.map(key => (props as any)[key]))
+    useEffect(
+      () => {
+        resetErrorRef.current?.()
+        resetErrorRef.current = undefined
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      },
+      retryOnChange.map((key) => (props as any)[key]),
+    )
 
-    const title = typeof pendingTitle === 'function'
-      ? pendingTitle(t)
-      : pendingTitle || t('common.loading')
+    const title =
+      typeof pendingTitle === 'function'
+        ? pendingTitle(t)
+        : pendingTitle || t('common.loading')
 
     return (
       <Suspense

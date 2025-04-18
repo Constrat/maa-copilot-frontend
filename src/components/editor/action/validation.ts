@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next'
 
 import type { CopilotDocV1 } from 'models/copilot.schema'
 
-export function createValidateAction(t: ReturnType<typeof useTranslation>['t']) {
+export function createValidateAction(
+  t: ReturnType<typeof useTranslation>['t'],
+) {
   return function validateAction(
     action: CopilotDocV1.Action,
     setError: UseFormSetError<CopilotDocV1.Action>,
@@ -16,7 +18,9 @@ export function createValidateAction(t: ReturnType<typeof useTranslation>['t']) 
       if (!action.name && !action.location) {
         const error = {
           type: 'required',
-          message: t('components.editor.action.validation.name_or_location_required'),
+          message: t(
+            'components.editor.action.validation.name_or_location_required',
+          ),
         }
         setError('name', error)
         setError('location', error)
@@ -40,7 +44,8 @@ export function validateAction(
     if (!action.name && !action.location) {
       const error = {
         type: 'required',
-        message: 'When type is Skill, Retreat, or BulletTime, you must provide either a name or location',
+        message:
+          'When type is Skill, Retreat, or BulletTime, you must provide either a name or location',
       }
       setError('name', error)
       setError('location', error)

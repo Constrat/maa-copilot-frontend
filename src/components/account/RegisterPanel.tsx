@@ -1,9 +1,9 @@
 import { Button } from '@blueprintjs/core'
-import { useTranslation } from 'react-i18next'
 
 import { register, sendRegistrationEmail } from 'apis/auth'
 import { FC, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 
 import { AppToaster } from 'components/Toaster'
 import { formatError } from 'utils/error'
@@ -27,7 +27,7 @@ export interface RegisterFormValues {
 export const RegisterPanel: FC<{
   onComplete: () => void
 }> = ({ onComplete }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const {
     control,
@@ -40,7 +40,10 @@ export const RegisterPanel: FC<{
   const [countdown, setCountdown] = useState(60)
   const onSubmit = async (val: RegisterFormValues) => {
     await wrapErrorMessage(
-      (e) => t('components.account.RegisterPanel.registration_failed', { error: formatError(e) }),
+      (e) =>
+        t('components.account.RegisterPanel.registration_failed', {
+          error: formatError(e),
+        }),
       register({
         email: val.email,
         registrationToken: val.registrationToken,
@@ -79,7 +82,10 @@ export const RegisterPanel: FC<{
         return
       }
       await wrapErrorMessage(
-        (e) => t('components.account.RegisterPanel.send_failed', { error: formatError(e) }),
+        (e) =>
+          t('components.account.RegisterPanel.send_failed', {
+            error: formatError(e),
+          }),
         sendRegistrationEmail({ email: val.email }),
       )
       AppToaster.show({
@@ -111,7 +117,9 @@ export const RegisterPanel: FC<{
           onClick={onEmailSubmit}
         >
           {isSendEmailButtonDisabled
-            ? t('components.account.RegisterPanel.retry_seconds', { seconds: countdown })
+            ? t('components.account.RegisterPanel.retry_seconds', {
+                seconds: countdown,
+              })
             : t('components.account.RegisterPanel.send_verification_code')}
         </Button>
       </div>

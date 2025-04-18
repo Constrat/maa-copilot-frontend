@@ -58,7 +58,12 @@ export const SheetOperatorContainer = (
 ) => {
   const { t } = useTranslation()
   return (
-    <SheetContainerSkeleton title={t('components.editor.operator.sheet.SheetOperator.select_operator')} icon="person">
+    <SheetContainerSkeleton
+      title={t(
+        'components.editor.operator.sheet.SheetOperator.select_operator',
+      )}
+      icon="person"
+    >
       <OperatorFilterProvider>
         <SheetOperator {...sheetOperatorProp} />
       </OperatorFilterProvider>

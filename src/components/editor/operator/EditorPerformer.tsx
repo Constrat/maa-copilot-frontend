@@ -16,7 +16,6 @@ import {
   arrayMove,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable'
-import { useTranslation } from 'react-i18next'
 
 import { compact, uniq, uniqueId } from 'lodash-es'
 import { FC, useEffect, useMemo, useState } from 'react'
@@ -26,6 +25,7 @@ import {
   useFieldArray,
   useWatch,
 } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 import { SetRequired } from 'type-fest'
 
 import { CopilotDocV1 } from 'models/copilot.schema'
@@ -257,7 +257,11 @@ export const EditorPerformer: FC<EditorPerformerProps> = ({ control }) => {
         ({ name, _id }) => name === operator.name && _id !== operator._id,
       )
     ) {
-      setError?.('name', { message: t('components.editor.operator.EditorPerformer.operator_already_exists') })
+      setError?.('name', {
+        message: t(
+          'components.editor.operator.EditorPerformer.operator_already_exists',
+        ),
+      })
       return false
     }
 
@@ -325,7 +329,11 @@ export const EditorPerformer: FC<EditorPerformerProps> = ({ control }) => {
 
         setEditingOperator(undefined)
       } else {
-        setError?.('global' as any, { message: t('components.editor.operator.EditorPerformer.update_operator_not_found') })
+        setError?.('global' as any, {
+          message: t(
+            'components.editor.operator.EditorPerformer.update_operator_not_found',
+          ),
+        })
         return false
       }
     } else {
@@ -343,7 +351,11 @@ export const EditorPerformer: FC<EditorPerformerProps> = ({ control }) => {
     if (
       groups.find(({ name, _id }) => name === group.name && _id !== group._id)
     ) {
-      setError?.('name', { message: t('components.editor.operator.EditorPerformer.group_already_exists') })
+      setError?.('name', {
+        message: t(
+          'components.editor.operator.EditorPerformer.group_already_exists',
+        ),
+      })
       return false
     }
     if (editingGroup || (fromSheet && group._id)) {
@@ -358,7 +370,11 @@ export const EditorPerformer: FC<EditorPerformerProps> = ({ control }) => {
         )
         setEditingGroup(undefined)
       } else {
-        setError?.('global' as any, { message: t('components.editor.operator.EditorPerformer.update_group_not_found') })
+        setError?.('global' as any, {
+          message: t(
+            'components.editor.operator.EditorPerformer.update_group_not_found',
+          ),
+        })
         return false
       }
     } else {
@@ -414,7 +430,10 @@ export const EditorPerformer: FC<EditorPerformerProps> = ({ control }) => {
               intent="primary"
             >
               <Icon icon="info-sign" className="mr-1" />
-              {t('components.editor.operator.EditorPerformer.ungrouped_operators')}: {additionalOperatorsFromActions.join(', ')}
+              {t(
+                'components.editor.operator.EditorPerformer.ungrouped_operators',
+              )}
+              : {additionalOperatorsFromActions.join(', ')}
             </Callout>
           )}
           <div className="mt-2 relative">
@@ -426,9 +445,21 @@ export const EditorPerformer: FC<EditorPerformerProps> = ({ control }) => {
               onDragCancel={handleDragEnd}
             >
               <Droppable id={nonGroupedContainerId}>
-                <FactItem title={t('components.editor.operator.EditorPerformer.operators')} icon="person" className="font-bold" />
+                <FactItem
+                  title={t(
+                    'components.editor.operator.EditorPerformer.operators',
+                  )}
+                  icon="person"
+                  className="font-bold"
+                />
 
-                {operators.length === 0 && <NonIdealState title={t('components.editor.operator.EditorPerformer.no_operators')} />}
+                {operators.length === 0 && (
+                  <NonIdealState
+                    title={t(
+                      'components.editor.operator.EditorPerformer.no_operators',
+                    )}
+                  />
+                )}
 
                 <SortableContext
                   items={operators.map(getId)}
@@ -466,7 +497,9 @@ export const EditorPerformer: FC<EditorPerformerProps> = ({ control }) => {
               </Droppable>
 
               <FactItem
-                title={t('components.editor.operator.EditorPerformer.operator_groups')}
+                title={t(
+                  'components.editor.operator.EditorPerformer.operator_groups',
+                )}
                 icon="people"
                 className="font-bold mt-8"
               />
@@ -474,7 +507,11 @@ export const EditorPerformer: FC<EditorPerformerProps> = ({ control }) => {
               {groups.length === 0 && (
                 // extra div container: NonIdealState is using height: 100% which causes unexpected overflow
                 <div className="relative">
-                  <NonIdealState title={t('components.editor.operator.EditorPerformer.no_operator_groups')} />
+                  <NonIdealState
+                    title={t(
+                      'components.editor.operator.EditorPerformer.no_operator_groups',
+                    )}
+                  />
                 </div>
               )}
 

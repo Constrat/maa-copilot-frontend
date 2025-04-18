@@ -1,7 +1,7 @@
 import { Button, Card, Elevation, H4, Icon, Tag } from '@blueprintjs/core'
 import { Tooltip2 } from '@blueprintjs/popover2'
-import { useTranslation } from 'react-i18next'
 
+import { useTranslation } from 'react-i18next'
 import { copyShortCode } from 'services/operation'
 
 import { ReLink } from 'components/ReLink'
@@ -16,7 +16,7 @@ export const NeoOperationSetCard = ({
 }: {
   operationSet: OperationSetListItem
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <Card
       interactive={true}
@@ -35,7 +35,9 @@ export const NeoOperationSetCard = ({
           >
             <H4 className="p-0 m-0 mr-20 whitespace-nowrap overflow-hidden text-ellipsis">
               {operationSet.status === 'PRIVATE' && (
-                <Tag className="mr-1">{t('components.OperationSetCard.private')}</Tag>
+                <Tag className="mr-1">
+                  {t('components.OperationSetCard.private')}
+                </Tag>
               )}
               {operationSet.name}
             </H4>
@@ -53,7 +55,11 @@ export const NeoOperationSetCard = ({
         <div className="flex">
           <div className="flex items-center text-zinc-500">
             <Icon icon="document" className="mr-1" />
-            <span>{t('components.OperationSetCard.jobs_count', { count: operationSet.copilotIds.length })}</span>
+            <span>
+              {t('components.OperationSetCard.jobs_count', {
+                count: operationSet.copilotIds.length,
+              })}
+            </span>
 
             <Icon icon="time" className="ml-4 mr-1" />
             <RelativeTime
@@ -84,7 +90,7 @@ export const OperationSetCard = ({
 }: {
   operationSet: OperationSetListItem
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <Card
       interactive={true}
@@ -111,7 +117,11 @@ export const OperationSetCard = ({
           <div className="flex flex-wrap items-start gap-x-4 gap-y-1 text-zinc-500">
             <div className="flex items-center">
               <Icon icon="document" className="mr-1" />
-              <span>{t('components.OperationSetCard.jobs_count', { count: operationSet.copilotIds.length })}</span>
+              <span>
+                {t('components.OperationSetCard.jobs_count', {
+                  count: operationSet.copilotIds.length,
+                })}
+              </span>
 
               <Icon icon="time" className="ml-4 mr-1" />
               <RelativeTime
@@ -152,13 +162,15 @@ const CardActions = ({
   className?: string
   operationSet: OperationSetListItem
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <div className={className}>
       <Tooltip2
         placement="bottom"
         content={
-          <div className="max-w-sm dark:text-slate-900">{t('components.OperationSetCard.copy_secret_code')}</div>
+          <div className="max-w-sm dark:text-slate-900">
+            {t('components.OperationSetCard.copy_secret_code')}
+          </div>
         }
       >
         <Button
